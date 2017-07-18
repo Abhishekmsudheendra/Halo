@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope)
+{
+	//location.reload(true);
+	/*
+	var firstLoad=sessionStorage.getItem('firstLoad');
+	if(firstLoad == null || firstLoad == 'no')
+		{
+			sessionStorage.setItem('firstLoad','yes');
+			location.reload();
+		}
+	else
+		{
+			sessionStorage.setItem('firstLoad','no');
+		}
+	*/
+	var locationStr=window.location;
+	var pattern=/[a-zA-Z0-9]{32}/;
+	var sysId=pattern.exec(locationStr);
+	var c=this;
+	
+	c.convertToBoolean=function(string)
+	{
+		if(string == "false" || string  == "")
+			return false;
+		else
+			return true;
+	};
+	
+	c.populateValues=function(incidentStatus,courseOfActionsData)
+	{
+		//Make COA section read-only when Incident is Closed
+				if(incidentStatus == 'Closed')
+					{
+						jQuery("#section3 :input").attr("disabled",true);
+						jQuery("#section3 :input").prop("disabled",true);
+					}
+	     if(courseOfActionsData[0].selectedName != '')
+				 {
+					 $scope.selectedValue=courseOfActionsData[0].selectedName;
+				 }
+		jQuery("#sendEmailUpdateToReporter").prop('checked', c.convertToBoolean(courseOfActionsData[0].sendEmailUpdateToReporter));
+		jQuery("#notifyIsp").prop('checked', c.convertToBoolean(courseOfActionsData[0].notifyIsp));
+		jQuery("#notifyDomainRegistrar").prop('checked', c.convertToBoolean(courseOfActionsData[0].notifyDomainRegistrar));
+		jQuery("#sendEmailReceipt").prop('checked', c.convertToBoolean(courseOfActionsData[0].sendEmailReceipt));
+		jQuery("#setStatusOfTicketToResolved").prop('checked', c.convertToBoolean(courseOfActionsData[0].setStatusOfTicketToResolved));
+		jQuery("#notifyProduction").prop('checked', c.convertToBoolean(courseOfActionsData[0].notifyProduction));
+		jQuery("#assignToNextTier").prop('checked', c.convertToBoolean(courseOfActionsData[0].assignToNextTier));
+		jQuery("#assignToGroup").prop('checked', c.convertToBoolean(courseOfActionsData[0].assignToGroup));
+		jQuery("#resolveAndCloseTicket").prop('checked', c.convertToBoolean(courseOfActionsData[0].resolveAndCloseTicket));
+		
+	  $scope.groupName=courseOfActionsData[0].groupName;
+		$scope.groupSelectedValue=courseOfActionsData[0].groupName;
+	};
+	
+	c.getData = function() 
+	{
+		c.server.get({sysId:sysId}).then(
+			function(response)
+			{  
+				c.data.incidentData= angular.fromJson(response.data.incidentData);
+				c.data.ipIndicatorsData= angular.fromJson(response.data.ipIndicatorsData)	;
+				c.data.domainIndicatorsData= angular.fromJson(response.data.domainIndicatorsData);
+				c.data.hashCodeIndicatorsData= angular.fromJson(response.data.hashCodeIndicatorsData);
+				c.data.courseOfActionsData= angular.fromJson(response.data.courseOfActionsData);
+			  c.data.ListOfCourseOfActionsData= angular.fromJson(response.data.ListOfCourseOfActionsData);
+				c.data.indicatorsData=angular.fromJson(response.data.indicatorsData);
+				c.data.commentshistory=angular.fromJson(response.data.commentshistory);
+				c.data.groupUsers=angular.fromJson(response.data.groupUsers);
+				
+				//Store JSON in Session
+				sessionStorage.setItem('ipIndicatorsData', JSON.stringify(c.data.ipIndicatorsData));
+				sessionStorage.setItem('domainIndicatorsData', JSON.stringify(c.data.domainIndicatorsData));
+				sessionStorage.setItem('hashCodeIndicatorsData', JSON.stringify(c.data.hashCodeIndicatorsData));
+				sessionStorage.setItem('indicatorsData', JSON.stringify(c.data.indicatorsData));
+				
+				//Populate Values
+				c.populateValues(c.data.incidentData[0].incidentStatus,c.data.courseOfActionsData);
+				
+			})
+	};
+
+	c.getData();
+
+
+  $scope.sysId=sysId+'';
+	
+	$scope.execute= function() 
+	{
+		//get Values from Form
+			var selectedCoa=jQuery("#sel1 option:selected").text();
+			var sendEmailUpdateToReporter=jQuery("#sendEmailUpdateToReporter").is(":checked");
+			var notifyIsp=jQuery("#notifyIsp").is(":checked");
+			var notifyDomainRegistrar=jQuery("#notifyDomainRegistrar").is(":checked");
+			var sendEmailReceipt=jQuery("#sendEmailReceipt").is(":checked");
+			var setStatusOfTicketToResolved=jQuery("#setStatusOfTicketToResolved").is(":checked");
+			var notifyProduction=jQuery("#notifyProduction").is(":checked");
+			var assignToNextTier=jQuery("#assignToNextTier").is(":checked");
+			var assignToGroup=jQuery("#assignToGroup").is(":checked");
+			var resolveAndCloseTicket=jQuery("#resolveAndCloseTicket").is(":checked");
+		  var groupName=jQuery("#groupSelectedValue option:selected").text();
+			var assignTo=jQuery("#assignTo option:selected").text();
+			var comments=jQuery("#comments").val();
+			var locationStr=window.location;
+			var pattern=/[a-zA-Z0-9]{32}/;
+			var sysId=pattern.exec(locationStr)+'';
+		
+		c.server.get({comments:comments,assignTo:assignTo,groupName:groupName,resolveAndCloseTicket:resolveAndCloseTicket,assignToGroup:assignToGroup,assignToNextTier:assignToNextTier,notifyProduction:notifyProduction,setStatusOfTicketToResolved:setStatusOfTicketToResolved,sendEmailReceipt:sendEmailReceipt,sysId:sysId,action:'execute',selectedCoa:selectedCoa,sendEmailUpdateToReporter:sendEmailUpdateToReporter,notifyIsp:notifyIsp,notifyDomainRegistrar:notifyDomainRegistrar}).then(
+			function(response)
+			{  
+				location.href=window.location;
+			});
+		
+  }//End of uiAction
+	
+	
+}
+
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-group
+{
+  margin:0px;
+  
+}
+.panel-body
+{
+  margin:0px;
+}
+
+
+label.checkbox-inline {
+    width: 210px;
+}
+
+@media only screen and (max-width: 1000px) 
+{
+    td 
+    {
+        width:auto;
+    }
+}
+
+@media only screen and (min-width: 1001px) 
+{
+    td 
+    {
+        width:260px !important;
+    }
+}
+
+.modal-content
+{
+   border-radius: 10px
+}
+.modal-header, .modal-footer 
+{
+    background-color: #337ab7;
+     color:white;
+}
+
+.labeldata
+{
+   font-weight: normal;
+}
+
+.col-sm-8
+{
+   padding-top:8px; 
+}
+
+body.modal-open div.modal-backdrop { 
+    z-index: 0; 
+}
+tr
+    {
+      border-style: solid;
+      border-width: 2px;
+    }
+.list2_cell_background
+{
+    margin-right: 6px;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+  background-color:tomato;
+}
+
+body
+{
+  font-size:14px;
+}
+
+.col-md-8, .col-xs-8, .col-lg-8, .col-md-10, .col-lg-10,  .col-md-2, .col-lg-2, .col-md-9, .col-lg-9,  .col-md-3, .col-lg-3, .col-md-12, .col-xs-12, .col-lg-12
+{ 
+  padding:0px !important;
+}
+
+.row
+{
+  margin-left:0px !important;
+}
+
+
+
+li.uib-tab.ng-scope.ng-isolate-scope.active 
+{
+  //border-top: 2px solid;
+  //border-left: 2px solid;
+  //border-right: 2px solid;
+  font-size: 22px;
+  border-bottom: 0px;
+}
+
+li.uib-tab.ng-scope.ng-isolate-scope {
+  font-size: 18px;
+  background-color: aliceblue;
+  //border-left: 1px solid white;
+  //border-right: 1px solid white;
+}
+
+
+a:hover,a:focus{
+         text-decoration: none;
+         outline: none;
+     }
+     .tab .nav-tabs{
+         border-bottom: 0 none;
+     }
+     .tab .nav-tabs li{
+         margin-right: 10px;
+     }
+     .tab .nav-tabs li a
+		{
+         padding: 30px 30px;
+         font-size: 16px;
+         color: black;
+         background: #fff;
+         border-radius: 50%;
+         //border: 1px solid #4B515D;
+         position: relative;
+     }
+     .tab .nav-tabs li a:hover{
+         background: #4B515D;
+         color: #fff;
+         border-color: #4B515D;
+     }
+     .tab .nav-tabs li.active a,
+     .tab .nav-tabs li.active a:focus,
+     .tab .nav-tabs li.active a:hover
+	{
+         background: #4B515D;
+         color: #fff;
+         border-color: #4B515D;
+         transition: background 0.20s linear 0s;
+     }
+     .tab .nav-tabs li.active a:before,
+     .tab .nav-tabs li.active a:after
+		{
+         content: "";
+         border: 25px solid transparent;
+         border-bottom-color: #4B515D;;
+         position: absolute;
+         bottom: -26px;
+         left: 37%;
+     }
+     .tab .nav-tabs li.active a:after{
+         border-bottom-color:  #eff0f1;
+         bottom: -27px;
+     }
+     .tab .tab-content{
+         font-size: 14px;
+         color: #333;
+         background: #ffffff;
+         line-height: 25px;
+         padding: 20px 25px;
+         margin-top: 25px;
+         border: 1px solid #4B515D;
+     }
+     .tab .tab-content h2{
+         font-size: 30px;
+     }
+     @media only screen and (max-width: 479px)
+     {
+         .tab .nav-tabs li
+         {
+             width:100%;
+             margin-bottom: 5px;
+         }
+         .tab .nav-tabs li a{
+             padding: 20px;
+             border-radius: 0;
+         }
+         .tab .nav-tabs li.active a:before,
+         .tab .nav-tabs li.active a:after
+         {
+             border: none;
+         }
+         .tab .tab-content
+         {
+             margin-top: 5px;
+         }
+     }
+
+.tab-content 
+{
+  padding:30px;
+  min-height: 700px;
+  font-size: 14px;
+}
+
+.commentData
+{
+  margin-left:10px;
+}
+
+.control-label
+{
+  font-size:16px;  
+}
+
+.col-md-7, .col-sm-7, .ng-binding {
+    padding-top: 4px;
+}
+
+.col-md-3, .col-sm-3, .col-lg-3, .ng-binding {
+    padding-top: 4px;
+  padding-left:5px;
+}
+
+.col-md-4.col-sm-4.col-lg-4.ng-binding {
+    padding-left: 10px !important;
+    padding-top: 4px !important;
+}
+
+
+.col-md-6.col-sm-6.col-lg-6.ng-binding {
+    padding-left: 10px !important;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>incident-summary</id>
+        <internal>false</internal>
+        <link/>
+        <name>Incident Summary</name>
+        <option_schema>[]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() 
+ {
+	var incidentRef;
+	var json=new global.JSON();
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	if(input != undefined && input.action == 'execute')
+		{
+			incidentRef=new incidentSummaryUtils();
+			incidentRef.updateSelectedCoa(input);	
+		}
+	else if(input)
+		{
+		  incidentRef=new incidentSummaryUtils();
+			data.incidentData=incidentRef.getCurrentIncidentData(input);	
+			data.courseOfActionsData=incidentRef.getSelectedAndRecommendedCOAData(input);
+			data.ListOfCourseOfActionsData=incidentRef.getAllCourseOfActions();
+			data.commentshistory=incidentRef.getCommentsHistiry(input.sysId);
+			data.groupUsers=incidentRef.getGroupUsers();
+			//Potential Indicators
+			var ranks=["SEVERE","CRITICAL","IMPORTANT","MODERATE","LOW"];
+			var indicatorsData=[];
+			var ipIndicatorsData=[];
+			var domainIndicatorsData=[];
+			var hashCodeIndicatorsData=[];
+			
+			for(var i=0;i<ranks.length;i++)
+			{
+				gr=new GlideRecord('x_19668_halo_potentialindicators');
+				gr.addQuery('incident_id',input.sysId);
+				gr.addQuery('overall_urgency_ranking',ranks[i]);
+				gr.orderByDesc('indicator_id');
+				gr.query();
+				while(gr.next())
+				{
+					if(gr.indicator_type.name == 'IP Address')
+					{
+						//ipIndicatorsData.push({number:ipIndicatorsData.length+1,ranking:gr.overall_urgency_ranking+'',ipAddress:gr.indicator_data+'',status:gr.indicator_status+'',sysId:gr.sys_id+''});
+						ipIndicatorsData.push({number:ipIndicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+					}
+					else if(gr.indicator_type.name == 'Hash Code')
+					{
+						hashCodeIndicatorsData.push({number:hashCodeIndicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+					}
+					else if(gr.indicator_type.name == 'Full Qualified Domain Name (FQDN)')
+					{
+						domainIndicatorsData.push({number:domainIndicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+					}
+					
+					//Adding CSS class
+					if(ranks[i] == "SEVERE")
+						{
+								indicatorsData.push({cssClass:'danger',number:indicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+						}
+					if(ranks[i] == "CRITICAL")
+						{
+								indicatorsData.push({cssClass:'danger',number:indicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+						}
+					if(ranks[i] == "IMPORTANT")
+						{
+								indicatorsData.push({cssClass:'danger',number:indicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+						}
+					if(ranks[i] == "MODERATE")
+						{
+								indicatorsData.push({cssClass:'warning',number:indicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+						}
+					if(ranks[i] == "LOW")
+						{
+								indicatorsData.push({cssClass:'default',number:indicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+						}
+					
+				}
+			}
+			data.domainIndicatorsData=json.encode(domainIndicatorsData);
+			data.ipIndicatorsData=json.encode(ipIndicatorsData);
+			data.hashCodeIndicatorsData=json.encode(hashCodeIndicatorsData);
+			data.indicatorsData=json.encode(indicatorsData);
+	
+		}
+	
+})();
+
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-06-07 15:11:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6d1f0c10db1332001cf8dec0cf961984</sys_id>
+        <sys_mod_count>249</sys_mod_count>
+        <sys_name>Incident Summary</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_6d1f0c10db1332001cf8dec0cf961984</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-26 19:44:47</sys_updated_on>
+        <template><![CDATA[<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+<div class="container" -ng-controller="incidentSummaryCtrl">
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h3>Incident  {{c.data.incidentData[0].incidentId}} </h3> </div>
+        <div class="panel-body" style="padding:0px">
+            <div class="panel-group">
+              <uib-tabset active="activeJustified" justified="true">
+                <uib-tab index="0" heading="Incident Information">
+                  <form class="form-horizontal">
+                  <div class="col-md-6 col-sm-6 col-lg-6">
+                    
+                     <div class="form-group">
+                         <label class="control-label   col-md-4 col-sm-4  col-lg-4">Incident #: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].incidentId}} </div>  
+                       </div>
+
+                      <div class="form-group">
+                         <label class="control-label  col-md-4 col-sm-4  col-lg-4">Status: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].incidentStatus}} </div>  
+                       </div>
+
+                      <div class="form-group">
+                         <label class="control-label    col-md-4 col-sm-4  col-lg-4">Category: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].incidentType}} </div>  
+                       </div>
+
+                      <div class="form-group">
+                         <label class="control-label  col-md-4 col-sm-4  col-lg-4">Organization: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].organization}} </div>  
+                       </div>
+
+                      <div class="form-group" ng-show="c.data.incidentData[0].organization == 'United States Federal Government'">
+                         <label class="control-label   col-md-4 col-sm-4  col-lg-4">Department: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].department}} </div>  
+                       </div>
+											
+                    <div class="form-group" ng-show="c.data.incidentData[0].organization == 'United States Federal Government'">
+                         <label class="control-label   col-md-4 col-sm-4  col-lg-4">Sub Agency: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].subAgency}} </div>  
+                       </div>
+                    
+                    <div class="form-group" ng-show="c.data.incidentData[0].organization == 'Critical Infrastructure' || c.data.incidentData[0].organization == 'Private Sector'">
+                         <label class="control-label  col-md-4 col-sm-4  col-lg-4">Company Name: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].companyName}} </div>  
+                       </div>
+                    
+                    <div class="form-group" ng-show="c.data.incidentData[0].organization == 'Critical Infrastructure' || c.data.incidentData[0].organization == 'Private Sector'">
+                         <label class="control-label   col-md-4 col-sm-4  col-lg-4">Sector: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].sector}} </div>  
+                       </div>
+                    
+                    <div class="form-group" ng-show="c.data.incidentData[0].organization == 'Foreign Government'">
+                         <label class="control-label   col-md-4 col-sm-4  col-lg-4">Country Name: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].countryName}} </div>  
+                       </div>
+                      
+                    <div class="form-group" ng-show="c.data.incidentData[0].organization == 'United States State Government'">
+                         <label class="control-label   col-md-4 col-sm-4  col-lg-4">State: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].state}} </div>  
+                       </div>
+        
+                      <div class="form-group">
+                         <label class="control-label  col-md-4 col-sm-4  col-lg-4">Assigned To: </label> <div class="col-md-6 col-sm-6 col-lg-6">{{c.data.incidentData[0].assignedTo}} </div>  
+                       </div>
+      
+                    </div>
+                  
+                    
+                    <div class="col-md-6 col-sm-6 col-lg-6">
+                        <div class="form-group">
+                           <label class="control-label col-md-4 col-sm-4  col-lg-4" >First Name: </label> <div  class="col-md-4 col-sm-4  col-lg-4">{{c.data.incidentData[0].firstName}} </div>  
+                        </div>
+                          <div class="form-group">
+                           <label class="control-label col-md-4 col-sm-4  col-lg-4">Last Name: </label> <div class="col-md-4 col-sm-4  col-lg-4">{{c.data.incidentData[0].lastName}} </div>  
+                         </div>
+
+                          <div class="form-group">
+                           <label class="control-label  col-md-4 col-sm-4  col-lg-4">Email: </label> <div class="col-md-4 col-sm-4  col-lg-4">{{c.data.incidentData[0].email}} </div>  
+                         </div>
+
+                          <div class="form-group">
+                           <label class="control-label   col-md-4 col-sm-4 col-lg-4">Telephone Number: </label> <div class="col-md-4 col-sm-4  col-lg-4">{{c.data.incidentData[0].telephoneNumber}} </div>  
+                         </div>
+
+                          <div class="form-group">
+                           <label class="control-label    col-md-4 col-sm-4 col-lg-4">Reported Date: </label> <div class="col-md-4 col-sm-4  col-lg-4">{{c.data.incidentData[0].createdDate}} </div>  
+                         </div>
+
+                          <div class="form-group">
+                           <label class="control-label    col-md-4 col-sm-4 col-lg-4">Last Updated: </label> <div class="col-md-4 col-sm-4  col-lg-4">{{c.data.incidentData[0].lastUpdated}} </div>  
+                         </div> 
+                  		</div>
+                  
+                     <div class="form-group col-md-12 col-sm-12 col-lg-12">
+                      <label class="control-label   col-md-2 col-sm-2  col-lg-2">Notes: </label> 
+                       <div class="col-md-8 col-sm-8  col-lg-8"> <textarea class="form-control" rows="5" id="notes" ng-readonly="true" style="margin-left:10px !important">{{c.data.incidentData[0].note}}</textarea>  </div> 
+                    </div>
+                  </form>
+                 
+                </uib-tab>
+
+                <uib-tab index="1" heading="Potential Indicators">
+                  <label>Extracted Potential Indicators</label>
+                  <table class="table table-condensed table-hover table-bordered">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Ranking</th>
+                        <th>Indicator</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="indicator in c.data.indicatorsData track by $index" >
+                        <td>{{indicator.number}}</td>
+                        <td>{{indicator.urgencyRanking}}</td>
+                        <td>{{indicator.indicatorText}}</td>
+                        <td class="{{indicator.cssClass}}"><a href="https://dev21310.service-now.com/haloportal/?id=potential_indicator_summary&indicator_id={{indicator.sysId}}" data-toggle="tooltip" data-placement="top" title="Click here to see more information"  target="_self">{{indicator.indicatorStatus}}</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </uib-tab>
+
+                <uib-tab index="2" heading="Course Of Action" id="section3" >
+                
+                  <p class="control-label"><label>Recommendation: </label> {{c.data.courseOfActionsData[0].recommendedName}}   </p>
+                  <p class="control-label"><label>Reasoning: </label> {{c.data.courseOfActionsData[0].reasoning}}  </p>
+
+                  <p class="control-label"><label>Select Course of Action: </label>
+                    <select class="form-control" id="sel1" ng-model="selectedValue"  style="max-width:700px"  ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
+                      <option ng-repeat="coa in c.data.ListOfCourseOfActionsData track by $index" value="{{coa.name}}" ng-selected="{{defaultvalue == c.data.courseOfActionsData[0].recommendedName}}">{{coa.name}}</option>
+                    </select> </p>
+
+                  <p><label>Additional Actions: </label>   </p>
+                  <div id="actions">
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="sendEmailUpdateToReporter"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Send Email Update to Reporter</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyIsp" ng-model="notifyIsp"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify ISP</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyDomainRegistrar" ng-model="notifyDomainRegistrar"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify Domain Registrar</label> <br/>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="sendEmailReceipt"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Send Email Receipt to Reporter</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="setStatusOfTicketToResolved"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Set Status of Ticket Resolved
+                    </label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyProduction"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify Production</label><br/>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="resolveAndCloseTicket"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Resolve and Close Ticket</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" ng-model="checked" id="assignToGroup"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Assign to Group</label>
+                    <br/>
+                  </div> <br/>
+
+
+                  <div class="row">
+
+                    <div id="assignment" class="col-md-4" style="margin-right:20px!important">
+                      <b>Group Name:</b>
+                      <select  id="groupSelectedValue" ng-model="groupSelectedValue"  style="max-width:700px"    class="form-control"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
+                        <option value="Tier1">Tier1</option>
+                        <option value="Tier2">Tier2</option>
+                        <option value="Tier3">Tier3</option>
+                        <option value="Tier4">Tier4</option>
+                        <option value="Tier5">Tier5</option>
+                        <option value="Halo Administrator">Halo Administrator</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-4">
+                      <b>Assign To:</b>
+                      <select  id="assignTo" ng-model="assignTo"    style="max-width:700px"  class="form-control"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
+                        <option  ng-repeat="user in (c.data.groupUsers | filter: {'groupName':groupSelectedValue}) track by $index" value="user.name">{{user.name}}</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <br/>
+
+                  <div id="commentsSection" >
+                    <div class="">
+                      <span ng-hide="c.data.incidentData[0].incidentStatus == 'Closed'">
+                        <b>Comments:</b>  <textarea id="comments"  class="form-control"  ng-model="comments"> </textarea> <br/>
+                      </span>
+                    </div>
+                    <br/>
+
+                    <div> 
+                      <div ng-repeat="text in c.data.commentshistory track by $index">
+                      <div  class="panel panel-default" style="max-width:1060px">
+                          <div class="panel-heading"> <span class="glyphicon glyphicon-user"></span> <span id="commentEnteredBy" style="margin-right:20px; margin-left:5px" > {{text.enteredBy}} </span>{{text.enteredDate}} </div>
+                          <div class="panel-body"> {{text.comment}} </div>
+                        </div>
+                      </div> <!-- End of Panel -->
+                      
+                      <button type="button" class="btn btn-primary" ng-click="execute()" style="margin-top:20px">Execute</button>
+                      <input type="hidden" id="sysId" value="{{sysId}}">
+                    </div>
+     
+                  </div>
+                
+                </uib-tab>
+
+              </uib-tabset>
+
+        </div> <!--End of Panel Group -->
+    </div>
+</div>
+</div>
+
+
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_css">
+    <content_css action="INSERT_OR_UPDATE">
+        <name>jqvmap.min.css</name>
+        <style>.jqvmap-label,.jqvmap-pin{pointer-events:none}.jqvmap-label{position:absolute;display:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#292929;color:#fff;font-family:sans-serif,Verdana;font-size:smaller;padding:3px}.jqvmap-zoomin,.jqvmap-zoomout{position:absolute;left:10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#000;padding:3px;color:#fff;min-width:10px;min-height:10px;cursor:pointer;line-height:10px;text-align:center}.jqvmap-zoomin{top:10px}.jqvmap-zoomout{top:30px}.jqvmap-region{cursor:pointer}.jqvmap-ajax_response{width:100%;height:500px}</style>
+        <sys_class_name>content_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-07 16:15:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>63a4566cdb8a32001cf8dec0cf96197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>jqvmap.min.css</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>content_css_63a4566cdb8a32001cf8dec0cf96197a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-07 16:15:00</sys_updated_on>
+        <type>local</type>
+        <url/>
+    </content_css>
+</record_update>

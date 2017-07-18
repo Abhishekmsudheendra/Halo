@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope, $http)
+{
+  
+	var locationStr=window.location;
+	var pattern=/[a-zA-Z0-9]{32}/;
+	var sysId=pattern.exec(locationStr);
+	var c=this;
+	c.getData = function() 
+	{
+		c.server.get({sysId:sysId}).then(
+			function(response)
+			{  
+				c.data.incidentData= angular.fromJson(response.data.incidentData);
+				c.data.ipIndicatorsData= angular.fromJson(response.data.ipIndicatorsData)	;
+				c.data.domainIndicatorsData= angular.fromJson(response.data.domainIndicatorsData);
+				c.data.hashCodeIndicatorsData= angular.fromJson(response.data.hashCodeIndicatorsData);
+				c.data.courseOfActionsData= angular.fromJson(response.data.courseOfActionsData);
+			  c.data.ListOfCourseOfActionsData= angular.fromJson(response.data.ListOfCourseOfActionsData);
+				
+				//Store JSON in Session
+				sessionStorage.setItem('ipIndicatorsData', JSON.stringify(c.data.ipIndicatorsData));
+				sessionStorage.setItem('domainIndicatorsData', JSON.stringify(c.data.domainIndicatorsData));
+				sessionStorage.setItem('hashCodeIndicatorsData', JSON.stringify(c.data.hashCodeIndicatorsData));
+			})
+	};
+	c.getData();
+
+}
+
+
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+.panel-group
+{
+  margin:0px;
+  
+}
+.panel-body
+{
+  margin:0px;
+  
+}
+
+
+label.checkbox-inline {
+    width: 210px;
+}
+
+@media only screen and (max-width: 1000px) 
+{
+    td 
+    {
+        width:auto;
+    }
+}
+
+@media only screen and (min-width: 1001px) 
+{
+    td 
+    {
+        width:260px !important;
+    }
+}
+
+.modal-content
+{
+   border-radius: 10px
+}
+.modal-header, .modal-footer 
+{
+    background-color: #337ab7;
+     color:white;
+}
+
+.labeldata
+{
+   font-weight: normal;
+}
+
+.col-sm-8
+{
+   padding-top:8px; 
+}
+
+body.modal-open div.modal-backdrop { 
+    z-index: 0; 
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>incident-summary-backup</id>
+        <internal>false</internal>
+        <link/>
+        <name>Incident Summary Backup</name>
+        <option_schema>[]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() 
+ {
+	var json=new global.JSON();
+	var incidentData=[];
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	if(input)
+		{
+			var gr=new GlideRecord('x_19668_halo_incident');
+			gr.addQuery('sys_id',input.sysId);
+			gr.query();
+			while(gr.next())
+			{
+				incidentData.push({incidentId:gr.incident_id+'',incidentType:gr.incident_type.name+'',assignedTo:gr.assign_to_group.name+'',incidentStatus:gr.ticket_status+'',createdDate:gr.sys_created_on+'',department:gr.r_department.name+'',note:gr.r_note+''});
+			}
+			data.incidentData=json.encode(incidentData);
+			
+			//Potential Indicators
+			var indicatorsData=[];
+			var ipIndicatorsData=[];
+			var domainIndicatorsData=[];
+			var hashCodeIndicatorsData=[];
+			gr=new GlideRecord('x_19668_halo_potentialindicators');
+			gr.addQuery('incident_id',input.sysId);
+			gr.orderByDesc('indicator_id');
+			gr.query();
+			while(gr.next())
+				{
+					if(gr.indicator_type.name == 'IP Address')
+						{
+							//ipIndicatorsData.push({number:ipIndicatorsData.length+1,ranking:gr.overall_urgency_ranking+'',ipAddress:gr.indicator_data+'',status:gr.indicator_status+'',sysId:gr.sys_id+''});
+							ipIndicatorsData.push({number:ipIndicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+						}
+					else if(gr.indicator_type.name == 'Hash Code')
+						{
+							hashCodeIndicatorsData.push({number:hashCodeIndicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+					}
+					else if(gr.indicator_type.name == 'Full Qualified Domain Name (FQDN)')
+						{
+							domainIndicatorsData.push({number:domainIndicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+						}
+					indicatorsData.push({number:indicatorsData.length+1,indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+'',sysId:gr.sys_id+''});
+				
+					
+				}
+			data.domainIndicatorsData=json.encode(domainIndicatorsData);
+			data.ipIndicatorsData=json.encode(ipIndicatorsData);
+			data.hashCodeIndicatorsData=json.encode(hashCodeIndicatorsData);
+			data.indicatorsData=json.encode(indicatorsData);
+			
+			//Selected/Recommended Course of Actions
+			var courseOfActionsData=[];
+			gr=new GlideRecord('x_19668_halo_selcted_ticket_course_of_action');
+			gr.addQuery('incident_id',input.sysId);
+			gr.query();
+			if(gr.next())
+				{
+						courseOfActionsData.push({recommendedName:gr.ticket_coa_recommended_id.ticket_coa_name+'',reasoning:gr.ticket_coa_reasoning+''});
+			data.courseOfActionsData=json.encode(courseOfActionsData);
+				}
+		
+			
+			//List of Course of Actions
+			var ListOfCourseOfActionsData=[];
+			gr=new GlideRecord('x_19668_halo_courseofactions');
+			gr.query();
+			while(gr.next())
+				{
+					ListOfCourseOfActionsData.push({name:gr.ticket_coa_name+'',sysId:gr.sys_id+''});
+				}
+			data.ListOfCourseOfActionsData=json.encode(ListOfCourseOfActionsData);
+		}
+	
+})();
+
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-09 17:54:44</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>436ed7f6db6232001cf8dec0cf961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Incident Summary Backup</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_436ed7f6db6232001cf8dec0cf961995</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-09 17:54:44</sys_updated_on>
+        <template><![CDATA[  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+
+<div class="container" -ng-controller="incidentSummaryCtrl" >
+  <div class="panel panel-primary">
+    <div class="panel-heading"><h3>Incident  {{c.data.incidentData[0].incidentId}} </h3> </div>
+      <div class="panel-body" style="padding:0px">
+        <div class="panel-group">
+          <div class="panel panel-info">
+            <div class="panel-heading"><h4>Step1: Review Incident Information </h4></div>
+            <div class="panel-body">
+            <div class="col-sm-10 tabbed tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="sumtab-0-0">
+                <p><label>Incident #: </label> {{c.data.incidentData[0].incidentId}}    </p>
+                  <p><label>Created Date: </label> {{c.data.incidentData[0].createdDate}}      </p>
+                  <p><label>Category: </label> {{c.data.incidentData[0].incidentType}}      </p>
+                  <p><label>Department:  </label> {{c.data.incidentData[0].department}}   </p>
+                  <p><label>Assigned To:  </label> {{c.data.incidentData[0].assignedTo}} </p>
+                  <p><label for="notes">Notes:</label>   </p>
+  								<textarea class="form-control" rows="5" id="notes" ng-readonly="true">{{c.data.incidentData[0].note}}</textarea>
+                </div>
+            </div>
+          </div>
+          </div> <!-- End of First Panel -->
+          
+          <div class="panel panel-info" style="margin:0px" >
+            <div class="panel-heading"><h4>Step2: Extracted Indicators Summary</h4></div>
+            <div class="panel-body">
+              <div class="col-sm-10 tabbed tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="sumtab-0-0"  >
+                  
+                  <label>Extracted IP Adress Indicators</label>
+                  <div>
+         
+                  <table class="table  table-condensed table-bordered" >
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Ranking</th>
+                        <th>IP Address</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    	<tr ng-repeat="indicator in c.data.ipIndicatorsData track by $index">
+                        <td>{{indicator.number}}</td>
+                        <td>{{indicator.urgencyRanking}}</td>
+                        <td>{{indicator.indicatorText}}</td>
+                      <!-- <td><a href="haloportal/?id=potential_indicator_summary&indicator_id={{indicator.sysId}}">{{indicator.indicatorStatus}}</a></td> -->
+                       <td><button  class="btn btn-primary" ng-click="passSysId(indicator.sysId,indicator.indicatorType)" data-toggle="modal" data-target="#myModal" >{{indicator.indicatorStatus}}</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                             
+                  </div>
+                   <label>Extracted Domain Name Indicators</label>
+                  <table class="table table-condensed table-bordered">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Ranking</th>
+                        <th>Domain Name</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="indicator in c.data.domainIndicatorsData track by $index">
+                        <td>{{indicator.number}}</td>
+                        <td>{{indicator.urgencyRanking}}</td>
+                        <td>{{indicator.indicatorText}}</td>
+                      <!--  <td><a href="haloportal/?id=potential_indicator_summary&indicator_id={{indicator.sysId}}">{{indicator.indicatorStatus}}</a></td> -->
+                      <td><button  class="btn btn-primary" ng-click="passSysId(indicator.sysId,indicator.indicatorType)" data-toggle="modal" data-target="#myModal" >{{indicator.indicatorStatus}}</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <label>Extracted Hash Code Indicators</label>
+                  <table class="table table-condensed table-bordered">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Ranking</th>
+                        <th>Hash Code</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="indicator in c.data.hashCodeIndicatorsData track by $index">
+                        <td>{{indicator.number}}</td>
+                        <td>{{indicator.urgencyRanking}}</td>
+                        <td>{{indicator.indicatorText}}</td>
+                        <td><a href="https://dev21310.service-now.com/haloportal/?id=potential_indicator_summary&indicator_id={{indicator.sysId}}">{{indicator.indicatorStatus}}</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div> <!-- End of Second Panel -->
+          </div>
+          <div class="panel panel-info" style="margin:0px">
+            <div class="panel-heading"><h4>Step3: Ticket Course of Action</h4></div>
+            <div class="panel-body">
+              <div class="col-sm-10 tabbed tab-content">
+               <div role="tabpanel" class="tab-pane fade in active" id="sumtab-0-0">
+                  <p><label>Recommendation: </label> {{c.data.courseOfActionsData[0].recommendedName}}   </p>
+                  <p><label>Reasoning: {{c.data.courseOfActionsData[0].reasoning}}</label>   </p>
+                  <p><h4>Actions to Execute</h4> 
+                  <p><label>Ticket COA: </label>   
+                      <select class="form-control" id="sel1" ng-model="selectedValue">
+                        <option ng-repeat="coa in c.data.ListOfCourseOfActionsData" value="{{coa.name}}" ng-selected="{{defaultvalue == c.data.courseOfActionsData[0].recommendedName}}">{{coa.name}}</option>
+                      </select> </p> 
+                  
+                  <p><label>Actions: </label>   </p>
+                  <div id="actions">
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="sendEmailUpdateToReporter">Send Email Update to Reporter</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyIsp">Notify ISP</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyDomainRegistrar">Notify Domain Registrar</label> <br/>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="sendEmailReceipt">Send Email Receipt to Reporter</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="setStatusOfTicketToResolved">Set Status of Ticket Resolved
+</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyProduction">Notify Production</label><br/>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="assignToNextTier">Assign to Next Tier</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="assignToGroup">Assign to Group</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="" id="resolveAndCloseTicket">Resolve and Close Ticket</label><br/>
+                   
+                  </div> <br/>
+                 <!-- <button type="button" class="btn btn-primary">Ready for Execution</button> -->
+                 <button type="button" class="btn btn-primary">Execute</button>
+                </div>
+               </div>
+            </div> <!-- End of Third Panel -->
+            
+          </div>
+        </div> <!--End of Panel Group -->
+     </div>
+ </div>
+</div>
+
+
+ <!-- Modal -->
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+   
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> Potential Indicator </h4>
+      </div>
+      
+      <div class="modal-body">
+        <form name="indicatorModal" class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label  col-sm-4">Indicator #: </label>
+              <div class="col-sm-8"> 
+                <label class="labeldata" id="indicatorId"></label>
+            </div>
+          </div>
+          
+           <div class="form-group">
+              <label class="control-label  col-sm-4">Indicator Status: </label>
+              <div class="col-sm-8"> 
+                <label class="labeldata" id="indicatorStatus"></label>
+            </div>
+           </div>
+          
+           <div class="form-group">
+            	<label class="control-label  col-sm-4">Indicator Type: </label>
+              <div class="col-sm-8"> 
+                <label class="labeldata" id="indicatorType"></label>
+            </div>
+             <!-- <p class="form-group"><label>Indicator Type: </label> <label class="labeldata" id="indicatorType"> </label></p> -->
+           </div>
+          
+           <div class="form-group">
+             <label class="control-label col-sm-4">Urgency Ranking: </label>
+              <div class="col-sm-8"> 
+                <label class="labeldata" id="urgencyRanking"></label>
+            </div>
+           		 <!-- <p><label>Urgency Ranking:  </label> <label class="labeldata" id="urgencyRanking"></label></p> -->
+           </div>
+          
+           <div class="form-group">
+             <label class="control-label col-sm-4">Completed Enrich Count:  </label>
+              <div class="col-sm-8"> 
+                <label class="labeldata" id="completedEnrichCount"></label>
+            </div>
+            	 <!--<p><label>Completed Enrich Count:  </label> <label class="labeldata" id="completedEnrichCount"></label></p> -->
+            </div>
+          
+            <div class="form-group">
+              <label class="control-label col-sm-4">Enrich Start Timestamp:  </label>
+              <div class="col-sm-8"> 
+                <label class="labeldata" id="enrichStartTimestamp"></label>
+            </div>
+            		 <!--<p><label>Enrich Start Timestamp:  </label> <label class="labeldata" id="enrichStartTimestamp"></label></p> -->
+             </div>
+          
+             <div class="form-group">
+               <label class="control-label col-sm-4">Enrich End Timestamp:  </label>
+              <div class="col-sm-8"> 
+                <label class="labeldata" id="enrichEndTimestamp"></label>
+            </div>
+            	 <!--	<p><label>Enrich End Timestamp:  </label> <label class="labeldata" id="enrichEndTimestamp"></label></p> -->
+              </div>
+          
+             <div class="form-group">
+               <label class="control-label col-sm-4">Indicator Data : </label>
+                 <div class="col-sm-8">     
+            				<textarea class="form-control" rows="3" id="indicatorText" ng-readonly="true"> </textarea>
+               </div>
+          	 </div>
+               
+             <br/>
+             <div class="form-group">
+             		<a href="" id="indicatorLink"> Click here for More information</a>
+             </div>
+        </form>
+      </div> 
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>  
+</div> 
+  
+  
+
+]]></template>
+    </sp_widget>
+</record_update>

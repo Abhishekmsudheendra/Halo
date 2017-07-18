@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="DataSources" max_length="40" name="x_19668_halo_datasources" type="collection">
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Accepted Indicators" mandatory="true" max_length="1024" name="accepted_indicators" reference="x_19668_halo_indicator_type" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" label="JSON Column or Attribute name that says Indicator is Threat" max_length="100" name="attribute_name" type="string"/>
+        <element label="Datasource Description" max_length="4000" name="datasource_description" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Datasource Id" max_length="255" name="datasource_id" read_only="true" type="string"/>
+        <element display="true" label="Datasource Name" mandatory="true" max_length="255" name="datasource_name" type="string"/>
+        <element choice="1" label="Datasource Type" mandatory="true" max_length="40" name="datasource_type" type="choice">
+            <choice>
+                <element label="MOE" sequence="0" value="MOE"/>
+                <element label="Netezza" sequence="2" value="Netezza"/>
+                <element label="External" sequence="3" value="External"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Response Type" mandatory="true" max_length="40" name="response_type" type="string">
+            <choice>
+                <element label="XML" sequence="0" value="XML"/>
+                <element label="JSON" sequence="1" value="JSON"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="REST Message" max_length="100" name="rest_message" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Sample Response" mandatory="true" max_length="100000" name="sample_response" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="SOAP Message" max_length="100" name="soap_message" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="XML Tag that says Indicator is Threat" max_length="100" name="xml_tag" type="string"/>
+    </element>
+</database>

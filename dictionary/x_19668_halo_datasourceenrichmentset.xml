@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="DataSourceEnrichmentSet" max_length="40" name="x_19668_halo_datasourceenrichmentset" type="collection">
+        <element label="DataSource Id" max_length="32" name="datasource_id" reference="x_19668_halo_datasources" type="reference"/>
+        <element label="DataSource EnrichmentSet Id" max_length="40" name="ds_enrichset_id" type="string"/>
+        <element label="DataSource Impact Level" max_length="255" name="ds_impactlevel" type="string"/>
+        <element label="DataSource Impact Level Timestamp" max_length="40" name="ds_impactlevel_ts" type="glide_date_time"/>
+        <element label="DataSource Summary" max_length="255" name="ds_summary" type="string"/>
+        <element label="DataSource Summary Timestamp" max_length="40" name="ds_summary_ts" type="glide_date_time"/>
+        <element label="Enrichment Count" max_length="40" name="enrichment_count" type="string"/>
+        <element label="Indicator Id" max_length="32" name="indicator_id" reference="x_19668_halo_potentialindicators" type="reference"/>
+        <index name="index">
+            <element name="datasource_id"/>
+        </index>
+        <index name="index2">
+            <element name="indicator_id"/>
+        </index>
+    </element>
+</database>

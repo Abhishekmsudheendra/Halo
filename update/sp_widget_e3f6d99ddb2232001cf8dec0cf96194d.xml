@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope, $http)
+{
+	var locationStr=window.location;
+	var pattern=/[a-zA-Z0-9]{32}/;
+	var sysId=pattern.exec(locationStr);
+	var c=this;
+	c.getData = function() 
+	{
+		c.server.get({sysId:sysId}).then(
+			function(response)
+			{  
+				c.data.indicatorData= angular.fromJson(response.data.indicatorData);
+				c.data.indicatorEnrichmentData= angular.fromJson(response.data.indicatorEnrichmentData);
+				$scope.$emit("dataReady", c.data.indicatorEnrichmentData);
+				//sessionStorage.setItem('indicatorEnrichmentData',JSON.stringify(c.data.indicatorEnrichmentData));
+			})
+	};
+	c.getData();
+  
+}
+
+
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+.panel-group
+{
+  margin:0px;
+  
+}
+.panel-body
+{
+  margin:0px;
+  
+}
+
+
+label.checkbox-inline {
+    width: 210px;
+}
+
+@media only screen and (max-width: 1000px) 
+{
+    td 
+    {
+        width:auto;
+    }
+}
+
+@media only screen and (min-width: 1001px) 
+{
+    td 
+    {
+        width:260px !important;
+    }
+}
+
+.panel-default&gt;.panel-heading 
+{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1; 
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>potential-indicator-summary</id>
+        <internal>false</internal>
+        <link/>
+        <name>Potential Indicator Summary</name>
+        <option_schema>[]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() 
+ {
+	var json=new global.JSON();
+	var indicatorData=[];
+	var indicatorEnrichmentData=[];
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	if(input)
+		{
+			var gr=new GlideRecord('x_19668_halo_potentialindicators');
+			gr.addQuery('sys_id',input.sysId);
+			gr.query();
+			while(gr.next())
+			{
+				indicatorData.push({indicatorId:gr.indicator_id+'',indicatorType:gr.indicator_type.name+'',urgencyRanking:gr.overall_urgency_ranking+'',indicatorStatus:gr.indicator_status+'',enrichStartTimestamp:gr.enrich_start_timestamp+''+'',enrichEndTimestamp:gr.enrich_end_timestamp+'',indicatorText:gr.indicator_data+'',completedEnrichCount:gr.completed_enrich_count+'',incidentId:gr.incident_id.incident_id+'',incidentSysId:gr.incident_id+''});
+			}
+			data.indicatorData=json.encode(indicatorData);
+			
+			
+			gr=new GlideRecord('x_19668_halo_indicatorenrichment');
+			gr.addQuery('indicator_id',input.sysId);
+			gr.query(); gs.info("indicatorEnrichmentData:  "+input.sysId);
+			while(gr.next())
+			{
+				indicatorEnrichmentData.push({enrichmentId:gr.enrichment_id+'',enrichmentSysid:gr.sys_id+'',enrichmentStatus:gr.enrichment_status+'',enrichmentImpactLevel:gr.enrichment_impactlevel+'',enrichmentData:gr.enrichment_data+'',enrichmentImpactLevelTs:gr.enrichmnet_impactlevel_ts+'',indicatorId:gr.indicator_id.indicator_id+'',indicatorSysId:gr.indicator_id+''});
+			}
+			
+			data.indicatorEnrichmentData=json.encode(indicatorEnrichmentData);
+			}
+	
+})();
+
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-04 16:12:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>e3f6d99ddb2232001cf8dec0cf96194d</sys_id>
+        <sys_mod_count>80</sys_mod_count>
+        <sys_name>Potential Indicator Summary</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_e3f6d99ddb2232001cf8dec0cf96194d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-21 16:33:21</sys_updated_on>
+        <template><![CDATA[
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading"><h3>Potential Indicator  {{c.data.indicatorData[0].indicatorId}} </h3> </div>
+      <div class="panel-body" style="padding:0px">
+        <div class="panel-group">
+          
+          
+          <div class="panel panel-info">
+            <div class="panel-heading"><h4>Step1: Review Indicator Information </h4></div>
+            <div class="panel-body">
+            <div class="col-sm-10 tabbed tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="sumtab-0-0">
+                <p><label>Indicator #: </label> {{c.data.indicatorData[0].indicatorId}}    </p>
+                <p><label>Related Incident #: </label> <a href="https://dev21310.service-now.com/haloportal/?id=incident_summary&incident_id={{c.data.indicatorData[0].incidentSysId}}"  target="_self">{{c.data.indicatorData[0].incidentId}}</a></p>
+                  <p><label>Indicator Status: </label> {{c.data.indicatorData[0].indicatorStatus}}      </p>
+                  <p><label>Indicator Type: </label> {{c.data.indicatorData[0].indicatorType}}      </p>
+                  <p><label>Urgency Ranking:  </label> {{c.data.indicatorData[0].urgencyRanking}}   </p>
+                  <p><label>Completed Enrich Count:  </label> {{c.data.indicatorData[0].completedEnrichCount}} </p>
+                 <p><label>Enrich Start Timestamp:  </label> {{c.data.indicatorData[0].enrichStartTimestamp}} </p>
+                 <p><label>Enrich End Timestamp:  </label> {{c.data.indicatorData[0].enrichEndTimestamp}} </p>
+                  <p><label for="notes">Indicator Data:</label>   
+  								<textarea class="form-control" rows="2" id="notes" ng-readonly="true">{{c.data.indicatorData[0].indicatorText}}</textarea>
+                <br/></p>
+                <h3><label>Indicator Enrichments:</label>
+                </h3>
+                <!--
+               <ol>
+                 <li  ng-repeat="row in c.data.indicatorEnrichmentData">
+                   <a href="haloportal/?id=indicator_enrichment_summary&enrichment_id={{row.enrichmentSysid}}">{{row.enrichmentId}}</a></li>
+                </ol>  -->
+                
+                 <div -ng-controller="getIndicatorEnrichments">
+                  <accordion close-others="true">
+                    <accordion-group ng-repeat="enrichment in indicatorEnrichmentData" 
+                                     heading="{{enrichment.enrichmentId}}" 
+                                     is-open="$first" 
+                                     is-disabled="status.isFirstDisabled">
+                      
+                      <p><label>Indicator Enrichment #: </label> {{enrichment.enrichmentId}}    </p>
+                      <p><label>Enrichment Status: </label> {{enrichment.enrichmentStatus}}      </p>
+                      <p><label>Enrichment Impact Level: </label> {{enrichment.enrichmentImpactLevel}}      </p>
+                      <p><label>Enrichment Impact Level Timestamp:  </label> {{enrichment.enrichmentImpactLevelTs}}   </p>
+                      <p><label for="notes">Enrichment Data:</label>   </p>
+                      <textarea class="form-control" rows="5" id="notes" ng-readonly="true">{{enrichment.enrichmentData}}</textarea>
+                    </accordion-group>
+                  </accordion>
+                </div>
+                
+              </div>
+            </div>  
+            </div>
+
+          </div> <!-- End of First Panel -->
+   
+        </div> <!--End of Panel Group -->
+     </div>
+ </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

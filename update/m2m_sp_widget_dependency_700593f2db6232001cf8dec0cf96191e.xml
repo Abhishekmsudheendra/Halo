@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="INSERT_OR_UPDATE">
+        <sp_dependency display_value="wizardReloadModule">9df41336db6232001cf8dec0cf961992</sp_dependency>
+        <sp_widget display_value="End User Incident View">e65207e6dbe232001cf8dec0cf96199b</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-09 17:13:37</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>700593f2db6232001cf8dec0cf96191e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wizardReloadModule.End User Incident View</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_700593f2db6232001cf8dec0cf96191e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-09 17:13:37</sys_updated_on>
+    </m2m_sp_widget_dependency>
+</record_update>

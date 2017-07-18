@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Sub Agency" max_length="40" name="x_19668_halo_sub_agency" type="collection">
+        <element label="Code" max_length="40" name="code" type="string"/>
+        <element label="Department" max_length="32" name="department" reference="x_19668_halo_department" type="reference"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <index name="index">
+            <element name="department"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="r_organization" table="x_19668_halo_remedy_ticket" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>United States Federal Government</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a80d60a5db2132001cf8dec0cf9619c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>United States Federal Government</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Foreign Government</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e40d60a5db2132001cf8dec0cf9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>Foreign Government</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>United States State Government</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>600d60a5db2132001cf8dec0cf9619c9</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-20 14:11:01</sys_updated_on>
+            <value>United States State Government</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Private Sector</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>9</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e80d60a5db2132001cf8dec0cf9619c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>Private Sector</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Individual</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>10</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>640d60a5db2132001cf8dec0cf9619ca</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>Individual</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>r_organization</element>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a00d60a5db2132001cf8dec0cf9619c8</sys_id>
+            <sys_mod_count>13</sys_mod_count>
+            <sys_name>r_organization</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_choice_x_19668_halo_remedy_ticket_r_organization</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-07-17 16:53:16</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

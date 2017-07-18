@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Country" max_length="40" name="x_19668_halo_country" type="collection">
+        <element display="true" label="Name" mandatory="true" max_length="32" name="name" reference="core_country" type="reference"/>
+        <index name="index">
+            <element name="name"/>
+        </index>
+    </element>
+</database>

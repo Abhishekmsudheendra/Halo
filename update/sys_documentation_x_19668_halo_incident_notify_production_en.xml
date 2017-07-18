@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="notify_production" label="Notify Production" language="en" table="x_19668_halo_incident">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>notify_production</element>
+            <help/>
+            <hint/>
+            <label>Notify Production</label>
+            <language>en</language>
+            <name>x_19668_halo_incident</name>
+            <plural>Notify Productions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-28 18:51:08</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>a7881711dbf932001cf8dec0cf9619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Notify Production</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_documentation_x_19668_halo_incident_notify_production_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-28 18:51:08</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

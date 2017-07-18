@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope) 
+{
+  var critical=0,moderate=0,severe=0,important=0,low=0;
+  var c = this;
+	c.getData = function() 
+	{
+    c.server.get({}).then(function(response)
+		{
+			c.data.myIncidentsData=angular.fromJson(response.data.myIncidentsData);
+			c.data.myGroupIncidentsData=angular.fromJson(response.data.myGroupIncidentsData);
+			c.data.last24HoursIncidentsData=angular.fromJson(response.data.last24HoursIncidentsData);
+			c.data.openIncidentsData=angular.fromJson(response.data.openIncidentsData);
+			c.data.highPriorityIncidentsData=angular.fromJson(response.data.highPriorityIncidentsData);
+			c.data.recentlyClosedIncidentsData=angular.fromJson(response.data.recentlyClosedIncidentsData);
+			c.data.totalIncidentsData=angular.fromJson(response.data.totalIncidentsData);
+			c.data.userData=angular.fromJson(response.data.userData);
+			for(var i=0;i<c.data.highPriorityIncidentsData.length;i++)
+				{
+					if(c.data.highPriorityIncidentsData[i].rank == 'CRITICAL')
+						{
+							critical=critical+1;
+							$scope.totalCriticalIncidents=critical;
+						}
+					else if(c.data.highPriorityIncidentsData[i].rank == 'SEVERE')
+						{
+							severe=severe+1;
+							$scope.totalSevereIncidents=severe;
+						}
+					else if(c.data.highPriorityIncidentsData[i].rank == 'IMPORTANT')
+						{
+							important=important+1;
+						}
+					else if(c.data.highPriorityIncidentsData[i].rank == 'MODERATE')
+						{
+							moderate=moderate+1;
+						}
+					else if(c.data.highPriorityIncidentsData[i].rank == 'LOW')
+						{
+							low=low+1;
+						}
+				}
+			
+			
+			//Load chart data
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+			function drawChart() 
+			{
+
+				var data = google.visualization.arrayToDataTable([
+					['Task', 'Hours per Day'],
+					['Moderate', moderate],
+					['Critical',critical],
+					['Severe', severe],
+					['Low',low],
+					['Important', important]
+				]);
+
+				
+				var options = {
+					title: ''
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+				chart.draw(data, options);
+				
+				//Bar Chart options
+			
+				dataBarChart = google.visualization.arrayToDataTable([
+        ['Status', 'Count', { role: 'style' } ],
+        ['Ready for Review', 10, 'color: green'],
+        ['Investigating', 14, 'color: #B4201A'],
+        ['Mitigated', 16, 'color:skyblue'],
+        ['Closed', 22, ''] 
+      ]);
+				var barchart_options = {title:'', 
+                       legend: 'none'};
+        var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+        barchart.draw(dataBarChart, barchart_options);
+			}
+		});
+		
+   };
+	
+	c.getData();
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.canvasjs-chart-credit
+{
+  display:none;
+}
+
+.row
+{
+  margin:0px !important; 
+}
+.charts
+{
+  margin:10px; 
+}
+
+.tile_stats_count
+{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.count_bottom
+{
+  display:none;
+}
+span.glyphicon-user {
+    font-size: 1.5em;
+}
+
+@media only screen and (min-width:1080px) 
+{
+  #searchText
+  {
+    margin-top:50px;
+    margin-bottom:20px;
+    min-width:300px;
+    max-width:500px;
+    height:40px;
+  }
+}
+@media only screen and (min-width:700px) {
+    #searchText
+  	{
+      margin-top:50px;
+      margin-bottom:20px;
+      min-width:300px;
+      height:40px;
+  	}
+}
+
+@media only screen and (min-width:1400px) 
+{
+  #searchText
+  {
+    margin-top:50px;
+    margin-bottom:20px;
+    min-width:400px;
+    height:40px;
+  }
+}
+
+.img-center 
+{
+    display: block;
+    margin: 0 auto;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>home-right-widget</id>
+        <internal>false</internal>
+        <link/>
+        <name>Home Right Widget</name>
+        <option_schema>[]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() 
+ {
+	var gr;
+	var ref=new RightWidgetUtils();
+
+	if(input)
+		{
+			data.myIncidentsData=ref.myIncidentsData();
+			data.myGroupIncidentsData=ref.myGroupIncidentsData();
+			data.last24HoursIncidentsData=ref.last24HoursIncidentsData();
+			data.openIncidentsData=ref.openIncidentsData();
+			data.highPriorityIncidentsData=ref.highPriorityIncidentsData();
+			data.recentlyClosedIncidentsData=ref.recentlyClosedIncidentsData();
+			data.totalIncidentsData=ref.totalIncidentsData();
+			data.userData=ref.userData();
+		}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-11 20:49:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>e6f93b71dbc232001cf8dec0cf96190c</sys_id>
+        <sys_mod_count>259</sys_mod_count>
+        <sys_name>Home Right Widget</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_e6f93b71dbc232001cf8dec0cf96190c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-23 17:16:01</sys_updated_on>
+        <template><![CDATA[<div class="top_nav">
+  <div class="nav_menu">
+    <nav>
+      <div class="nav toggle">
+        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+       
+        <!--
+        <li>
+          <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="menu1">
+            {{c.data.userData[0].displayName}}
+            <span class=" fa fa-angle-down"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-usermenu pull-right"  role="menu" aria-labelledby="menu1">
+            <li><a href="javascript:;"  role="menuitem" tabindex="-1" > Profile</a></li>
+            <li>
+              <a href="javascript:;">
+                <span class="badge bg-red pull-right">50%</span>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li><a href="javascript:;">Help</a></li>
+            <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+          </ul>
+
+        </li>  -->
+        
+
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+<div class="right_col" role="main" style="min-height: 1704px;">
+  
+  <div class="row tile_count">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Incidents</span>
+              <div class="count">{{c.data.totalIncidentsData[0].totalIncidents}}</div>
+              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i> Total Open Incidents</span>
+              <div class="count green">{{c.data.totalIncidentsData[0].totalOpenIncidents}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Closed Incidents</span>
+              <div class="count">{{c.data.totalIncidentsData[0].totalClosedIncidents}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Open Critical Incidents</span>
+              <div class="count">{{totalCriticalIncidents}}</div>
+              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Open Severe Incidents</span>
+              <div class="count">{{totalSevereIncidents}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Mitigated Incidents</span>
+              <div class="count">{{c.data.totalIncidentsData[0].totalMitigatedIncidents}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            </div>
+          </div>
+  
+  <div class="row">
+
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                  <h2><a href="https://dev21310.service-now.com/haloportal/?id=myincidents ">My Incidents  </a></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Incident Id</th>            
+                          <th>Status</th>
+                          <th>Reported Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="incident in c.data.myIncidentsData track by $index">
+                          <td><a href="https://dev21310.service-now.com/haloportal/?id=incident_summary&incident_id={{incident.incidentSysId}}">{{incident.incidentId}}</a></td> 
+                          <td>{{incident.incidentStatus}}</td>
+                          <td>{{incident.createdDate}}</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                   </div> 
+                </div>
+                
+                
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320 overflow_hidden">
+                <div class="x_title">
+                  <h2><a href="https://dev21310.service-now.com/haloportal/?id=mygroupincidents ">My Group Incidents  </a></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                
+                <div class="x_content">
+                   <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Incident Id</th>            
+                          <th>Status</th>
+                          <th>Assigned Group</th>
+                          <th>Reported Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="incident in c.data.myGroupIncidentsData track by $index">
+                          <td><a href="https://dev21310.service-now.com/haloportal/?id=incident_summary&incident_id={{incident.incidentSysId}}">{{incident.incidentId}}</a></td> 
+                          <td>{{incident.incidentStatus}}</td>
+                          <td>{{incident.groupName}}</td>
+                          <td>{{incident.createdDate}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </div> 
+                  
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                  <h2>Incidents Reported in past 24 hours </h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  
+                   <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Incident Id</th>            
+                          <th>Status</th>
+                          <th>Reported Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="incident in c.data.last24HoursIncidentsData track by $index">
+                          <td><a href="https://dev21310.service-now.com/haloportal/?id=incident_summary&incident_id={{incident.incidentSysId}}">{{incident.incidentId}}</a></td> 
+                          <td>{{incident.incidentStatus}}</td>
+                          <td>{{incident.createdDate}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </div> 
+                  
+                </div>
+              </div>
+            </div>
+
+          </div>
+  
+   
+  <div class="row">
+		  <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                  <h2>Incidents Report</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div id="barchart_div" style="width: auto; height: auto; border: 1px solid #ccc">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="x_panel tile fixed_height_320">
+        <div class="x_title">
+          <h2>Search Incidents</h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Settings 1</a>
+                </li>
+                <li><a href="#">Settings 2</a>
+                </li>
+              </ul>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="searchDiv">  
+          <a href="/haloportal/?id=search_incident"> 
+            <img class="center-block" src="search.jpg" width="200" height="200" />
+					</a>
+        </div>
+
+
+      </div>
+    </div>
+    
+    
+    
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320 overflow_hidden">
+                <div class="x_title">
+                  <h2>High Priority Incidents</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                     
+                 <script>
+                   
+                   
+                  </script>
+                <div id="piechart" style="width: auto; height: auto;"></div>
+                
+                </div>
+              </div>
+            </div>
+
+
+
+
+  </div>
+
+
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Remedy Ticket" max_length="40" name="x_19668_halo_remedy_ticket" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Company Name" max_length="40" name="company_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="CAT 0 Exercise/Network Defense Testing" label="Category" mandatory="true" max_length="100" name="r_category" type="string">
+            <choice>
+                <element label="CAT 0 Exercise/Network Defense Testing" sequence="0" value="CAT 0 Exercise/Network Defense Testing"/>
+                <element label="CAT 1 Unauthorized Access" sequence="1" value="CAT 1 Unauthorized Access"/>
+                <element label="CAT 2 Denial of Service" sequence="2" value="CAT 2 Denial of Service"/>
+                <element label="CAT 3 Malicious Code" sequence="3" value="CAT 3 Malicious Code"/>
+                <element label="CAT 4 Improper Usage" sequence="4" value="CAT 4 Improper Usage"/>
+                <element label="CAT 5 Scans/Probes/Attempted Access" sequence="5" value="CAT 5 Scans/Probes/Attempted Access"/>
+                <element label="CAT 6 Investigation" sequence="6" value="CAT 6 Investigation"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Country Name" max_length="40" name="r_country_name" type="string"/>
+        <element label="Department" max_length="32" name="r_department" reference="x_19668_halo_department" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="r_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Email Address" mandatory="true" max_length="100" name="r_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="First Name" mandatory="true" max_length="40" name="r_first_name" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Incident Id" max_length="40" name="r_incident_id" read_only="true" type="string" unique="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" mandatory="true" max_length="40" name="r_last_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Notes" mandatory="true" max_length="100000" name="r_notes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Organization" mandatory="true" max_length="100" name="r_organization" type="string">
+            <choice>
+                <element label="United States Federal Government" sequence="0" value="United States Federal Government"/>
+                <element label="Foreign Government" sequence="1" value="Foreign Government"/>
+                <element label="United States State Government" sequence="2" value="United States State Government"/>
+                <element label="Private Sector" sequence="9" value="Private Sector"/>
+                <element label="Individual" sequence="10" value="Individual"/>
+            </choice>
+        </element>
+        <element label="Sender" max_length="32" name="r_sender" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="SLTT Government Agency/Organization Name" max_length="100" name="r_sltt_government_agency_name" type="string"/>
+        <element label="State" max_length="32" name="r_state" reference="x_19668_halo_state" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="r_status" type="string">
+            <choice>
+                <element label="Open" sequence="0" value="Open"/>
+                <element label="Investigating" sequence="1" value="Investigating"/>
+                <element label="Mitigated" sequence="2" value="Mitigated"/>
+                <element label="Closed" sequence="3" value="Closed"/>
+            </choice>
+        </element>
+        <element label="Sub Agency" max_length="32" name="r_sub_agency" reference="x_19668_halo_sub_agency" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Telephone Number" max_length="40" name="r_telephone_number" type="string"/>
+        <index name="index">
+            <element name="r_sub_agency"/>
+        </index>
+        <index name="index2">
+            <element name="r_sender"/>
+        </index>
+        <index name="index3">
+            <element name="r_department"/>
+        </index>
+        <index name="index4">
+            <element name="r_state"/>
+        </index>
+        <index name="index5">
+            <element name="r_incident_id"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="PotentialIndicators" max_length="40" name="x_19668_halo_potentialindicators" type="collection">
+        <element label="Completed Enrich Count" max_length="40" name="completed_enrich_count" type="string"/>
+        <element default="0" label="Enrichment Count" max_length="40" name="enrichment_count" type="string"/>
+        <element label="Enrich End Timestamp" max_length="40" name="enrich_end_timestamp" type="glide_date_time"/>
+        <element label="Enrich Start Timestamp" max_length="40" name="enrich_start_timestamp" type="glide_date_time"/>
+        <element audit="true" label="Incident Id" max_length="32" name="incident_id" reference="x_19668_halo_incident" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Indicator Data" max_length="100000" name="indicator_data" type="string"/>
+        <element audit="true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Indicator Id" max_length="40" name="indicator_id" read_only="true" type="string"/>
+        <element choice="1" label="Indicator Status" mandatory="true" max_length="40" name="indicator_status" type="choice">
+            <choice>
+                <element label="Calculate Urgency Rank" value="Calculate Urgency Rank"/>
+                <element label="Completed" value="Completed"/>
+                <element label="Determine COA" value="Determine COA"/>
+                <element label="In Progress" value="In Progress"/>
+                <element label="New" value="New"/>
+                <element label="Ready for Review" value="Ready for Review"/>
+            </choice>
+        </element>
+        <element label="Indicator Type" mandatory="true" max_length="255" name="indicator_type" reference="x_19668_halo_indicator_type" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Notes" max_length="100000" name="notes" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) &#13;&#10;{&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="3" default="LOW" label="Overall urgency Ranking" max_length="255" name="overall_urgency_ranking" type="string">
+            <choice>
+                <element label="LOW" sequence="0" value="LOW"/>
+                <element label="MODERATE" sequence="1" value="MODERATE"/>
+                <element label="IMPORTANT" sequence="2" value="IMPORTANT"/>
+                <element label="SEVERE" sequence="3" value="SEVERE"/>
+                <element label="CRITICAL" sequence="4" value="CRITICAL"/>
+            </choice>
+        </element>
+        <element label="Overall urgency Ranking Timestamp" max_length="40" name="overall_urgency_ranking_timestamp" type="glide_date_time"/>
+        <element label="Urgency Reasoning" max_length="255" name="urgency_reasoning" type="string"/>
+        <element label="Urgency Reasoning Timestamp" max_length="40" name="urgency_reasoning_timestamp" type="glide_date_time"/>
+        <index name="index">
+            <element name="incident_id"/>
+        </index>
+    </element>
+</database>

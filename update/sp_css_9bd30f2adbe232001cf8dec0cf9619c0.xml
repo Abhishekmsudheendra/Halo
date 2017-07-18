@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>/*!  &#13;
+ * SmartWizard v4.x&#13;
+ * jQuery Wizard Plugin&#13;
+ * http://www.techlaboratory.net/smartwizard&#13;
+ *&#13;
+ * Created by Dipu Raj&#13;
+ * http://dipuraj.me&#13;
+ *&#13;
+ * Licensed under the terms of MIT License&#13;
+ * https://github.com/techlab/SmartWizard/blob/master/LICENSE&#13;
+ */&#13;
+&#13;
+/* SmartWizard Theme: Arrows */&#13;
+.sw-theme-arrows{&#13;
+    border-radius: 5px;&#13;
+    border: 1px solid #ddd;&#13;
+}&#13;
+.sw-theme-arrows &gt; .sw-container {&#13;
+    min-height: 200px;&#13;
+}&#13;
+.sw-theme-arrows .step-content {&#13;
+    padding: 0 10px;&#13;
+    border: 0px solid #D4D4D4;&#13;
+    background-color: #FFF;&#13;
+    text-align: left;&#13;
+}&#13;
+.sw-theme-arrows .sw-toolbar{&#13;
+    padding-left: 10px;&#13;
+    padding-right: 10px;&#13;
+    margin-bottom: 0 !important;&#13;
+    border-radius: 5px;&#13;
+}&#13;
+.sw-theme-arrows &gt; .sw-toolbar-top{&#13;
+}&#13;
+.sw-theme-arrows &gt; .sw-toolbar-bottom{&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor{&#13;
+    display: block;&#13;
+    border: 0;&#13;
+    border-bottom: 1px solid #ddd;&#13;
+    padding: 0px;&#13;
+	background: #f5f5f5;&#13;
+    border-radius: 5px;&#13;
+    border-bottom-left-radius: 0;&#13;
+    border-bottom-right-radius: 0;&#13;
+	list-style: none;&#13;
+	overflow: hidden;&#13;
+    /*margin: -1px -1px 0 -1px -1px;*/&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor li+li:before {&#13;
+	padding: 0;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li {&#13;
+}&#13;
+&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a, .sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a:hover  {&#13;
+	color: #bbb;&#13;
+	text-decoration: none;&#13;
+	padding: 10px 0 10px 45px;&#13;
+	position: relative;&#13;
+	display: block;&#13;
+    border: 0 !important;&#13;
+    border-radius: 0;&#13;
+    outline-style:none;&#13;
+    background: #f5f5f5;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a:after {&#13;
+	content: " ";&#13;
+	display: block;&#13;
+	width: 0;&#13;
+	height: 0;&#13;
+	border-top: 50px solid transparent;&#13;
+	border-bottom: 50px solid transparent;&#13;
+	border-left: 30px solid #f5f5f5;&#13;
+	position: absolute;&#13;
+	top: 50%;&#13;
+	margin-top: -50px;&#13;
+	left: 100%;&#13;
+	z-index: 2;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a:before {&#13;
+	content: " ";&#13;
+	display: block;&#13;
+	width: 0;&#13;
+	height: 0;&#13;
+	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */&#13;
+	border-bottom: 50px solid transparent;&#13;
+	border-left: 30px solid #ddd;&#13;
+	position: absolute;&#13;
+	top: 50%;&#13;
+	margin-top: -50px;&#13;
+	margin-left: 1px;&#13;
+	left: 100%;&#13;
+	z-index: 1;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li:first-child &gt; a {&#13;
+	padding-left: 15px;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a:hover  {&#13;
+    color: #bbb;&#13;
+    text-decoration: none;&#13;
+    outline-style:none;&#13;
+    background: #f5f5f5;&#13;
+    border-color: #f5f5f5;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a:hover:after {&#13;
+    border-left-color: #f5f5f5;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a small{&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li.clickable &gt; a:hover {&#13;
+    color: #4285F4 !important;&#13;
+	background: #46b8da !important;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li.active &gt; a {&#13;
+    border-color: #5bc0de !important;&#13;
+    color: #fff !important;&#13;
+	background: #5bc0de !important;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li.active &gt; a:after {&#13;
+	border-left: 30px solid #5bc0de !important;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li.done &gt; a {&#13;
+    border-color: #5cb85c !important;&#13;
+    color: #fff !important;&#13;
+    background: #5cb85c !important;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li.done &gt; a:after {&#13;
+	border-left: 30px solid #5cb85c;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li.danger &gt; a {&#13;
+    border-color: #d9534f !important;&#13;
+    color: #d9534f !important;&#13;
+    background: #fff !important;&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li.disabled &gt; a, .sw-theme-arrows &gt; ul.step-anchor &gt; li.disabled &gt; a:hover {&#13;
+    color: #eee !important;&#13;
+}&#13;
+&#13;
+/* Responsive CSS */&#13;
+@media screen and (max-width: 768px) {&#13;
+    .sw-theme-arrows &gt; ul.step-anchor{&#13;
+        border: 0;&#13;
+        background: #ddd !important;&#13;
+    }&#13;
+    .sw-theme-arrows &gt; .nav-tabs &gt; li {&#13;
+        float: none !important;&#13;
+        margin-bottom: 0;&#13;
+    }&#13;
+    .sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a, .sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a:hover {&#13;
+        padding-left: 15px;&#13;
+        margin-right: 0;&#13;
+        margin-bottom: 1px;&#13;
+    }&#13;
+    .sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a:after, .sw-theme-arrows &gt; ul.step-anchor &gt; li &gt; a:before {&#13;
+        display: none;&#13;
+    }&#13;
+}&#13;
+&#13;
+/* Loader Animation&#13;
+Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js&#13;
+*/&#13;
+@-webkit-keyframes ld {&#13;
+  0%   { transform: rotate(0deg) scale(1); }&#13;
+  50%  { transform: rotate(180deg) scale(1.1); }&#13;
+  100% { transform: rotate(360deg) scale(1); }&#13;
+}&#13;
+@-moz-keyframes ld {&#13;
+  0%   { transform: rotate(0deg) scale(1); }&#13;
+  50%  { transform: rotate(180deg) scale(1.1); }&#13;
+  100% { transform: rotate(360deg) scale(1); }&#13;
+}&#13;
+@-o-keyframes ld {&#13;
+  0%   { transform: rotate(0deg) scale(1); }&#13;
+  50%  { transform: rotate(180deg) scale(1.1); }&#13;
+  100% { transform: rotate(360deg) scale(1); }&#13;
+}&#13;
+@keyframes ld {&#13;
+  0%   { transform: rotate(0deg) scale(1); }&#13;
+  50%  { transform: rotate(180deg) scale(1.1); }&#13;
+  100% { transform: rotate(360deg) scale(1); }&#13;
+}&#13;
+.sw-theme-arrows &gt; ul.step-anchor &gt; li.loading:before {&#13;
+    content: '';&#13;
+    display: inline-block;&#13;
+    position: absolute;&#13;
+    background: transparent;&#13;
+    border-radius: 50%;&#13;
+    box-sizing: border-box;&#13;
+    border: 2px solid #fff;&#13;
+    border-top-color: transparent;&#13;
+    border-bottom-color: transparent;&#13;
+    border-left-color: #4285f4;&#13;
+    border-right-color: #4285f4;&#13;
+    top: 50%;&#13;
+    left: 50%;&#13;
+    margin-top: -16px;&#13;
+    margin-left: -16px;&#13;
+    width: 32px;&#13;
+    height: 32px;&#13;
+    z-index: 99;&#13;
+    -webkit-animation: ld 1s ease-in-out infinite;&#13;
+    -moz-animation:    ld 1s ease-in-out infinite;&#13;
+    -o-animation:      ld 1s ease-in-out infinite;&#13;
+    animation:         ld 1s ease-in-out infinite;&#13;
+}</css>
+        <name>smart_wizard_theme_arrows.css</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-08 21:20:25</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9bd30f2adbe232001cf8dec0cf9619c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>smart_wizard_theme_arrows.css</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_css_9bd30f2adbe232001cf8dec0cf9619c0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-08 21:20:25</sys_updated_on>
+    </sp_css>
+</record_update>

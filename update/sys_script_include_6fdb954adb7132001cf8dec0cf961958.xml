@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_19668_halo.IncidentUtils</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>IncidentUtils</name>
+        <script><![CDATA[var IncidentUtils = Class.create();
+IncidentUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
+{
+	getCompletedEnrichCount: function()
+	{
+		var completedEnrichCount=0;
+		var sysId=this.getParameter('sysparm_sysId');
+		var gr=new GlideRecord('x_19668_halo_potentialindicators');
+		gr.addQuery('incident_id',sysId);
+		gr.query(); 
+		while(gr.next())
+			{
+				completedEnrichCount+=gr.completed_enrich_count;
+			}
+		
+		//Update Incident table
+		gr=new GlideRecord('x_19668_halo_incident');
+		gr.addQuery('sys_id',sysId);
+		gr.query();
+		gr.next();
+		if( gr.completed_enrich_count < completedEnrichCount)
+			{
+				gr.completed_enrich_count=completedEnrichCount;
+				gr.update();
+			}
+			
+	}
+   
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-03-30 17:42:34</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6fdb954adb7132001cf8dec0cf961958</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>IncidentUtils</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_script_include_6fdb954adb7132001cf8dec0cf961958</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-03-30 18:01:06</sys_updated_on>
+    </sys_script_include>
+</record_update>

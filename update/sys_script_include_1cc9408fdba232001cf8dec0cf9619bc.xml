@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_19668_halo.incidentSummaryUtils</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>incidentSummaryUtils</name>
+        <script><![CDATA[var incidentSummaryUtils = Class.create();
+incidentSummaryUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
+{
+	
+	updateSelectedCoa:function(input)
+	{
+		
+			var gr=new GlideRecord('x_19668_halo_incident');
+			gr.addQuery('sys_id',input.sysId);
+			gr.query();
+				if(gr.next())
+				{
+					this.updateSelectedSysIdOfCoa(input.selectedCoa,input.sysId);
+					gr.send_email_update_to_reporter=input.sendEmailUpdateToReporter;
+					gr.notify_isp=input.notifyIsp;
+					gr.send_email_receipt_to_reporter=input.sendEmailReceipt;
+					gr.set_status_to_resolved=input.setStatusOfTicketToResolved;
+					gr.notify_production=input.notifyProduction;
+					gr.notify_domain_registrar=input.notifyDomainRegistrar;
+					gr.assigned_to=this.finsUserSysId(input.assignTo);
+					gr.assign_to_group=this.findGroupSysId(input.groupName);
+					gr.resolve_and_close_the_ticket=input.resolveAndCloseTicket;
+					gr.comments=input.comments;
+					gr.update();
+				}
+	},
+	
+	findGroupSysId:function(groupName)
+	{
+		var gr=new GlideRecord('sys_user_group');
+		gr.addQuery('name',groupName);
+		gr.query();
+		if(gr.next())
+			{
+				return gr.sys_id+'';
+			}
+		
+	},
+	updateSelectedSysIdOfCoa:function(selectedCoa,sysId)
+	{
+		var selectedCoaSysId='';
+		var gr1=new GlideRecord('x_19668_halo_selcted_ticket_course_of_action');
+		gr1.addQuery('incident_id',sysId);
+		gr1.query();
+		if(gr1.next())
+			{
+				var gr2=new GlideRecord('x_19668_halo_courseofactions');
+				gr2.addQuery('ticket_coa_name',selectedCoa);
+				gr2.query();
+				if(gr2.next())
+					{
+						selectedCoaSysId=gr2.sys_id+'';
+					}
+				gr1.ticket_coa_selected_id=selectedCoaSysId;
+				gr1.update();
+				
+			}
+	},
+	
+	getCurrentIncidentData:function(input)
+	{
+			var incidentData=[];
+			var json=new global.JSON();
+			var gr=new GlideRecord('x_19668_halo_incident');
+			gr.addQuery('sys_id',input.sysId);
+			gr.query();
+			while(gr.next())
+			{
+				incidentData.push({lastUpdated:gr.r_updated_date+'',createdDate:gr.r_created_date+'',email:gr.r_email+'',lastName:gr.r_last_name+'',firstName:gr.r_first_name+'',incidentId:gr.incident_id+'',incidentType:gr.incident_type.name+'',assignedTo:gr.assigned_to.name+'',incidentStatus:gr.ticket_status+'',createdDate:gr.sys_created_on+'',department:gr.r_department.name+'',subAgency:gr.r_sub_agency.name+'',note:gr.r_note+'',organization:gr.r_organization+'',groupName:gr.assign_to_group.name+'',telephoneNumber:gr.r_telephone_number+'',companyName:gr.r_company_name+'',sector:gr.sector.name+'',countryName:gr.r_country_name+'',state:gr.r_state.name+''});
+			}
+			return json.encode(incidentData);
+	},
+	
+	getSelectedAndRecommendedCOAData:function(input)
+	{
+		var json=new global.JSON();
+		var courseOfActionsData=[];
+		var gr=new GlideRecord('x_19668_halo_incident');
+		gr.addQuery('sys_id',input.sysId);
+		gr.query();
+		if(gr.next())
+		{	courseOfActionsData.push({resolveAndCloseTicket:gr.resolve_and_close_the_ticket+'',assignToGroup:gr.assign_to_group.name+'',groupName:gr.assign_to_group.name+'',assignToNextTier:gr.assign_to_tier+'',notifyDomainRegistrar:gr.notify_domain_registrar+'',notifyProduction:gr.notify_production+'',setStatusOfTicketToResolved:gr.set_status_to_resolved+'',sendEmailReceipt:gr.send_email_receipt_to_reporter+'',notifyIsp:gr.notify_isp+'',sendEmailUpdateToReporter:gr.send_email_update_to_reporter+'',selectedName:gr.ticket_coa.ticket_coa_selected_id.ticket_coa_name+'',recommendedName:gr.ticket_coa.ticket_coa_recommended_id.ticket_coa_name+'',reasoning:gr.ticket_coa.ticket_coa_reasoning+'',assignedTo:gr.assigned_to.name+''});
+
+		}
+		return json.encode(courseOfActionsData);
+	},
+	getAllCourseOfActions:function()
+	{
+		var json=new global.JSON();
+		var ListOfCourseOfActionsData=[];
+		var gr=new GlideRecord('x_19668_halo_courseofactions');
+		gr.query();
+		while(gr.next())
+		{
+			ListOfCourseOfActionsData.push({name:gr.ticket_coa_name+'',sysId:gr.sys_id+''});
+		}
+		return json.encode(ListOfCourseOfActionsData);
+	},
+	
+	getCommentsHistiry:function(incidentSysId)
+	{
+		var json=new global.JSON();
+		var comments=[];
+		var gr=new GlideRecord('x_19668_halo_incidents_comments_history');
+		gr.addQuery('incident',incidentSysId);
+		gr.orderByDesc('sys_created_on')
+		gr.query();
+		while(gr.next())
+		{			comments.push({comment:gr.comment+'',enteredDate:gr.sys_created_on+'',enteredBy:gr.created_by.first_name+' '+gr.created_by.last_name});
+		}
+		return json.encode(comments);
+		
+	},
+	
+	getGroupUsers:function()
+	{
+		var json=new global.JSON();
+		var groupUsers=[];
+		var gr=new GlideRecord('sys_user_grmember');
+		gr.addQuery('group.name','IN','Tier1,Tier2,Tier3,Tier4,Tier5,Halo Administrator');
+		gr.query();
+		while(gr.next())
+		{	groupUsers.push({groupName:gr.group.name+'',name:gr.user.name+''});
+		}
+		return json.encode(groupUsers);
+		
+	},
+	
+	finsUserSysId:function(name)
+	{
+		var gr=new GlideRecord('sys_user');
+		gr.addQuery('name',name);
+		gr.query();
+		if(gr.next())
+			{
+				gs.info('inside finsUserSysId');
+				return gr.sys_id+'';
+			}
+		else
+			return '';
+	},
+	
+	isPublic: function() 
+	{
+		return true;
+	}
+   
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-09 21:05:01</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>1cc9408fdba232001cf8dec0cf9619bc</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>incidentSummaryUtils</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_script_include_1cc9408fdba232001cf8dec0cf9619bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-26 18:54:03</sys_updated_on>
+    </sys_script_include>
+</record_update>

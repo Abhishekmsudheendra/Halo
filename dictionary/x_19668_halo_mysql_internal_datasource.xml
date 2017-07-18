@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="MySql Internal Datasource" max_length="40" name="x_19668_halo_mysql_internal_datasource" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Threat Data" mandatory="true" max_length="100" name="threat_data" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Threat Id" mandatory="true" max_length="40" name="threat_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Threat Level" mandatory="true" max_length="40" name="threat_level" type="string">
+            <choice>
+                <element label="Critical" sequence="0" value="Critical"/>
+                <element label="Severe" sequence="1" value="Severe"/>
+                <element label="Important" sequence="2" value="Important"/>
+                <element label="Moderate" sequence="3" value="Moderate"/>
+                <element label="Low" sequence="4" value="Low"/>
+            </choice>
+        </element>
+        <element label="Threat Type" max_length="32" name="threat_type" reference="x_19668_halo_indicator_type" type="reference"/>
+        <index name="index">
+            <element name="threat_type"/>
+        </index>
+    </element>
+</database>

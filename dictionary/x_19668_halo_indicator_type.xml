@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Indicator Type" max_length="40" name="x_19668_halo_indicator_type" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Pattern" max_length="400" name="pattern" type="string"/>
+    </element>
+</database>

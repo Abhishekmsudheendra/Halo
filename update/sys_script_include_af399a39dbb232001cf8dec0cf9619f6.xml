@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_19668_halo.SubmitIncidentUtils</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>SubmitIncidentUtils</name>
+        <script><![CDATA[var SubmitIncidentUtils = Class.create();
+SubmitIncidentUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
+{
+    initialize: function() 
+	{
+		var gr=null;
+    },
+	
+	getDepartmentSysId:function(department)
+	{
+		gr=new GlideRecord('x_19668_halo_department');
+		gr.addQuery('name',department);
+		gr.query();
+		if(gr.next())
+			return gr.sys_id+'';
+		else 
+			return '';
+	},
+	
+	getGroupSysId:function(groupName)
+	{
+		gr=new GlideRecord('sys_user_group');
+		gr.addQuery('name',groupName);
+		gr.query();
+		if(gr.next())
+			{
+				return gr.sys_id+'';
+			}
+		
+	},
+	
+	getSubAgencySysId:function(subAgency)
+	{
+		gr=new GlideRecord('x_19668_halo_sub_agency');
+		gr.addQuery('name',subAgency);
+		gr.query();
+		if(gr.next())
+			return gr.sys_id+'';
+		else 
+			return '';
+	},
+	
+	getIncidentTypeSysId:function(incidentType)
+	{
+		gr=new GlideRecord('x_19668_halo_incident_type');
+		gr.addQuery('name',incidentType);
+		gr.query();
+		if(gr.next())
+			return gr.sys_id+'';
+		else 
+			return '';
+	},
+	
+	getSectorSysId:function(sector)
+	{
+		
+		gr=new GlideRecord('x_19668_halo_sector');
+		gr.addQuery('name',sector);
+		gr.query();
+		if(gr.next())
+			return gr.sys_id+'';
+		else 
+			return '';
+	},
+	
+	getStateSysId:function(state)
+	{
+		gr=new GlideRecord('x_19668_halo_state');
+		gr.addQuery('name',state);
+		gr.query();
+		if(gr.next())
+			return gr.sys_id+'';
+		else 
+			return '';
+    },
+	isPublic:function()
+	{
+	  return true;
+	}
+   
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-18 20:34:44</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>af399a39dbb232001cf8dec0cf9619f6</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>SubmitIncidentUtils</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_script_include_af399a39dbb232001cf8dec0cf9619f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-14 19:05:48</sys_updated_on>
+    </sys_script_include>
+</record_update>

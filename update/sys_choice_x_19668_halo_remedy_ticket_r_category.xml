@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="r_category" table="x_19668_halo_remedy_ticket" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CAT 0 Exercise/Network Defense Testing</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>380d60a5db2132001cf8dec0cf9619f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>CAT 0 Exercise/Network Defense Testing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CAT 1 Unauthorized Access</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>740d60a5db2132001cf8dec0cf9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>CAT 1 Unauthorized Access</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CAT 2 Denial of Service</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fc0d60a5db2132001cf8dec0cf9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>CAT 2 Denial of Service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CAT 3 Malicious Code</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>780d60a5db2132001cf8dec0cf9619fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>CAT 3 Malicious Code</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CAT 4 Improper Usage</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f00d60a5db2132001cf8dec0cf9619fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>CAT 4 Improper Usage</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CAT 5 Scans/Probes/Attempted Access</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7c0d60a5db2132001cf8dec0cf9619fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>CAT 5 Scans/Probes/Attempted Access</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CAT 6 Investigation</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sequence>6</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f40d60a5db2132001cf8dec0cf9619fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 14:44:25</sys_updated_on>
+            <value>CAT 6 Investigation</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>r_category</element>
+            <name>x_19668_halo_remedy_ticket</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 14:44:25</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>300d60a5db2132001cf8dec0cf9619f9</sys_id>
+            <sys_mod_count>9</sys_mod_count>
+            <sys_name>r_category</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_choice_x_19668_halo_remedy_ticket_r_category</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-07-17 16:52:54</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

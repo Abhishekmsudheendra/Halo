@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <css>body&#13;
+{&#13;
+ background-color:white;&#13;
+}</css>
+        <id>open_incidents_2</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-17 19:47:31</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a4456a77db8232001cf8dec0cf961995</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>open_incidents_2</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_page_a4456a77db8232001cf8dec0cf961995</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-01 14:47:04</sys_updated_on>
+        <title>Open Incidents</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=a4456a77db8232001cf8dec0cf961995"/>
+</record_update>

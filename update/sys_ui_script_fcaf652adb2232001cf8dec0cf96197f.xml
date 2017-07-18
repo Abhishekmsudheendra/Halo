@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_19668_halo.indicatorEnrichments</name>
+        <script><![CDATA[var app = angular.module('indicatorEnrichmentsModule', ['ui.bootstrap']);
+app.controller('getIndicatorEnrichments',["$scope","$rootScope", function ($scope,$rootScope) 
+{
+	$rootScope.$on("dataReady",function(data)
+	{
+		$scope.indicatorEnrichmentData =data.targetScope.data.indicatorEnrichmentData;
+	}); 
+
+}]);]]></script>
+        <script_name>indicatorEnrichments</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-08 15:12:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>fcaf652adb2232001cf8dec0cf96197f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_19668_halo.indicatorEnrichments</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_ui_script_fcaf652adb2232001cf8dec0cf96197f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-08 18:03:27</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

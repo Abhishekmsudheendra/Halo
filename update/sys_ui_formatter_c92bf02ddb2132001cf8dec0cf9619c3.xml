@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_formatter">
+    <sys_ui_formatter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <angular_module/>
+        <formatter>activity.xml</formatter>
+        <name>User Activity</name>
+        <sys_class_name>sys_ui_formatter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-03-16 15:46:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c92bf02ddb2132001cf8dec0cf9619c3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>User Activity</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_ui_formatter_c92bf02ddb2132001cf8dec0cf9619c3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-03-16 16:40:29</sys_updated_on>
+        <table>x_19668_halo_remedy_ticket</table>
+        <type>formatter</type>
+    </sys_ui_formatter>
+</record_update>

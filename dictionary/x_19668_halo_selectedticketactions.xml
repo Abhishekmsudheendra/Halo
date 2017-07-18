@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="SelectedTicketActions" max_length="40" name="x_19668_halo_selectedticketactions" type="collection">
+        <element label="Incident Id" mandatory="true" max_length="32" name="incident_id" reference="x_19668_halo_incident" type="reference"/>
+        <element label="Remedy Incident Id" max_length="32" name="r_incident_id" reference="x_19668_halo_incident" type="reference"/>
+        <element label="Selected Action Timestamp" max_length="40" name="selection_action_timestamp" type="glide_date"/>
+        <element label="Ticket Action Id" mandatory="true" max_length="32" name="ticket_action_id" reference="x_19668_halo_ticketactions" type="reference"/>
+        <index name="index">
+            <element name="incident_id"/>
+        </index>
+        <index name="index2">
+            <element name="ticket_action_id"/>
+        </index>
+        <index name="index3">
+            <element name="r_incident_id"/>
+        </index>
+    </element>
+</database>

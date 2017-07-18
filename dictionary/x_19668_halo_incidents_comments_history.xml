@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Incidents Comments History" max_length="40" name="x_19668_halo_incidents_comments_history" type="collection">
+        <element display="true" label="Comment" mandatory="true" max_length="10000" name="comment" type="string"/>
+        <element label="Created By" max_length="32" name="created_by" reference="sys_user" type="reference"/>
+        <element label="Created Date" max_length="40" name="created_date" type="glide_date_time"/>
+        <element label="Incident" max_length="32" name="incident" reference="x_19668_halo_incident" type="reference"/>
+        <index name="index">
+            <element name="created_by"/>
+        </index>
+        <index name="index2">
+            <element name="incident"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() 
+{
+  /* widget controller */
+	$(document).ready(function()
+	{
+		jQuery("#indicatortypesIframe")[0].setAttribute("width", "100%");
+		jQuery("#indicatortypesIframe")[0].setAttribute("height", "1000");
+	});
+  var c = this;
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>&#13;
+&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>indicatortypes</id>
+        <internal>false</internal>
+        <link/>
+        <name>Indicator Types</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-15 16:56:04</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>ce8a0e38db7232001cf8dec0cf9619b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Indicator Types</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_ce8a0e38db7232001cf8dec0cf9619b4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-15 16:56:04</sys_updated_on>
+        <template><![CDATA[<div>
+<iframe id="indicatortypesIframe" src="https://dev21310.service-now.com/x_19668_halo_indicator_type_list.do?sysparm_userpref_module=935d4576db2132001cf8dec0cf9619d4&sysparm_clear_stack=true&sysparm_clear_stack=true" style="border:none;"></iframe>
+</div>]]></template>
+    </sp_widget>
+</record_update>

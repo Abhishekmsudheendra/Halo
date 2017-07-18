@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_19668_halo.loadDataIntoWizard</name>
+        <script><![CDATA[(function() 
+ {
+	
+	"use strict";
+	
+    var app=angular.module("wizardReloadModule", []);
+
+	//Controller
+	app.controller("loadDataIntoWizardController",["$scope","$rootScope",function($scope,$rootScope)
+	{
+		var jsonList;
+		$rootScope.$on("incidentStatus", function(incidentStatus)
+		{
+			incidentStatus=incidentStatus.targetScope.data.incidentData[0].incidentStatus;
+			var status=0;  
+			if(incidentStatus == "Open")
+			{
+				status=0;
+			}
+			else if(incidentStatus == "Extract Indicators")
+			{
+				status=1;
+			}
+			else if(incidentStatus == "Closed")
+			{
+				status=4;
+			}
+			else if(incidentStatus == "Enrich Indicators")
+			{
+				status=1;
+			}
+			else if(incidentStatus == "Determine CourseofActions")
+			{
+				status=1;
+			}
+			else if(incidentStatus == "Publish")
+			{
+				status=2;
+			}
+			else if(incidentStatus == "Ready for Review")
+			{
+				status=2;
+			}
+			else if(incidentStatus == "Mitigated")
+			{
+				status=3;
+			}
+
+			console.log("incidentStatus :"+incidentStatus);
+			// Smart Wizard
+			jQuery('#smartwizard').smartWizard(
+				{
+					selected: status,  // Initial selected step, 0 = first step
+					keyNavigation:false, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
+					autoAdjustHeight:true, // Automatically adjust content height
+					cycleSteps: false, // Allows to cycle the navigation of steps
+					backButtonSupport: false, // Enable the back button support
+					useURLhash: true, // Enable selection of the step based on url hash
+					lang: {  // Language variables
+						next: 'Next',
+						previous: 'Previous'
+					},
+					toolbarSettings: {
+						toolbarPosition: 'bottom', // none, top, bottom, both
+						toolbarButtonPosition: 'right', // left, right
+						showNextButton: false, // show/hide a Next button
+						showPreviousButton: false, // show/hide a Previous button
+
+					},
+					anchorSettings: {
+						anchorClickable: true, // Enable/Disable anchor navigation
+						enableAllAnchors: false, // Activates all anchors clickable all times
+						markDoneStep: true, // add done css
+						enableAnchorOnDoneStep: false // Enable/Disable the done steps navigation
+					},
+					contentURL: null, // content url, Enables Ajax content loading. can set as data data-content-url on anchor
+					disabledSteps: [],    // Array Steps disabled
+					errorSteps: [],    // Highlight step with errors
+					theme: 'arrows',
+					transitionEffect: 'fade', // Effect on navigation, none/slide/fade
+					transitionSpeed: '400'
+        }); //End of Smart Wizard
+		}); //End of rootScope
+								
+	}]);
+    
+})();
+
+
+]]></script>
+        <script_name>loadDataIntoWizard</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-09 17:14:34</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>ef259336db6232001cf8dec0cf9619b6</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>x_19668_halo.loadDataIntoWizard</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_ui_script_ef259336db6232001cf8dec0cf9619b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-21 16:31:26</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

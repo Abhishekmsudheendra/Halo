@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>/* Make clicks pass-through */&#13;
+#nprogress {&#13;
+  pointer-events: none;&#13;
+}&#13;
+&#13;
+#nprogress .bar {&#13;
+  background: #29d;&#13;
+&#13;
+  position: fixed;&#13;
+  z-index: 1031;&#13;
+  top: 0;&#13;
+  left: 0;&#13;
+&#13;
+  width: 100%;&#13;
+  height: 2px;&#13;
+}&#13;
+&#13;
+/* Fancy blur effect */&#13;
+#nprogress .peg {&#13;
+  display: block;&#13;
+  position: absolute;&#13;
+  right: 0px;&#13;
+  width: 100px;&#13;
+  height: 100%;&#13;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;&#13;
+  opacity: 1.0;&#13;
+&#13;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);&#13;
+      -ms-transform: rotate(3deg) translate(0px, -4px);&#13;
+          transform: rotate(3deg) translate(0px, -4px);&#13;
+}&#13;
+&#13;
+/* Remove these to get rid of the spinner */&#13;
+#nprogress .spinner {&#13;
+  display: block;&#13;
+  position: fixed;&#13;
+  z-index: 1031;&#13;
+  top: 15px;&#13;
+  right: 15px;&#13;
+}&#13;
+&#13;
+#nprogress .spinner-icon {&#13;
+  width: 18px;&#13;
+  height: 18px;&#13;
+  box-sizing: border-box;&#13;
+&#13;
+  border: solid 2px transparent;&#13;
+  border-top-color: #29d;&#13;
+  border-left-color: #29d;&#13;
+  border-radius: 50%;&#13;
+&#13;
+  -webkit-animation: nprogress-spinner 400ms linear infinite;&#13;
+          animation: nprogress-spinner 400ms linear infinite;&#13;
+}&#13;
+&#13;
+.nprogress-custom-parent {&#13;
+  overflow: hidden;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.nprogress-custom-parent #nprogress .spinner,&#13;
+.nprogress-custom-parent #nprogress .bar {&#13;
+  position: absolute;&#13;
+}&#13;
+&#13;
+@-webkit-keyframes nprogress-spinner {&#13;
+  0%   { -webkit-transform: rotate(0deg); }&#13;
+  100% { -webkit-transform: rotate(360deg); }&#13;
+}&#13;
+@keyframes nprogress-spinner {&#13;
+  0%   { transform: rotate(0deg); }&#13;
+  100% { transform: rotate(360deg); }&#13;
+}&#13;
+</css>
+        <name>nprogress.css</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-06 16:01:36</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>4818c95cdb0232001cf8dec0cf9619ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>nprogress.css</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_css_4818c95cdb0232001cf8dec0cf9619ce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-06 16:01:36</sys_updated_on>
+    </sp_css>
+</record_update>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="indicator_type" label="Indicator Type" language="en" table="x_19668_halo_queries">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>indicator_type</element>
+            <help/>
+            <hint/>
+            <label>Indicator Type</label>
+            <language>en</language>
+            <name>x_19668_halo_queries</name>
+            <plural>Indicator Types</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-09 16:26:11</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>47210ddbdb1132001cf8dec0cf961960</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Indicator Type</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_documentation_x_19668_halo_queries_indicator_type_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-09 16:26:11</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

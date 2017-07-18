@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>/*!  &#13;
+ * SmartWizard v4.x&#13;
+ * jQuery Wizard Plugin&#13;
+ * http://www.techlaboratory.net/smartwizard&#13;
+ *&#13;
+ * Created by Dipu Raj&#13;
+ * http://dipuraj.me&#13;
+ *&#13;
+ * Licensed under the terms of MIT License&#13;
+ * https://github.com/techlab/SmartWizard/blob/master/LICENSE&#13;
+ */&#13;
+&#13;
+/* SmartWizard Theme: Circles */&#13;
+.sw-theme-circles{&#13;
+    &#13;
+}&#13;
+.sw-theme-circles .sw-container {&#13;
+    min-height: 300px;&#13;
+}&#13;
+.sw-theme-circles .step-content {&#13;
+    padding: 10px 0;&#13;
+    background-color: #FFF;&#13;
+    text-align: left;&#13;
+}&#13;
+.sw-theme-circles .sw-toolbar{&#13;
+    background: #fff;&#13;
+    padding-left: 10px;&#13;
+    padding-right: 10px;&#13;
+    margin-bottom: 0 !important;&#13;
+}&#13;
+.sw-theme-circles .sw-toolbar-top{&#13;
+    &#13;
+}&#13;
+.sw-theme-circles .sw-toolbar-bottom{&#13;
+    border-top-color: #ddd !important;&#13;
+    border-bottom-color: #ddd !important;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor{&#13;
+    position: relative;&#13;
+    background: #fff;&#13;
+    display: block;&#13;
+    border: none;&#13;
+    list-style: none;&#13;
+    margin-bottom: 40px;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor:before {&#13;
+    content: " ";&#13;
+    position: absolute;&#13;
+    top: 40px;&#13;
+    bottom: 0;&#13;
+    width: 100%;&#13;
+    height: 5px;&#13;
+    background-color: #f5f5f5;&#13;
+    border-radius: 3px;&#13;
+    z-index: 0;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li{&#13;
+    border: none;&#13;
+    margin-left: 40px;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li &gt; a{&#13;
+    border: 2px solid #f5f5f5;&#13;
+    background: #f5f5f5;&#13;
+    width: 75px;&#13;
+    height: 75px;&#13;
+    text-align: center;&#13;
+    padding: 25px 0;&#13;
+    border-radius: 50%;&#13;
+    box-shadow: inset 0px 0px 0px 3px #fff !important;&#13;
+    text-decoration: none;&#13;
+    outline-style:none;&#13;
+    z-index: 99;&#13;
+    color: #bbb;&#13;
+    background: #f5f5f5;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li &gt; a:hover  {&#13;
+    color: #bbb;&#13;
+    background: #f5f5f5;&#13;
+    border-width: 2px;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li &gt; a &gt; small{&#13;
+    position: absolute;&#13;
+    bottom: -40px;&#13;
+    display: block;&#13;
+    color: #ccc;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.clickable &gt; a:hover {&#13;
+    color: #4285F4 !important;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.active &gt; a {&#13;
+    border-color: #5bc0de;&#13;
+    color: #fff;&#13;
+    background: #5bc0de;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.active &gt; a &gt; small{&#13;
+    color: #5bc0de;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.done &gt; a {&#13;
+    border-color: #5cb85c;&#13;
+    color: #fff;&#13;
+    background: #5cb85c;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.done &gt; a &gt; small{&#13;
+    color: #5cb85c;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.danger &gt; a {&#13;
+    border-color: #d9534f;&#13;
+    color: #d9534f;&#13;
+    background: #fff;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.danger &gt; a &gt; small{&#13;
+    color: #d9534f;&#13;
+}&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.disabled &gt; a, .sw-theme-circles &gt; ul.step-anchor &gt; li.disabled &gt; a:hover {&#13;
+    color: #eee !important;&#13;
+}&#13;
+&#13;
+/* Loader Animation&#13;
+Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js&#13;
+*/&#13;
+.sw-theme-circles &gt; ul.step-anchor &gt; li.loading:before {&#13;
+    content: '';&#13;
+    display: inline-block;&#13;
+    position: absolute;&#13;
+    background: transparent;&#13;
+    border-radius: 50%;&#13;
+    box-sizing: border-box;&#13;
+    border: 2px solid #fff;&#13;
+    border-top-color: transparent;&#13;
+    border-bottom-color: transparent;&#13;
+    border-left-color: #4285f4;&#13;
+    border-right-color: #4285f4;&#13;
+    width: 75px;&#13;
+    height: 75px;&#13;
+    z-index: 999;&#13;
+    -webkit-animation: ld 1s ease-in-out infinite;&#13;
+    -moz-animation:    ld 1s ease-in-out infinite;&#13;
+    -o-animation:      ld 1s ease-in-out infinite;&#13;
+    animation:         ld 1s ease-in-out infinite;&#13;
+}&#13;
+&#13;
+@-webkit-keyframes ld {&#13;
+  0%   { transform: rotate(0deg) scale(1); }&#13;
+  50%  { transform: rotate(180deg) scale(1.1); }&#13;
+  100% { transform: rotate(360deg) scale(1); }&#13;
+}&#13;
+@-moz-keyframes ld {&#13;
+  0%   { transform: rotate(0deg) scale(1); }&#13;
+  50%  { transform: rotate(180deg) scale(1.1); }&#13;
+  100% { transform: rotate(360deg) scale(1); }&#13;
+}&#13;
+@-o-keyframes ld {&#13;
+  0%   { transform: rotate(0deg) scale(1); }&#13;
+  50%  { transform: rotate(180deg) scale(1.1); }&#13;
+  100% { transform: rotate(360deg) scale(1); }&#13;
+}&#13;
+@keyframes ld {&#13;
+  0%   { transform: rotate(0deg) scale(1); }&#13;
+  50%  { transform: rotate(180deg) scale(1.1); }&#13;
+  100% { transform: rotate(360deg) scale(1); }&#13;
+}</css>
+        <name>smart_wizard_theme_circles.css</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-22 01:34:24</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>fb8a367edbbe72001cf8dec0cf9619f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>smart_wizard_theme_circles.css</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_css_fb8a367edbbe72001cf8dec0cf9619f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-22 01:34:24</sys_updated_on>
+    </sp_css>
+</record_update>

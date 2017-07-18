@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <footer/>
+        <footer_fixed>false</footer_fixed>
+        <header/>
+        <name>Halo Theme</name>
+        <navbar_fixed>false</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-06 14:49:31</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>87777454db0232001cf8dec0cf96193e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Halo Theme</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_theme_87777454db0232001cf8dec0cf96193e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-10 18:38:22</sys_updated_on>
+    </sp_theme>
+</record_update>

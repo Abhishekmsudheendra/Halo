@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="TicketActionsCOAsint" max_length="40" name="x_19668_halo_ticketactionscoasint" type="collection">
+        <element label="Ticket Action Id" max_length="32" name="ticket_action_id" reference="x_19668_halo_ticketactions" type="reference"/>
+        <element label="Ticket Course Of Action Id" max_length="32" name="ticket_coa_id" reference="x_19668_halo_courseofactions" type="reference"/>
+        <index name="index">
+            <element name="ticket_action_id"/>
+        </index>
+        <index name="index2">
+            <element name="ticket_coa_id"/>
+        </index>
+    </element>
+</database>

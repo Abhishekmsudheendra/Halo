@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope) 
+{
+  var c = this;
+	
+	$scope.submitIncident=function()
+	{
+		var firstName=jQuery('#firstName').val();
+		var lastName=jQuery('#lastName').val();
+		var organization=jQuery('#organization').val();
+		var department=jQuery('#department').val();
+		var subAgency=jQuery('#subAgency').val();
+		var countryName=jQuery('#countryName').val();
+		var state=jQuery('#state').val();
+		var telephone=jQuery('#telephone').val();
+		var email=jQuery('#email').val();
+		var description=jQuery('#description').val();
+		var notes=jQuery('#notes').val();
+		var incidentType=jQuery('#incidentType').val();
+		
+		var sector,companyName;
+		if(organization =='Private Sector' )
+		{
+			sector=jQuery('#sector').val();
+			companyName=jQuery('#companyName').val();
+		}
+		
+		else if(organization =='Critical Infrastructure' )
+			{
+				sector=jQuery('#sector2').val();
+				companyName=jQuery('#companyName2').val();
+			}
+	
+		c.server.get({operation:'submit',sector:sector,incidentType:incidentType,firstName:firstName,lastName:lastName,organization:organization,department:department,subAgency:subAgency,countryName:countryName,companyName:companyName,state:state,telephone:telephone,email:email,description:description,notes:notes}).then(function(response)
+		{
+			jQuery("form").html("Thanks for reporting. Your incident number is "+response.data.incidentId+". Please use below link to track the progress of your request <br\> <a href='https://dev21310.service-now.com/haloportal/?id=incident_end_user_view&incident_id="+response.data.incidentSysId+"' > "+response.data.incidentId+" </a>");
+		});
+	};
+	
+	c.loadData=function()
+	{
+		c.server.get({operation:'load'}).then(function(response)
+		{
+			c.data.departments= angular.fromJson(response.data.departments);
+			c.data.subagencies= angular.fromJson(response.data.subagencies);
+			c.data.countries= angular.fromJson(response.data.countries);
+			c.data.states= angular.fromJson(response.data.states);
+			c.data.sectors= angular.fromJson(response.data.sectors);
+		});
+	};
+	c.loadData();
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>div#zone-branding-wrapper 
+{
+  padding:15px;
+  margin-right:-30px;
+}
+
+div#zone-branding-wrapper {
+   background-color: #dfe6ef;
+  //background-color:#144B76;
+  //background-color:#FFFFFF;
+}
+
+.container
+{
+  padding:0px;
+}
+
+
+//testing css
+/*
+div#zone-branding-wrapper {
+    height: 150px;
+}
+
+img#logo 
+{
+height:135px;
+  width:150px;
+}
+
+h1{
+position: relative;
+    /* float: right; */
+    top: -104px;
+    left: 500px;
+    color: ghostwhite;
+    font-size: 40px;
+}
+  */</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>submit-incident-dhs</id>
+        <internal>false</internal>
+        <link/>
+        <name>Submit Incident DHS</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() 
+{
+	var json=new global.JSON();
+	var gr;
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+   if(input)
+		 {
+			 if(input.operation == 'load')
+				 {
+					 var departments=[]; 
+					 gr=new GlideRecord('x_19668_halo_department');
+					 gr.orderBy('name');
+					 gr.query();
+					 while(gr.next())
+					 {
+						 departments.push({name:gr.name+''});
+					 }
+					 data.departments=json.encode(departments);
+
+					 var subagencies=[]; 
+					 gr=new GlideRecord('x_19668_halo_sub_agency');
+					 gr.orderBy('name');
+					 gr.query();
+					 while(gr.next())
+					 {
+						 subagencies.push({department:gr.department.name+'',name:gr.name+''});
+					 }
+					 data.subagencies=json.encode(subagencies);
+
+
+					 var countries=[]; 
+					 gr=new GlideRecord('x_19668_halo_country');
+					 gr.orderBy('name');
+					 gr.query();
+					 while(gr.next())
+					 {
+						 countries.push({name:gr.name.name+''});
+					 }
+					 data.countries=json.encode(countries);
+
+					 var states=[]; 
+					 gr=new GlideRecord('x_19668_halo_state');
+					 gr.orderBy('name');
+					 gr.query();
+					 while(gr.next())
+					 {
+						 states.push({name:gr.name+''});
+					 }
+					 data.states=json.encode(states);
+
+
+					 var sectors=[]; 
+					 gr=new GlideRecord('x_19668_halo_sector');
+					 gr.orderBy('name');
+					 gr.query();
+					 while(gr.next())
+					 {
+						 sectors.push({name:gr.name+''});
+					 }
+					 data.sectors=json.encode(sectors); 
+				}
+				
+			 if(input.operation == 'submit')
+			 {
+				 var ref=new SubmitIncidentUtils();
+				 gr=new GlideRecord('x_19668_halo_incident');
+				 gr.initialize();
+				 gr.r_first_name=input.firstName;
+				 gr.r_last_name=input.lastName;
+				 gr.r_organization=input.organization;
+				 if(input.organization == 'United States Federal Government')
+					 {
+						 gr.r_department=ref.getDepartmentSysId(input.department);
+						 gr.r_sub_agency=ref.getSubAgencySysId(input.subAgency);
+					 }
+				 else if(input.organization == 'Foreign Government')
+					 {
+						 gr.r_country_name=input.countryName;
+					 }
+				 else if(input.organization == 'Critical Infrastructure')
+					 {
+						 gr.r_company_name=input.companyName;
+						 gr.sector=ref.getSectorSysId(input.sector);
+					 }
+				 else if(input.organization == 'Private Sector')
+					 {
+						 gr.r_company_name=input.companyName;
+						 gr.sector=ref.getSectorSysId(input.sector);
+					 }
+				 else if(input.organization == 'United States State Government')
+					 {
+						 gr.r_state=ref.getStateSysId(input.state);
+					 }
+				 
+				 gr.incident_type=ref.getIncidentTypeSysId(input.incidentType);
+				 gr.ticket_status='Open';
+				 gr.r_status='Open';
+				 gr.r_category=input.incidentType;
+				 gr.r_telephone_number=input.telephone;
+				 gr.r_email=input.email;
+				 gr.r_description=input.description;
+				 gr.r_note=input.notes;
+				 gr.assign_to_group=ref.getGroupSysId(input.groupName);
+				 gr.insert();
+				 data.incidentSysId=gr.sys_id+'';
+				 data.incidentId=gr.incident_id+'';
+				 
+			 }
+		 } //End of If
+	
+	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-07 17:00:04</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>e9b7cb31db7332001cf8dec0cf96194b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Submit Incident DHS</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_e9b7cb31db7332001cf8dec0cf96194b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-07 17:03:42</sys_updated_on>
+        <template>&lt;div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix"&gt;  
+  &lt;div id="zone-branding" class="zone zone-branding clearfix container-12"&gt;
+    &lt;div class="grid-8 region region-branding" id="region-branding"&gt;
+  &lt;div class="region-inner region-branding-inner"&gt;
+        &lt;div class="block block-block block-23 block-block-23 odd block-without-title" id="block-block-23"&gt;
+  &lt;div class="block-inner clearfix"&gt;
+                
+    &lt;div class="content clearfix"&gt;
+      &lt;div class="logo-img"&gt;&lt;a href="/"&gt;&lt;img src="logo.png" id="logo" alt="U.S. Department of Homeland Security Seal. United States Computer Emergency Readiness Team US-CERT"  width="411" height="72"/&gt;&lt;/a&gt;
+      
+      &lt;/div&gt;    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;&lt;div class="grid-4 region region-search" id="region-search"&gt;
+  &lt;div class="region-inner region-search-inner"&gt;
+    &lt;div class="block block-block block-3 block-block-3 odd block-without-title" id="block-block-3"&gt;
+  &lt;div class="block-inner clearfix"&gt;
+                
+    &lt;div class="content clearfix"&gt;
+      
+&lt;style type="text/css"&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/* &gt;&lt;!--*/
+.view-id-current_job_openings .views-table thead th {
+color: white;
+}
+
+/*--&gt;&lt;!]]&gt;*/
+&lt;/style&gt;&lt;style type="text/css"&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/* &gt;&lt;!--*/
+.general-table {
+        margin-bottom: 2px;
+        margin-top: 2px;
+}
+
+.general-table th {
+        border: 1px solid #2b5580;
+        background-color: #4078b1;
+        background-image: -webkit-gradient(
+                linear,
+                left bottom,
+                left top,
+                color-stop(0.15, rgb(41,90,139)),
+                color-stop(0.85, rgb(64,120,177))
+        );
+        background-image: -moz-linear-gradient(
+                center bottom,
+                rgb(41,90,139) 15%,
+                rgb(64,120,177) 85%
+        );
+        color: #FFFFFF;
+        text-align: center;
+}
+
+.general-table td, .general-table th {
+        border: 1px solid #2b5580;
+        line-height: 1.2em;
+	padding: 10px;
+}
+
+.general-table caption {
+	padding: 14px;
+	
+}
+
+.general-table caption strong {
+        line-height: 1.2em;
+	padding: 10px;
+	font-size: 14px;
+}
+
+}
+
+/*--&gt;&lt;!]]&gt;*/
+&lt;/style&gt;&lt;style type="text/css"&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/* &gt;&lt;!--*/
+.table-in-accordion {
+        margin-bottom: 2px;
+        margin-top: 2px;
+}
+
+.table-in-accordion th {
+        border: 1px solid #2b5580;
+        background-color: #4078b1;
+        background-image: -webkit-gradient(
+                linear,
+                left bottom,
+                left top,
+                color-stop(0.15, rgb(41,90,139)),
+                color-stop(0.85, rgb(64,120,177))
+        );
+        background-image: -moz-linear-gradient(
+                center bottom,
+                rgb(41,90,139) 15%,
+                rgb(64,120,177) 85%
+        );
+        color: #FFFFFF;
+        text-align: center;
+}
+
+.table-in-accordion td, .table-in-accordion th {
+        border: 1px solid #2b5580;
+        line-height: 1.2em;
+	padding: 6px;
+}
+
+.table-in-accordion caption {
+	padding: 14px;
+	
+}
+
+.table-in-accordion caption strong {
+        line-height: 1.2em;
+	padding: 10px;
+	font-size: 14px;
+}
+
+}
+
+/*--&gt;&lt;!]]&gt;*/
+&lt;/style&gt;&lt;style type="text/css"&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/* &gt;&lt;!--*/
+.node-bulletin #snya_v td {
+        line-height: 1.2em !important;
+}
+
+.node-bulletin #snya_v {
+        margin-bottom: 25px;
+}
+
+.node-bulletin #snya_v tfoot {
+        background-color: #F5F5F5;
+}
+
+.node-bulletin #snya_v td, .node-bulletin #snya_v th {
+        border: 1px solid #666666;
+        padding: 10px 5px !important;
+}
+
+.node-bulletin #snya_v_title {
+        background-color: #999999;
+        color: #FFFFFF;
+        text-align: center;
+        font-weight: bold;
+}
+
+.node-bulletin h2#snya_v_title
+{
+        padding: 10px 0;
+        border: 1px solid #666666;
+        border-bottom: none;
+}
+
+/*--&gt;&lt;!]]&gt;*/
+&lt;/style&gt;&lt;style type="text/css"&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/* &gt;&lt;!--*/
+body.node-type-current-activity div.content div.content a{
+    color: #005EBD;
+    text-decoration: underline;
+}
+.view-id-current_job_openings td.active {
+    background-color: inherit;
+}
+img.usajobs-img {
+    width: 85%;
+}
+
+/*--&gt;&lt;!]]&gt;*/
+&lt;/style&gt;    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class="container"&gt;
+  &lt;h2&gt;Report Incident&lt;/h2&gt;&lt;br/&gt;
+  &lt;form&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName" ng-required="true"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="lastName"&gt;Last Name:&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" name="lastName" ng-required="true"&gt;
+    &lt;/div&gt;
+     &lt;div class="form-group"&gt;
+      &lt;label for="organization"&gt;Organization:&lt;/label&gt;
+      &lt;select id="organization" name="organization" class="form-control" ng-model="organization" ng-required="true" required&gt;
+        &lt;option value="United States Federal Government"&gt;United States Federal Government&lt;/option&gt;
+        &lt;option  value="Private Sector"&gt;Private Sector&lt;/option&gt;
+        &lt;option  value="Foreign Government"&gt;Foreign Government&lt;/option&gt;
+      	&lt;option  value="Critical Infrastructure"&gt;Critical Infrastructure&lt;/option&gt;
+        &lt;option  value="Individual"&gt;Individual&lt;/option&gt;
+        &lt;option  value="United States State Government"&gt;United States State Government&lt;/option&gt;
+    	&lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group" ng-show="organization == 'United States Federal Government'"&gt;
+      &lt;label for="department"&gt;Department:&lt;/label&gt;
+ 			&lt;select id="department"  name="department" class="form-control" ng-model="department" ng-required="true"&gt;
+        &lt;option ng-repeat="dep in c.data.departments track by $index"&gt;{{dep.name}}&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+     &lt;div class="form-group" ng-show="organization == 'United States Federal Government'" &gt;
+      &lt;label for="subAgency"&gt;Sub Agency:&lt;/label&gt;
+       &lt;select id="subAgency"  name="subAgency" class="form-control" ng-model="subAgency"&gt;
+        &lt;option ng-repeat="sub in (c.data.subagencies | filter: {'department':department}) track by $index" value="{{sub.name}}"&gt;{{sub.name}}&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group" ng-show="organization == 'Foreign Government'"&gt;
+      &lt;label for="countryName"&gt;Country Name:&lt;/label&gt;
+       &lt;select id="countryName"  name="countryName" class="form-control" ng-model="countryName"&gt;
+        &lt;option ng-repeat="country in c.data.countries track by $index"&gt;{{country.name}}&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group" ng-show="organization == 'United States State Government'"&gt;
+      &lt;label for="state"&gt;State:&lt;/label&gt;
+       &lt;select id="state"  name="state" class="form-control" ng-model="state"&gt;
+        &lt;option  ng-repeat="state in c.data.states track by $index"&gt;{{state.name}}&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"  ng-show="organization == 'Private Sector'"&gt;
+      &lt;label for="companyName"&gt;Company Name:&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="companyName" placeholder="Enter Company Name" name="companyName"&gt;
+    &lt;/div&gt;
+     &lt;div class="form-group"  ng-show="organization == 'Private Sector'"&gt;
+      &lt;label for="sector"&gt;Sector:&lt;/label&gt;
+      &lt;select id="sector"  name="sector" class="form-control" ng-model="sector"&gt;
+        &lt;option  ng-repeat="sector in c.data.sectors track by $index"&gt;{{sector.name}}&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"  ng-show="organization == 'Critical Infrastructure'"&gt;
+      &lt;label for="companyName"&gt;Company Name:&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="companyName2" placeholder="Enter Company Name" name="companyName"&gt;
+    &lt;/div&gt;
+    
+     &lt;div class="form-group"  ng-show="organization == 'Critical Infrastructure'"&gt;
+      &lt;label for="sector"&gt;Sector:&lt;/label&gt;
+      &lt;select id="sector2"  name="sector2" class="form-control" ng-model="sector2"&gt;
+        &lt;option ng-repeat="sector in c.data.sectors track by $index" &gt;{{sector.name}}&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label for="incidentType"&gt;Incident Type:&lt;/label&gt;
+      &lt;select id="incidentType"  name="incidentType" class="form-control" ng-model="incidentType"&gt;
+        &lt;option value="CAT 0 Exercise/Network Defense Testing"&gt;Exercise/Network Defense Testing&lt;/option&gt;
+         &lt;option value="CAT 1 Unauthorized Access"&gt;Unauthorized Access&lt;/option&gt;
+         &lt;option value="CAT 2 Denial of Service (DoS)"&gt;Denial of Service&lt;/option&gt;
+         &lt;option value="CAT 3 Malicious Code"&gt;Malicious Code&lt;/option&gt;
+         &lt;option value="CAT 4 Improper Usage"&gt;Improper Usage&lt;/option&gt;
+         &lt;option value="CAT 5 Scans/Probes/Attempted Access"&gt;Scans/Probes/Attempted Access&lt;/option&gt;
+         &lt;option value="CAT 6 Investigation"&gt;Investigation&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"&gt;
+      &lt;label for="telephone"&gt;Telephone Number:&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="telephone" placeholder="Enter Telephone Number" name="telephone" ng-required="true"&gt;
+    &lt;/div&gt;
+     &lt;div class="form-group"&gt;
+      &lt;label for="email"&gt;Email:&lt;/label&gt;
+      &lt;input type="email" class="form-control" id="email" placeholder="Enter email" name="email" ng-required="true"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="description"&gt;Description:&lt;/label&gt;
+      &lt;input type="description" class="form-control" id="description" placeholder="Enter Description" name="description" ng-required="true"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="Notes"&gt;Notes:&lt;/label&gt;
+      &lt;textarea class="form-control" id="notes" placeholder="Enter Notes" name="notes"  rows="5" cols="200" ng-required="true"&gt; &lt;/textarea&gt;
+    &lt;/div&gt;
+    
+    &lt;button type="button" class="btn btn-default" ng-click="submitIncident()"&gt;Submit&lt;/button&gt;
+   &lt;br/&gt; &lt;br/&gt;
+    &lt;p&gt;
+      
+&lt;b&gt;Privacy Act Statement&lt;/b&gt;
+Authority: 5 U.S.C. § 301 and 44 U.S.C. § 3101 authorize the collection of this information.
+Purpose: The primary purpose for the collection of this information is to allow the Department of Homeland Security to contact you regarding your request.
+Routine Uses: The information collected may be disclosed as generally permitted under 5 U.S.C. § 552a(b) of the Privacy Act of 1974, as amended. This includes using the information as necessary and authorized by the routine uses published in DHS/ALL-002 - Department of Homeland Security (DHS) Mailing and Other Lists System Novermber 25, 2008, 73 FR 71659.
+Disclosure: Providing this information is voluntary, however, failure to provide this information will prevent DHS from contacting you in the event there are questions regarding your request.
+    &lt;/p&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</template>
+    </sp_widget>
+</record_update>

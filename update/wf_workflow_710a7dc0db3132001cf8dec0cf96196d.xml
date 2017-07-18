@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"ends":["1df91125db3332001cf8dec0cf9619b4"],"subflows":[],"stages":{},"activities":{}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type>run_match</condition_type>
+        <description/>
+        <expected_sequences>9df91125db3332001cf8dec0cf9619b2,adf95565db3332001cf8dec0cf96191f,25f95565db3332001cf8dec0cf961921,a5f91125db3332001cf8dec0cf9619b6,1df91125db3332001cf8dec0cf9619b4</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>9df91125db3332001cf8dec0cf9619b2,adf95565db3332001cf8dec0cf96191f,25f95565db3332001cf8dec0cf961921,a5f91125db3332001cf8dec0cf9619b6,1df91125db3332001cf8dec0cf9619b4</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Test</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field/>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">9df91125db3332001cf8dec0cf9619b2</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>55f91125db3332001cf8dec0cf9619b0</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-07 15:27:05</sys_updated_on>
+        <table>global</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Test">710a7dc0db3132001cf8dec0cf96196d</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Test</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-03-24 14:45:43</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>710a7dc0db3132001cf8dec0cf96196d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>wf_workflow_710a7dc0db3132001cf8dec0cf96196d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-03-24 14:54:32</sys_updated_on>
+        <table>global</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Is Threat Exists">aa7403fddb3332001cf8dec0cf9619bb</activity_definition>
+        <activity_definition_updated>true</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{"threatData":"${workflow.scratchpad.threatData}"}</input>
+        <is_parent>false</is_parent>
+        <name/>
+        <new_activity_definition/>
+        <notes>This activity was updated to a newer version since the workflow was published.</notes>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>25f95565db3332001cf8dec0cf961921</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-07 16:47:45</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Test">55f91125db3332001cf8dec0cf9619b0</workflow_version>
+        <x>171</x>
+        <y>231</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=25f95565db3332001cf8dec0cf961921"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="">25f95565db3332001cf8dec0cf961921</activity>
+        <condition>(totalRows &gt;= 1) &amp;&amp; (threatLevel!='')</condition>
+        <condition_default display_value="Threat Found">15b4b921db7332001cf8dec0cf96192f</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Threat Found</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 16:19:34</sys_created_on>
+        <sys_id>aed4b161db7332001cf8dec0cf96197c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 16:30:44</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="">25f95565db3332001cf8dec0cf961921</activity>
+        <condition>(totalRows &lt;1) ||(threatLevel =='')</condition>
+        <condition_default display_value="Threat Not Found">48f4b521db7332001cf8dec0cf96197c</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Threat Not Found</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 16:22:09</sys_created_on>
+        <sys_id>2c757da1db7332001cf8dec0cf961931</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 16:30:44</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>9df91125db3332001cf8dec0cf9619b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Test">55f91125db3332001cf8dec0cf9619b0</workflow_version>
+        <x>26</x>
+        <y>49</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=9df91125db3332001cf8dec0cf9619b2"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">9df91125db3332001cf8dec0cf9619b2</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>99f91125db3332001cf8dec0cf9619b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Create Inputs</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>adf95565db3332001cf8dec0cf96191f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 16:47:42</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Test">55f91125db3332001cf8dec0cf9619b0</workflow_version>
+        <x>149</x>
+        <y>57</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=adf95565db3332001cf8dec0cf96191f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>adf95565db3332001cf8dec0cf96191f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>21f95565db3332001cf8dec0cf961920</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 16:47:42</sys_updated_on>
+        <value>workflow.scratchpad.threatData="http://jqueryapi.org/Apple_Support/";</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>adf95565db3332001cf8dec0cf96191f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>21f95565db3332001cf8dec0cf961920</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 16:47:42</sys_updated_on>
+        <value>workflow.scratchpad.threatData="http://jqueryapi.org/Apple_Support/";</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Create Inputs">adf95565db3332001cf8dec0cf96191f</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>a5f95565db3332001cf8dec0cf961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>1df91125db3332001cf8dec0cf9619b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Test">55f91125db3332001cf8dec0cf9619b0</workflow_version>
+        <x>707</x>
+        <y>115</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=1df91125db3332001cf8dec0cf9619b4"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Log Output of Activity</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>a5f91125db3332001cf8dec0cf9619b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Test">55f91125db3332001cf8dec0cf9619b0</workflow_version>
+        <x>475</x>
+        <y>230</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=a5f91125db3332001cf8dec0cf9619b6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a5f91125db3332001cf8dec0cf9619b6</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>29f95565db3332001cf8dec0cf96191e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+        <value>gs.info("workflow.scratchpad.threatLevel:   "+threatLevel);</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a5f91125db3332001cf8dec0cf9619b6</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>29f95565db3332001cf8dec0cf96191e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+        <value>gs.info("workflow.scratchpad.threatLevel:   "+threatLevel);</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Log Output of Activity">a5f91125db3332001cf8dec0cf9619b6</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>e5f95565db3332001cf8dec0cf96191f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">a5f95565db3332001cf8dec0cf961920</condition>
+        <from display_value="Create Inputs">adf95565db3332001cf8dec0cf96191f</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:05</sys_created_on>
+        <sys_id>69f95565db3332001cf8dec0cf961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:05</sys_updated_on>
+        <to display_value="">25f95565db3332001cf8dec0cf961921</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Threat Not Found">2c757da1db7332001cf8dec0cf961931</condition>
+        <from display_value="">25f95565db3332001cf8dec0cf961921</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 16:24:17</sys_created_on>
+        <sys_id>6fe57da1db7332001cf8dec0cf961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 16:24:17</sys_updated_on>
+        <to display_value="Log Output of Activity">a5f91125db3332001cf8dec0cf9619b6</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Threat Found">aed4b161db7332001cf8dec0cf96197c</condition>
+        <from display_value="">25f95565db3332001cf8dec0cf961921</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 16:24:24</sys_created_on>
+        <sys_id>90f5b9a1db7332001cf8dec0cf9619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 16:24:24</sys_updated_on>
+        <to display_value="Log Output of Activity">a5f91125db3332001cf8dec0cf9619b6</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">99f91125db3332001cf8dec0cf9619b3</condition>
+        <from display_value="Begin">9df91125db3332001cf8dec0cf9619b2</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>a5f95565db3332001cf8dec0cf961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+        <to display_value="Create Inputs">adf95565db3332001cf8dec0cf96191f</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">e5f95565db3332001cf8dec0cf96191f</condition>
+        <from display_value="Log Output of Activity">a5f91125db3332001cf8dec0cf9619b6</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>e1f95565db3332001cf8dec0cf961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+        <to display_value="End">1df91125db3332001cf8dec0cf9619b4</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-06 14:22:04</sys_created_on>
+        <sys_id>59f91125db3332001cf8dec0cf9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-06 14:22:04</sys_updated_on>
+        <workflow_version display_value="Test">55f91125db3332001cf8dec0cf9619b0</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=710a7dc0db3132001cf8dec0cf96196d^sys_id!=55f91125db3332001cf8dec0cf9619b0">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

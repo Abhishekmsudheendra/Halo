@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function()
+{
+  var c=this;
+	var jsonTable;
+	c.getData = function() 
+	{
+
+		c.server.get().then(
+			function(response)
+			{  
+				c.data.tableData=response.data.tableData;
+				jsonTable=response.data.tableData;
+				//c.data.tableData= angular.fromJson(response.data.tableData);
+			})
+	};
+	c.getData();
+	jsonTable=JSON.parse(c.data.tableData);
+	$("#open_incidents").dataTable({ data: jsonTable,
+        columns: [
+        { data: "incidentIndex"},
+        { data: function(data, type, row ) 
+								{
+									var link='<a href=haloportal/?id=incident_summary&sys_id='+data.sysId+' <a>'+data.incidentId+'</a>';
+									return link;
+								}},
+        { data: "incidentType" },
+        { data: "incidentStatus"},
+        { data: "indicatorCount"},
+        { data: "createdDate"},
+        { data: "lastUpdated"}
+    ]
+	});
+   
+}
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #3b3b3b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+background: #2b2b2b;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 800px;
+}
+
+.table {
+  margin: 0 0 40px 0;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+}
+@media screen and (max-width: 580px) {
+  .table {
+    display: block;
+  }
+}
+
+.row {
+  display: table-row;
+  background: #f6f6f6;
+}
+.row:nth-of-type(odd) {
+  background: #e9e9e9;
+}
+.row.header {
+  font-weight: 900;
+  color: #ffffff;
+  background: #ea6153;
+}
+.row.green {
+  background: #27ae60;
+}
+.row.blue {
+  background: #2980b9;
+}
+
+.header.blue
+{
+  font-weight: 900;
+  color: #ffffff;
+  background: #428bca;
+}
+@media screen and (max-width: 580px) {
+  .row {
+    padding: 8px 0;
+    display: block;
+  }
+}
+
+.cell {
+  padding: 6px 12px;
+  display: table-cell;
+}
+@media screen and (max-width: 580px) {
+  .cell {
+    padding: 2px 12px;
+    display: block;
+  }
+}
+
+#h2_title
+{
+  color: #b70505;
+  font-size: 40px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.col-md-12
+{
+ padding-left: 0px;
+  padding-right:0px;
+}
+
+.panel-body
+{
+  padding:0px;
+ 
+}
+
+.panel-heading
+{
+  font-size:18px;
+}
+.table
+{
+   margin-bottom:0px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+td
+{
+ color:#0c4a6f 
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>test-incidents</id>
+        <internal>false</internal>
+        <link/>
+        <name>Test Incidents</name>
+        <option_schema>[]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() 
+ {
+	var json=new global.JSON();
+	var list=[];
+	var i=1;
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  var gr=new GlideRecord('x_19668_halo_incident');
+	gr.addQuery('ticket_status','Open');
+	gr.query();
+	while(gr.next())
+		{
+			 list.push({incidentIndex:i++,incidentId:gr.incident_id+'',incidentType:gr.incident_type.name+'',indicatorCount:gr.complted_indicator_count+'',incidentStatus:gr.ticket_status+'',createdDate:gr.sys_created_on+'',lastUpdated:gr.sys_updated_on+'',sysId:gr.sys_id+''});
+		}
+	
+	data.tableData=json.encode(list);
+})();
+
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-20 19:42:25</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>dfd0ceb4db9232001cf8dec0cf961991</sys_id>
+        <sys_mod_count>87</sys_mod_count>
+        <sys_name>Test Incidents</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_dfd0ceb4db9232001cf8dec0cf961991</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-23 19:19:32</sys_updated_on>
+        <template><![CDATA[<div  class="container-fluid">
+  <div id="h2_title">
+      Welcome to the Automated Incident Triage System 
+    </div> <br/>
+  <div class="panel panel-info">
+    <div class="panel-heading"> Open Incidents</div>
+    <div class="panel-body">
+    
+    <div class="col-md-12">
+      
+   <!--   
+      <table  ng-table="demo.tableParams" class="table display" id="open_incidents">
+        <tr class="row header blue">
+          <th>#</th>
+          <th>Incident Id</th>
+          <th>Incident Type</th>
+          <th>Status</th>
+          <th>Indicator Count</th>
+          <th>Created Date</th>
+          <th>Last Updated</th>
+        </tr>
+       
+        <tr ng-repeat="row in c.data.tableData track by $index" class="row">
+          <td data-title="'incidentId'" class="cell">{{$index}}</td>
+          <td data-title="'incidentId'" sortable="'incidentId'" class="cell"><a href="/haloportal/?id=incident_summary&sys_id={{row.sysId}}" style="color:#0c4a6f">{{row.incidentId}}</a></td>
+          <td data-title="'incidentType'" sortable="'incidentType'" class="cell">{{row.incidentType}}</td>
+          <td data-title="'incidentStatus'" sortable="'incidentStatus'" class="cell">{{row.incidentStatus}}</td>
+          <td data-title="'indicatorCount'" sortable="'indicatorCount'" class="cell">{{row.indicatorCount}}</td>
+          <td data-title="'createdDate'" sortable="'createdDate'" class="cell">{{row.createdDate}}</td>
+          <td data-title="'lastUpdated'" sortable="'lastUpdated'" class="cell">{{row.lastUpdated}}</td>
+
+        </tr> 
+        
+      </table>  -->
+      
+       <table   class="display" id="open_incidents">
+        <thead>
+          <tr class="header blue">
+            <th>#</th>
+            <th>Incident Id</th>
+            <th>Incident Type</th>
+            <th>Status</th>
+            <th>Indicator Count</th>
+            <th>Created Date</th>
+            <th>Last Updated</th>
+        </tr>
+       </thead>
+         <tbody>
+         	
+         </tbody>
+         
+      </table>  
+  		</div>
+  
+    </div>
+  </div>
+</div>
+  
+
+
+]]></template>
+    </sp_widget>
+</record_update>

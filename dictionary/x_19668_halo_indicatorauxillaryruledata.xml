@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="IndicatorAuxillaryRuleData" max_length="40" name="x_19668_halo_indicatorauxillaryruledata" type="collection">
+        <element label="Foset" max_length="40" name="foset" type="boolean"/>
+        <element label="Foset Timestamp" max_length="40" name="foset_ts" type="glide_date_time"/>
+        <element label="Indicator Aux Data Id" max_length="40" name="indicator_aux_data_id" type="string"/>
+        <element label="Indicator Id" max_length="32" name="indicator_id" reference="x_19668_halo_potentialindicators" type="reference"/>
+        <element label="IsGovSpace" max_length="40" name="isgovspace" type="boolean"/>
+        <element label="IsGovSpace Timestamp" max_length="40" name="isgovspace_ts" type="glide_date_time"/>
+        <element label="IsUS" max_length="40" name="isus" type="boolean"/>
+        <element label="IsUS Timestamp" max_length="40" name="isus_ts" type="glide_date_time"/>
+        <element label="Repscore" max_length="40" name="repscore" type="string"/>
+        <element label="Repscore Raw" max_length="4000" name="repscore_raw" type="journal"/>
+        <element label="Repscore Timestamp" max_length="40" name="repscore_ts" type="glide_date_time"/>
+        <index name="index">
+            <element name="indicator_id"/>
+        </index>
+    </element>
+</database>

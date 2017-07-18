@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Decision Table" max_length="40" name="x_19668_halo_decision_table" type="collection">
+        <element label="DataSource Type" max_length="32" name="datasource_type" reference="x_19668_halo_datasources" type="reference"/>
+        <element label="Description" max_length="100" name="description" type="string"/>
+        <element label="High Threshold" max_length="40" name="high_threshold" type="integer"/>
+        <element label="Low Threshold" max_length="40" name="low_threshold" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Resulting Impact Level" max_length="40" name="resulting_impact_level" type="string"/>
+        <index name="index">
+            <element name="datasource_type"/>
+        </index>
+    </element>
+</database>

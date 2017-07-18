@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Incident" max_length="40" name="x_19668_halo_incident" type="collection">
+        <element label="Add FO Set to Ticket" max_length="40" name="add_fo_set_to_ticket" type="boolean"/>
+        <element label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Assign to Group" max_length="32" name="assign_to_group" reference="sys_user_group" type="reference"/>
+        <element label="Assign to Next Tier" max_length="32" name="assign_to_tier" reference="sys_user_group" type="reference"/>
+        <element label="Comments" max_length="4000" name="comments" type="journal"/>
+        <element default="0" label="Completed Enrich Count" max_length="40" name="completed_enrich_count" type="integer"/>
+        <element label="Completed Indicator Count" max_length="40" name="complted_indicator_count" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="400" name="description" type="string"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Enrichment Datasources" max_length="1024" name="enrichment_datasources" reference="x_19668_halo_datasources" type="glide_list"/>
+        <element label="Has Executed" max_length="40" name="has_executed" type="boolean"/>
+        <element label="Has Executed Time" max_length="40" name="has_executed_time" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" default="javascript:global.getNextObjNumberPadded();&#9;" display="true" label="Incident Id" max_length="40" name="incident_id" read_only="true" type="string"/>
+        <element audit="true" label="Incident Type" max_length="32" name="incident_type" reference="x_19668_halo_incident_type" type="reference"/>
+        <element label="Indicator Count" max_length="40" name="indicator_count" type="integer"/>
+        <element label="Notify CIO Group" max_length="40" name="notify_cio_group" type="boolean"/>
+        <element label="Notify Domain Registrar" max_length="40" name="notify_domain_registrar" type="boolean"/>
+        <element label="Notify ISP" max_length="40" name="notify_isp" type="boolean"/>
+        <element label="Notify Production" max_length="40" name="notify_production" type="boolean"/>
+        <element label="Notify usual Five 8" max_length="40" name="notify_usual_five8" type="boolean"/>
+        <element label="Resolve and Close the Ticket" max_length="40" name="resolve_and_close_the_ticket" type="boolean"/>
+        <element choice="1" label="Category" mandatory="true" max_length="100" name="r_category" type="string">
+            <choice>
+                <element label="CAT 0 Exercise/Network Defense Testing" sequence="0" value="CAT 0 Exercise/Network Defense Testing"/>
+                <element label="CAT 1 Unauthorized Access" sequence="1" value="CAT 1 Unauthorized Access"/>
+                <element label="CAT 2 Denial of Service" sequence="2" value="CAT 2 Denial of Service"/>
+                <element label="CAT 3 Malicious Code" sequence="3" value="CAT 3 Malicious Code"/>
+                <element label="CAT 4 Improper Usage" sequence="4" value="CAT 4 Improper Usage"/>
+                <element label="CAT 5 Scans/Probes/Attempted Access" sequence="5" value="CAT 5 Scans/Probes/Attempted Access"/>
+                <element label="CAT 6 Investigation" sequence="6" value="CAT 6 Investigation"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Company Name" max_length="40" name="r_company_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Country Name" max_length="40" name="r_country_name" type="string"/>
+        <element calculation="current.r_created_date=current.sys_created_on;" label="Created Date" max_length="40" name="r_created_date" type="glide_date_time" virtual="true"/>
+        <element label="Department" max_length="32" name="r_department" reference="x_19668_halo_department" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="400" name="r_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Email Address" max_length="40" name="r_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="First Name" max_length="40" name="r_first_name" type="string"/>
+        <element label="Remedy Incident Id" max_length="32" name="r_incident_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" max_length="40" name="r_last_name" type="string"/>
+        <element label="Note" max_length="100000" name="r_note" type="string"/>
+        <element choice="1" label="Organization" mandatory="true" max_length="100" name="r_organization" type="string">
+            <choice>
+                <element label="United States Federal Government" sequence="1" value="United States Federal Government"/>
+                <element label="Foreign Government" sequence="2" value="Foreign Government"/>
+                <element label="Individual" sequence="3" value="Individual"/>
+                <element label="United States State Government" sequence="3" value="United States State Government"/>
+                <element label="Private Sector" sequence="4" value="Private Sector"/>
+                <element label="Critical Infrastructure" sequence="5" value="Critical Infrastructure"/>
+            </choice>
+        </element>
+        <element label="Sender" max_length="32" name="r_sender" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="SLTT Government Agency/Organization Name" max_length="40" name="r_sltt_government_agency_name" type="string"/>
+        <element label="State" max_length="32" name="r_state" reference="x_19668_halo_state" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="r_status" type="string">
+            <choice>
+                <element label="Open" sequence="0" value="open"/>
+                <element label="Closed" sequence="1" value="closed"/>
+                <element label="Investigating" sequence="2" value="investigating"/>
+                <element label="Mitigated" sequence="2" value="mitigated"/>
+            </choice>
+        </element>
+        <element label="Sub Agency" max_length="32" name="r_sub_agency" reference="x_19668_halo_sub_agency" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Telephone Number" max_length="40" name="r_telephone_number" type="string"/>
+        <element calculation="current.r_updated_date=current.sys_updated_on;" label="Last Updated" max_length="40" name="r_updated_date" type="glide_date_time" virtual="true"/>
+        <element label="Sector" max_length="32" name="sector" reference="x_19668_halo_sector" type="reference"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Indicators" max_length="1024" name="select_indcators" reference="x_19668_halo_indicator_type" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
+        <element label="Send Email Receipt to Reporter" max_length="40" name="send_email_receipt_to_reporter" type="boolean"/>
+        <element label="Send Email to Reporter with Notice of Resolution - with explanation of unfounded" max_length="40" name="send_email_to_reporter_with_explanation" type="boolean"/>
+        <element label="Send Email Update to Reporter" max_length="40" name="send_email_update_to_reporter" type="boolean"/>
+        <element label="Set Status of Ticket Resolved" max_length="40" name="set_status_to_resolved" type="boolean"/>
+        <element label="Ticket COA" max_length="32" name="ticket_coa" reference="x_19668_halo_selcted_ticket_course_of_action" type="reference"/>
+        <element label="Ticket Ready for Execution" max_length="40" name="ticket_ready_for_execution" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Open" label="Ticket Status" max_length="40" name="ticket_status" type="string">
+            <choice>
+                <element label="Open" sequence="0" value="Open"/>
+                <element label="Extract Indicators" sequence="1" value="Extract Indicators"/>
+                <element label="Investigating" sequence="1" value="Investigating"/>
+                <element label="Enrich Indicators" sequence="2" value="Enrich Indicators"/>
+                <element label="Determine CourseofActions" sequence="3" value="Determine CourseofActions"/>
+                <element label="Ready for Review" sequence="3" value="Ready for Review"/>
+                <element label="Publish" sequence="4" value="Publish"/>
+                <element label="Mitigated" sequence="5" value="Mitigated"/>
+                <element label="Closed" sequence="6" value="Closed"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" calculation="if(current.ticket_status == 'Closed')&#13;&#10;&#9;current.ui_workflow_status='Closed';&#13;&#10;else if(current.ticket_status == 'Open')&#13;&#10;&#9;current.ui_workflow_status='New';&#13;&#10;else&#13;&#10;&#9;current.ui_workflow_status='Executing';" choice="3" default="New" label="UI Workflow Status" max_length="40" name="ui_workflow_status" type="string" virtual="true">
+            <choice>
+                <element label="New" sequence="0" value="New"/>
+                <element label="Executing" sequence="1" value="Executing"/>
+                <element label="Completed" sequence="2" value="Completed"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="incident_type"/>
+        </index>
+        <index name="index2">
+            <element name="assign_to_group"/>
+        </index>
+        <index name="index3">
+            <element name="assign_to_tier"/>
+        </index>
+        <index name="index4">
+            <element name="r_organization"/>
+        </index>
+        <index name="index5">
+            <element name="r_state"/>
+        </index>
+        <index name="index6">
+            <element name="ticket_coa"/>
+        </index>
+        <index name="index7">
+            <element name="r_sub_agency"/>
+        </index>
+        <index name="index8">
+            <element name="r_sender"/>
+        </index>
+        <index name="index9">
+            <element name="r_category"/>
+        </index>
+        <index name="index10">
+            <element name="r_department"/>
+        </index>
+        <index name="index11">
+            <element name="r_incident_id"/>
+        </index>
+        <index name="index12">
+            <element name="sector"/>
+        </index>
+        <index name="index13">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>

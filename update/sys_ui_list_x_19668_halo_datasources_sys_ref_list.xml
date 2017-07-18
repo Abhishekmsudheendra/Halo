@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_19668_halo_datasources" version="2" view="sys_ref_list">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>datasource_name</element>
+            <list_id display_value="x_19668_halo_datasources" element="NULL" name="x_19668_halo_datasources" parent="NULL" relationship="NULL" sys_domain="global" view="23b20773db3032001cf8dec0cf96192f">160dca0ddb7132001cf8dec0cf9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-27 18:42:42</sys_created_on>
+            <sys_id>5a0dca0ddb7132001cf8dec0cf9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-27 18:42:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>datasource_id</element>
+            <list_id display_value="x_19668_halo_datasources" element="NULL" name="x_19668_halo_datasources" parent="NULL" relationship="NULL" sys_domain="global" view="23b20773db3032001cf8dec0cf96192f">160dca0ddb7132001cf8dec0cf9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-27 18:42:42</sys_created_on>
+            <sys_id>da0dca0ddb7132001cf8dec0cf9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-27 18:42:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>accepted_indicators</element>
+            <list_id display_value="x_19668_halo_datasources" element="NULL" name="x_19668_halo_datasources" parent="NULL" relationship="NULL" sys_domain="global" view="23b20773db3032001cf8dec0cf96192f">160dca0ddb7132001cf8dec0cf9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-27 18:42:42</sys_created_on>
+            <sys_id>5e0dca0ddb7132001cf8dec0cf9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-27 18:42:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>datasource_description</element>
+            <list_id display_value="x_19668_halo_datasources" element="NULL" name="x_19668_halo_datasources" parent="NULL" relationship="NULL" sys_domain="global" view="23b20773db3032001cf8dec0cf96192f">160dca0ddb7132001cf8dec0cf9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-27 18:42:42</sys_created_on>
+            <sys_id>de0dca0ddb7132001cf8dec0cf9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-27 18:42:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_19668_halo_datasources</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-27 18:42:42</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>160dca0ddb7132001cf8dec0cf9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_19668_halo_datasources</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_ui_list_x_19668_halo_datasources_sys_ref_list</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-27 18:42:42</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">23b20773db3032001cf8dec0cf96192f</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

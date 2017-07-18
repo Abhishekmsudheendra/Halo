@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function()
+{
+	var locationStr=window.location;
+	var pattern=/[a-zA-Z0-9]{32}/;
+	var sysId=pattern.exec(locationStr);
+	var c=this;
+	c.getData = function() 
+	{
+		c.server.get({sysId:sysId}).then(
+			function(response)
+			{  
+				c.data.indicatorEnrichmentData= angular.fromJson(response.data.indicatorEnrichmentData);
+			});
+	};
+	c.getData();
+  
+}
+
+
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+.panel-group
+{
+  margin:0px;
+  
+}
+.panel-body
+{
+  margin:0px;
+  
+}
+
+
+label.checkbox-inline {
+    width: 210px;
+}
+
+@media only screen and (max-width: 1000px) 
+{
+    td 
+    {
+        width:auto;
+    }
+}
+
+@media only screen and (min-width: 1001px) 
+{
+    td 
+    {
+        width:260px !important;
+    }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>indicator-enrichment-summary</id>
+        <internal>false</internal>
+        <link/>
+        <name>Indicator Enrichment Summary</name>
+        <option_schema>[]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() 
+ {
+	var json=new global.JSON();
+	var indicatorEnrichmentData=[];
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	if(input)
+		{
+
+			gr=new GlideRecord('x_19668_halo_indicatorenrichment');
+			gr.addQuery('sys_id',input.sysId);
+			gr.query(); 
+			while(gr.next())
+			{
+				indicatorEnrichmentData.push({enrichmentId:gr.enrichment_id+'',enrichmentStatus:gr.enrichment_status+'',enrichmentImpactLevel:gr.enrichment_impactlevel+'',enrichmentData:gr.enrichment_data+'',enrichmentImpactLevelTs:gr.enrichmnet_impactlevel_ts+'',indicatorId:gr.indicator_id.indicator_id+'',indicatorSysId:gr.indicator_id+''});
+			}
+			
+			data.indicatorEnrichmentData=json.encode(indicatorEnrichmentData);
+			}
+	
+})();
+
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-04 17:58:53</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>836fa199db6232001cf8dec0cf961992</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Indicator Enrichment Summary</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_836fa199db6232001cf8dec0cf961992</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-04 20:05:42</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading"><h3> Indicator Enrichment {{c.data.indicatorEnrichmentData[0].enrichmentId}} </h3> </div>
+      <div class="panel-body" style="padding:0px">
+        <div class="panel-group">
+          
+          
+          <div class="panel panel-info">
+            <div class="panel-heading"><h4>Review Enrichment Information </h4></div>
+            <div class="panel-body">
+            <div class="col-sm-10 tabbed tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="sumtab-0-0">
+                <p><label>Indicator Enrichment #: </label> {{c.data.indicatorEnrichmentData[0].enrichmentId}}    </p>
+                <p><label>Related Indicator #: </label> <a href="haloportal/?id=potential_indicator_summary&indicator_id={{c.data.indicatorEnrichmentData[0].indicatorSysId}}">{{c.data.indicatorEnrichmentData[0].indicatorId}}</a></p>
+                  <p><label>Enrichment Status: </label> {{c.data.indicatorEnrichmentData[0].enrichmentStatus}}      </p>
+                  <p><label>Enrichment Impact Level: </label> {{c.data.indicatorEnrichmentData[0].enrichmentImpactLevel}}      </p>
+                  <p><label>Enrichment Impact Level Timestamp:  </label> {{c.data.indicatorEnrichmentData[0].enrichmentImpactLevelTs}}   </p>
+                  <p><label for="notes">Enrichment Data:</label>   </p>
+  								<textarea class="form-control" rows="5" id="notes" ng-readonly="true">{{c.data.indicatorEnrichmentData[0].enrichmentData}}</textarea>
+                </div>
+            </div>
+            </div>
+           
+          </div> <!-- End of First Panel -->
+   
+        </div> <!--End of Panel Group -->
+     </div>
+ </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

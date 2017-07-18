@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() 
+{
+	$(document).ready(function()
+		{
+			$('[data-toggle="tooltip"]').tooltip(); 
+	});
+
+	var c = this;
+	c.getData = function() 
+	{
+		c.server.get({}).then(function(response)
+		{			
+			c.data.userData=angular.fromJson(response.data.userData);
+			c.data.accessData=angular.fromJson(response.data.accessData);
+
+		});
+	};
+	c.getData();						  
+							  
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>ul.nav.child_menu li:before 
+{
+    background: #425668;
+    bottom: auto;
+    content: "";
+    height: 8px;
+    left: 23px;
+    margin-top: 15px;
+    position: absolute;
+    right: auto;
+    width: 8px;
+    z-index: 1;
+    border-radius: 50%;
+}
+.nav-md:before
+{
+   background: #425668;
+    bottom: auto;
+    content: "";
+    height: 8px;
+    left: 23px;
+    margin-top: 15px;
+    position: absolute;
+    right: auto;
+    width: 8px;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+ul.nav.child_menu li:after {
+    border-left: 1px solid #425668;
+    bottom: 0;
+    content: "";
+    left: 27px;
+    position: absolute;
+    top: 0;
+}
+
+.nav-md:after
+{
+    border-left: 1px solid #425668;
+    bottom: 0;
+    content: "";
+    left: 27px;
+    position: absolute;
+    top: 0;
+}
+
+.nav_title {
+    width: auto !important;
+    
+}
+
+.sidebar-footer, footer
+
+{
+  display:none;
+}
+
+
+@media only screen and (min-height: 500px) 
+{
+   .left_col
+  {
+    height:1684px;
+  }
+}
+
+.col-md-10, .col-lg-10,  .col-md-2, .col-lg-2, .col-md-9, .col-lg-9,  .col-md-3, .col-lg-3
+{ 
+  padding:0px !important;
+}
+
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>home-left-widget</id>
+        <internal>false</internal>
+        <link/>
+        <name>Home Left Widget</name>
+        <option_schema>[]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() 
+{
+	var gr;
+	var ref=new RightWidgetUtils();
+	var leftref=new LeftWidgetUtils();
+	if(input)
+	{
+		data.userData=ref.userData();
+		data.accessData=leftref.accessData();
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-06 14:37:12</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>3fb4b4d0db0232001cf8dec0cf961930</sys_id>
+        <sys_mod_count>170</sys_mod_count>
+        <sys_name>Home Left Widget</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_widget_3fb4b4d0db0232001cf8dec0cf961930</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-17 14:50:39</sys_updated_on>
+        <template><![CDATA[    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="id=home" class="site_title"><i class="fa fa-paw"></i> <span>Halo Home</span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile clearfix">
+            <div class="profile_pic">
+                <img src="img.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info" >
+                <span>Welcome,</span>
+                <h2>{{c.data.userData[0].displayName}}</h2>
+            </div>
+        </div>
+        <!-- /menu profile quick info -->
+
+        <br>
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section active">
+                <h3>General</h3>
+                <ul class="nav side-menu" style="" >
+              
+                    <li class="" ><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="display: none;">
+                            <li class="current-page"><a href="https://dev21310.service-now.com/haloportal/id=home">Dashboard</a></li>
+                            <li class="current-page"><a href="https://dev21310.service-now.com/haloportal/?id=search_incident">Search Incidents</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-edit"></i> Halo <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="">
+                           <li><a href="/haloportal/?id=myincidents">My Incidents</a></li>
+                            <li><a href="/haloportal/?id=open_incidents">Open Incidents</a></li>
+                            <li><a href="/haloportal/?id=closedincidents">Closed Incidents</a></li>
+                  			<li><a href="/haloportal/?id=mygroupincidents">My Group Incidnets</a></li>
+                            <li><a href="/haloportal/?id=search_incident">Search Incidents</a></li>
+
+                        </ul>
+                    </li>
+                    <li ng-show="c.data.accessData[0].isAdmin == 'true'"><a><i class="fa fa-wrench"></i> Halo Administration <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="">
+                            <li><a href="/haloportal/?id=datasources">Data Sources</a></li>
+                            <li><a href="/haloportal/?id=decisiontable">Decision Table</a></li>
+                            <li><a href="/haloportal/?id=indicatortypes">Indicator Types</a></li>
+                            <li><a href="/haloportal/?id=incidenttypes">Incident Types</a></li>
+                            <li><a href="/haloportal/?id=courseofactions">Course Of Actions</a></li>
+                          	<li><a href="/haloportal/?id=soapmessages">SOAP Messages</a></li>
+                            <li><a href="/haloportal/?id=restmessages">REST Messages</a></li>
+                            <li><a href="/haloportal/?id=workfloweditor">Workflow Editor</a></li>                            
+                        </ul>
+                    </li>
+                    
+                  <li ng-show="c.data.accessData[0].isAdmin == 'true'"><a><i class="fa fa-wrench"></i> Halo Data Management <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="">
+                            <li><a href="/haloportal/?id=departments">Departments</a></li>
+                            <li><a href="/haloportal/?id=subagencies">Subagencies</a></li>
+                            <li><a href="/haloportal/?id=states">States</a></li>
+                            <li><a href="/haloportal/?id=countries">Countries</a></li>
+                          	<li><a href="/haloportal/?id=sectors">Sectors</a></li>
+                        </ul>
+                    </li>
+                  
+                    <li  ng-show="c.data.accessData[0].isAdmin == 'true'"><a><i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="">         
+                            <li><a href="/haloportal/?id=userprofiles">User Profiles</a></li>
+                            <li><a href="/haloportal/?id=adduser">Add User</a></li>
+                            <li><a href="/haloportal/?id=managegroups">Manage Groups</a></li>
+                            <li><a href="/haloportal/?id=addusertogroup">Add User to Group</a></li>
+                   
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-bar-chart-o"></i>Reports <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="">
+                          <li><a href="/haloportal/?id=past24hoursincidents_report">Report - Past 24 Hours Incidents</a></li>
+                          <li><a href="/haloportal/?id=past7daysincidents_report">Report - Past 1 week Incidents</a></li>
+                          <li><a href="/haloportal/?id=highthreatopenincidents_report">Report - High Threat Open Incidents</a></li>
+                          <li><a href="/haloportal/?id=incidentsbycategory_report">Report - Incidents by Category</a></li>
+                          <li><a href="/haloportal/?id=incidentsbytype_report">Report - Incidents By Type</a></li>
+                          <li><a href="/haloportal/?id=closedincidents_report">Report - Closed Incidents</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_section">
+                <h3>Help</h3>
+                <ul class="nav side-menu">
+                    <li><a><i class="fa fa-recycle"></i> Self Service <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="">
+                            <li><a href="/haloportal/?id=editprofile">Edit Profile</a></li>
+                            <li><a href="/haloportal/?id=changepassword">Change Password</a></li>
+                           <li><a href="/haloportal/?id=faqs">FAQ's</a></li>
+                      </ul>
+                    </li>
+                    <li><a><i class="fa fa-question-circle"></i> Get Help <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="">
+                            <li><a href="/haloportal/?id=customersupport">Contact Customer support</a></li>                      
+                        </ul>
+                    </li>
+                    <li> <a href="https://dev21310.service-now.com/logout.do"><i class="fa fa-power-off"></i> Logout <span class="fa fa-chevron-down"></span></a>
+                     </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- /sidebar menu -->
+
+        <!-- /menu footer buttons -->
+        <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="" data-original-title="My Profile">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="" data-original-title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="" href="https://dev21310.service-now.com/haloportal/?id=login" data-original-title="Logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- /menu footer buttons -->
+    </div>
+  
+<script>
+   // $(".left_col").height($(".panel-group").height());    
+</script>
+     ]]></template>
+    </sp_widget>
+</record_update>

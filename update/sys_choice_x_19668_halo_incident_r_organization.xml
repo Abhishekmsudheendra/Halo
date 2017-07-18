@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="r_organization" table="x_19668_halo_incident" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>United States Federal Government</label>
+            <language>en</language>
+            <name>x_19668_halo_incident</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-13 15:16:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b979da4db2532001cf8dec0cf961953</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-13 15:17:04</sys_updated_on>
+            <value>United States Federal Government</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Foreign Government</label>
+            <language>en</language>
+            <name>x_19668_halo_incident</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-13 15:17:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eba759a4db2532001cf8dec0cf9619f9</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-13 15:17:19</sys_updated_on>
+            <value>Foreign Government</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Individual</label>
+            <language>en</language>
+            <name>x_19668_halo_incident</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-13 15:18:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f7e711e4db2532001cf8dec0cf961949</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-05-19 16:15:26</sys_updated_on>
+            <value>Individual</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>United States State Government</label>
+            <language>en</language>
+            <name>x_19668_halo_incident</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-13 15:17:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>04c7d9a4db2532001cf8dec0cf96193b</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-20 14:14:19</sys_updated_on>
+            <value>United States State Government</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Private Sector</label>
+            <language>en</language>
+            <name>x_19668_halo_incident</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-13 15:18:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bdd711e4db2532001cf8dec0cf961948</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-13 15:18:11</sys_updated_on>
+            <value>Private Sector</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>r_organization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Critical Infrastructure</label>
+            <language>en</language>
+            <name>x_19668_halo_incident</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-05-19 16:15:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8677a20edb7a32001cf8dec0cf96195c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-05-19 16:15:15</sys_updated_on>
+            <value>Critical Infrastructure</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>r_organization</element>
+            <name>x_19668_halo_incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-13 15:16:54</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>d7a719a4db2532001cf8dec0cf9619ea</sys_id>
+            <sys_mod_count>27</sys_mod_count>
+            <sys_name>r_organization</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_choice_x_19668_halo_incident_r_organization</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-07-17 16:53:24</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

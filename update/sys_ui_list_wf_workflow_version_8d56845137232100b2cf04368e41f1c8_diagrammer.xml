@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="wf_workflow_version" relationship="8d56845137232100b2cf04368e41f1c8" sys_domain="global" table="var_dictionary" version="2" view="diagrammer">
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>var_dictionary</name>
+            <parent>wf_workflow_version</parent>
+            <position/>
+            <relationship display_value="Workflow Variables-&gt;Workflow Version">8d56845137232100b2cf04368e41f1c8</relationship>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-22 21:15:47</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dc200defdba132001cf8dec0cf9619b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>var_dictionary</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_ui_list_wf_workflow_version_8d56845137232100b2cf04368e41f1c8_diagrammer</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-22 21:15:47</sys_updated_on>
+            <sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user>
+            <view display_value="Diagrammer" name="diagrammer">02060fffdb3032001cf8dec0cf9619e8</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

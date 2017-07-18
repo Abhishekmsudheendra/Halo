@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_theme_css">
+    <content_theme_css action="INSERT_OR_UPDATE">
+        <content_css display_value="green.css">41a4da2cdb8a32001cf8dec0cf96191c</content_css>
+        <content_theme display_value="Halo Theme">23931e2cdb8a32001cf8dec0cf961987</content_theme>
+        <order>400</order>
+        <sys_class_name>content_theme_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-07 16:14:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>7ea4966cdb8a32001cf8dec0cf96190d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>green.css.Halo Theme</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>content_theme_css_7ea4966cdb8a32001cf8dec0cf96190d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-14 19:41:55</sys_updated_on>
+    </content_theme_css>
+</record_update>

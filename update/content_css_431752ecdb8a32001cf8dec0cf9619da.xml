@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_css">
+    <content_css action="INSERT_OR_UPDATE">
+        <name>custom.css</name>
+        <style>&#13;
+@font-face &#13;
+{&#13;
+   font-family: 'GlyphiconsFonts';&#13;
+      src: url('/sys_attachment.do?sys_id=2a9892d8dbc232001cf8dec0cf961923');&#13;
+      src: url('/sys_attachment.do?sys_id=2a9892d8dbc232001cf8dec0cf961923?#iefix') format('embedded-opentype'),&#13;
+           url('/sys_attachment.do?sys_id=fe9892d8dbc232001cf8dec0cf961929') format('woff'),&#13;
+           url('/sys_attachment.do?sys_id=3e9892d8dbc232001cf8dec0cf96192b') format('woff2'),&#13;
+           url('/sys_attachment.do?sys_id=329892d8dbc232001cf8dec0cf961928') format('truetype'),&#13;
+           url('/sys_attachment.do?sys_id=e29892d8dbc232001cf8dec0cf961925') format('svg');&#13;
+   font-weight: normal;&#13;
+   font-style: normal;&#13;
+}&#13;
+&#13;
+@font-face &#13;
+{&#13;
+   font-family: 'FontAwesomeFonts';&#13;
+      src: url('/sys_attachment.do?sys_id=06981e98dbc232001cf8dec0cf9619a5');&#13;
+      src: url('/sys_attachment.do?sys_id=06981e98dbc232001cf8dec0cf9619a5?#iefix') format('embedded-opentype'),&#13;
+           url('/sys_attachment.do?sys_id=3e9892d8dbc232001cf8dec0cf96192b') format('woff'),&#13;
+           url('/sys_attachment.do?sys_id=a69892d8dbc232001cf8dec0cf961919') format('woff2'),&#13;
+           url('/sys_attachment.do?sys_id=d6981e98dbc232001cf8dec0cf9619aa') format('truetype'),&#13;
+          &#13;
+   font-weight: normal;&#13;
+   font-style: normal;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+.left_col&#13;
+ {&#13;
+    width: 230px;&#13;
+}&#13;
+&#13;
+.col-md-3 .&#13;
+ {&#13;
+    width: 230px;&#13;
+}&#13;
+&#13;
+.top_nav&#13;
+{&#13;
+margin-left:230px;&#13;
+}&#13;
+&#13;
+.right_col&#13;
+{&#13;
+margin-left:230px;&#13;
+padding: 10px 10px 0;&#13;
+}&#13;
+&#13;
+.tile_count&#13;
+{&#13;
+  margin-top:20px&#13;
+  margin-bottom:20px;&#13;
+max-height:150px;&#13;
+}&#13;
+&#13;
+.row&#13;
+{&#13;
+  max-height:150px;&#13;
+}</style>
+        <sys_class_name>content_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-07 16:25:38</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>431752ecdb8a32001cf8dec0cf9619da</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>custom.css</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>content_css_431752ecdb8a32001cf8dec0cf9619da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-14 20:30:49</sys_updated_on>
+        <type>local</type>
+        <url/>
+    </content_css>
+</record_update>

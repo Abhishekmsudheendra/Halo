@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_19668_halo.SearchIncidentUtils</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>SearchIncidentUtils</name>
+        <script><![CDATA[var SearchIncidentUtils = Class.create();
+SearchIncidentUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
+{
+	loadSearchData:function()
+	{
+		var searchData=[];
+		var json=new global.JSON();
+		var gr='',i=0;
+		gr=new GlideRecord('x_19668_halo_incident');
+		gr.query();
+		while(gr.next())
+		{
+			searchData.push({category:'Incidents',label:gr.incident_id+''});
+		}
+
+		//Load Indicator Data
+		var list1=new Array();
+		gr=new GlideRecord('x_19668_halo_potentialindicators');
+		gr.query();
+		while(gr.next())
+		{
+			if(gr.indicator_type.name == 'IP Address')
+				//searchData.push({category:'IP Address',label:gr.indicator_data+''});
+				list1.push(gr.indicator_data+'');
+		}
+		var arrayUtil = new global.ArrayUtil();
+		var uniqueList=arrayUtil.unique(list1);
+		for(i=0;i<uniqueList.length;i++)
+			{
+				searchData.push({category:'IP Address',label:uniqueList[i]+''});
+			}
+
+		list1=new Array();
+		gr=new GlideRecord('x_19668_halo_potentialindicators');
+		gr.query();
+		while(gr.next())
+		{
+			if(gr.indicator_type.name == 'Hash Code')
+				//searchData.push({category:'Hash Code',label:gr.indicator_data+''});
+				list1.push(gr.indicator_data+'');
+		}
+		arrayUtil = new global.ArrayUtil();
+		uniqueList=arrayUtil.unique(list1);
+		for(i=0;i<uniqueList.length;i++)
+		{
+			searchData.push({category:'Hash Code',label:uniqueList[i]+''});
+		}
+		
+		list1=new Array();
+		gr=new GlideRecord('x_19668_halo_potentialindicators');
+		gr.query();
+		while(gr.next())
+		{
+			if(gr.indicator_type.name == 'Full Qualified Domain Name (FQDN)')
+				//searchData.push({category:'Full Qualified Domain Name (FQDN)',label:gr.indicator_data+''});
+				list1.push(gr.indicator_data+'');
+		}
+		arrayUtil = new global.ArrayUtil();
+		uniqueList=arrayUtil.unique(list1);
+		for(i=0;i<uniqueList.length;i++)
+			{
+				searchData.push({category:'Full Qualified Domain Name (FQDN)',label:uniqueList[i]+''});
+			}
+		
+		return json.encode(searchData);
+	},
+	
+	getSelectedIncidentData:function(input)
+	{
+		var searchText=input.searchText;
+		var selectedIncidentData=[];
+		var json=new global.JSON();
+		var gr='';
+		
+		if(input.category == 'Incidents')
+			{
+				gr=new GlideRecord('x_19668_halo_incident');
+				gr.addQuery('incident_id',input.searchText);
+				gr.query();
+				while(gr.next())
+				{
+					selectedIncidentData.push({lastUpdated:gr.r_updated_date+'',email:gr.r_email+'',lastName:gr.r_last_name+'',firstName:gr.r_first_name+'',incidentId:gr.incident_id+'',incidentType:gr.incident_type.name+'',assignedTo:gr.assigned_to.name+'',incidentStatus:gr.ticket_status+'',createdDate:gr.sys_created_on+'',department:gr.r_department.name+'',note:gr.r_note+'',organization:gr.r_organization+'',groupName:gr.assign_to_group.name+'',incidentSysId:gr.sys_id+''});
+				}
+				
+			}
+		else if(input.category == 'IP Address')
+			{
+				gr=new GlideRecord('x_19668_halo_potentialindicators');
+				gr.addQuery('indicator_type.name','IP Address');
+				gr.addQuery('indicator_data',input.searchText);
+				gr.query();
+				while(gr.next())
+				{
+					selectedIncidentData.push({lastUpdated:gr.incident_id.r_updated_date+'',email:gr.incident_id.r_email+'',lastName:gr.incident_id.r_last_name+'',firstName:gr.incident_id.r_first_name+'',incidentId:gr.incident_id.incident_id+'',incidentType:gr.incident_id.incident_type.name+'',assignedTo:gr.incident_id.assigned_to.name+'',incidentStatus:gr.incident_id.ticket_status+'',createdDate:gr.incident_id.sys_created_on+'',department:gr.incident_id.r_department.name+'',note:gr.incident_id.r_note+'',organization:gr.incident_id.r_organization+'',groupName:gr.incident_id.assign_to_group.name+'',incidentSysId:gr.incident_id+''});
+				}
+			}
+		else if(input.category == 'Hash Code')
+			{
+				gr=new GlideRecord('x_19668_halo_potentialindicators');
+				gr.addQuery('indicator_type.name','Hash Code');
+				gr.addQuery('indicator_data',input.searchText);
+				gr.query();
+				while(gr.next())
+				{
+					selectedIncidentData.push({lastUpdated:gr.incident_id.r_updated_date+'',email:gr.incident_id.r_email+'',lastName:gr.incident_id.r_last_name+'',firstName:gr.incident_id.r_first_name+'',incidentId:gr.incident_id.incident_id+'',incidentType:gr.incident_id.incident_type.name+'',assignedTo:gr.incident_id.assigned_to.name+'',incidentStatus:gr.incident_id.ticket_status+'',createdDate:gr.incident_id.sys_created_on+'',department:gr.incident_id.r_department.name+'',note:gr.incident_id.r_note+'',organization:gr.incident_id.r_organization+'',groupName:gr.incident_id.assign_to_group.name+'',incidentSysId:gr.incident_id+''});
+				}
+			}
+		else if(input.category == 'Full Qualified Domain Name (FQDN)')
+			{
+				gr=new GlideRecord('x_19668_halo_potentialindicators');
+				gr.addQuery('indicator_type.name','Full Qualified Domain Name (FQDN)');
+				gr.addQuery('indicator_data',input.searchText);
+				gr.query();
+				while(gr.next())
+				{
+					selectedIncidentData.push({lastUpdated:gr.incident_id.r_updated_date+'',email:gr.incident_id.r_email+'',lastName:gr.incident_id.r_last_name+'',firstName:gr.incident_id.r_first_name+'',incidentId:gr.incident_id.incident_id+'',incidentType:gr.incident_id.incident_type.name+'',assignedTo:gr.incident_id.assigned_to.name+'',incidentStatus:gr.incident_id.ticket_status+'',createdDate:gr.incident_id.sys_created_on+'',department:gr.incident_id.r_department.name+'',note:gr.incident_id.r_note+'',organization:gr.incident_id.r_organization+'',groupName:gr.incident_id.assign_to_group.name+'',incidentSysId:gr.incident_id+''});
+				}
+			}
+		
+		return json.encode(selectedIncidentData);
+	}
+	
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-23 14:30:24</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>d2c5b297db3232001cf8dec0cf961922</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>SearchIncidentUtils</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_script_include_d2c5b297db3232001cf8dec0cf961922</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-10 15:36:51</sys_updated_on>
+    </sys_script_include>
+</record_update>

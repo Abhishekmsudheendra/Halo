@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_19668_halo.incidentSummary</name>
+        <script><![CDATA[(function()
+{
+	"use strict";
+	var app=angular.module('indicatorModal', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
+	app.controller('incidentSummaryCtrl',['$scope',function($scope)
+	{
+		
+		
+		$scope.updateSelectedCoa=function()
+		{
+			//get Values from Form
+			var selectedCoa=jQuery("#sel1 option:selected").text();
+			var sendEmailUpdateToReporter=jQuery("#sendEmailUpdateToReporter").is(":checked");
+			var notifyIsp=jQuery("#notifyIsp").is(":checked");
+			var notifyDomainRegistrar=jQuery("#notifyDomainRegistrar").is(":checked");
+			var sendEmailReceipt=jQuery("#sendEmailReceipt").is(":checked");
+			var setStatusOfTicketToResolved=jQuery("#setStatusOfTicketToResolved").is(":checked");
+			var notifyProduction=jQuery("#notifyProduction").is(":checked");
+			var assignToNextTier=jQuery("#assignToNextTier").is(":checked");
+			var assignToGroup=jQuery("#assignToGroup").is(":checked");
+			var resolveAndCloseTicket=jQuery("#resolveAndCloseTicket").is(":checked");
+			var sysId=jQuery("#sysId").val();
+			
+			
+			var gr=new GlideRecord('x_19668_halo_incident');
+			gr.addQuery('sys_id',sysId);
+			gr.query(callbackFunction);
+			function callbackFunction(gr)
+			{
+				if(gr.next())
+					{
+					$scope.updateSelectedSysIdOfCoa(selectedCoa,sysId);
+					gr.send_email_update_to_reporter=sendEmailUpdateToReporter;
+					gr.notify_isp=notifyIsp;
+					gr.send_email_receipt_to_reporter=sendEmailReceipt;
+					gr.set_status_to_resolved=setStatusOfTicketToResolved;
+					gr.notify_production=notifyProduction;
+					gr.notify_domain_registrar=notifyDomainRegistrar;
+					gr.assign_to_tier=assignToNextTier;
+					gr.assign_to_group=assignToGroup;
+					gr.resolve_and_close_the_ticket=resolveAndCloseTicket;
+					gr.update();
+				}
+			}
+			
+		};
+		
+		$scope.updateSelectedSysIdOfCoa=function(selectedCoa,sysId)
+		{
+			var selectedCoaSysId='';
+			var gr1=new GlideRecord('x_19668_halo_selcted_ticket_course_of_action');
+			gr1.addQuery('incident_id',sysId);
+			gr1.query(callbackFunction2);
+			function callbackFunction2(gr1)
+			{
+				if(gr1.next())
+					{
+					var gr2=new GlideRecord('x_19668_halo_courseofactions');
+					gr2.addQuery('ticket_coa_name',selectedCoa);
+					gr2.query();
+					if(gr2.next())
+						{
+						selectedCoaSysId=gr2.sys_id+'';
+					}
+					gr1.ticket_coa_selected_id=selectedCoaSysId;
+					gr1.update();
+					
+				}
+			}
+			
+		};
+		
+		$scope.passSysId=function(indicatorSysId,indicatorType)
+		{
+			var ipIndicatorsData = JSON.parse(sessionStorage.getItem('ipIndicatorsData'));
+			var domainIndicatorsData = JSON.parse(sessionStorage.getItem('domainIndicatorsData'));
+			var hashCodeIndicatorsData = JSON.parse(sessionStorage.getItem('hashCodeIndicatorsData'));
+			if(indicatorType == 'IP Address')
+				{
+				for(var indicator in ipIndicatorsData )
+					{
+					if(ipIndicatorsData[indicator].sysId == indicatorSysId)
+						{
+						jQuery("#indicatorId").text(ipIndicatorsData[indicator].indicatorId);
+						jQuery("#indicatorStatus").text(ipIndicatorsData[indicator].indicatorStatus);
+						jQuery("#indicatorType").text(ipIndicatorsData[indicator].indicatorType);
+						jQuery("#urgencyRanking").text(ipIndicatorsData[indicator].urgencyRanking);
+						jQuery("#completedEnrichCount").text(ipIndicatorsData[indicator].completedEnrichCount);
+						jQuery("#enrichStartTimestamp").text(ipIndicatorsData[indicator].enrichStartTimestamp);
+						jQuery("#enrichEndTimestamp").text(ipIndicatorsData[indicator].enrichEndTimestamp);
+						jQuery("#indicatorText").text(ipIndicatorsData[indicator].indicatorText);
+						$("#indicatorLink").attr("href", "https://dev21310.service-now.com/haloportal/?id=potential_indicator_summary&indicator_id="+indicatorSysId);
+					}
+				}
+			}
+			else if(indicatorType == 'Full Qualified Domain Name (FQDN)')
+				{
+				for(var indicator in domainIndicatorsData )
+					{
+					if(domainIndicatorsData[indicator].sysId == indicatorSysId)
+						{
+						jQuery("#indicatorId").text(domainIndicatorsData[indicator].indicatorId);
+						jQuery("#indicatorStatus").text(domainIndicatorsData[indicator].indicatorStatus);
+						jQuery("#indicatorType").text(domainIndicatorsData[indicator].indicatorType);
+						jQuery("#urgencyRanking").text(domainIndicatorsData[indicator].urgencyRanking);
+						jQuery("#completedEnrichCount").text(domainIndicatorsData[indicator].completedEnrichCount);
+						jQuery("#enrichStartTimestamp").text(domainIndicatorsData[indicator].enrichStartTimestamp);
+						jQuery("#enrichEndTimestamp").text(domainIndicatorsData[indicator].enrichEndTimestamp);
+						jQuery("#indicatorText").text(domainIndicatorsData[indicator].indicatorText);
+						jQuery("#indicatorLink").attr("href", "https://dev21310.service-now.com/haloportal/?id=potential_indicator_summary&indicator_id="+indicatorSysId);
+						
+					}
+				}
+			}
+			else if(indicatorType == 'Hash Code')
+				{
+				for(var indicator in hashCodeIndicatorsData )
+					{
+					if(hashCodeIndicatorsData[indicator].sysId == indicatorSysId)
+						{
+						jQuery("#indicatorId").text(hashCodeIndicatorsData[indicator].indicatorId);
+						jQuery("#indicatorStatus").text(hashCodeIndicatorsData[indicator].indicatorStatus);
+						jQuery("#indicatorType").text(hashCodeIndicatorsData[indicator].indicatorType);
+						jQuery("#urgencyRanking").text(hashCodeIndicatorsData[indicator].urgencyRanking);
+						jQuery("#completedEnrichCount").text(hashCodeIndicatorsData[indicator].completedEnrichCount);
+						jQuery("#enrichStartTimestamp").text(hashCodeIndicatorsData[indicator].enrichStartTimestamp);
+						jQuery("#enrichEndTimestamp").text(hashCodeIndicatorsData[indicator].enrichEndTimestamp);
+						jQuery("#indicatorText").text(hashCodeIndicatorsData[indicator].indicatorText);
+						$("#indicatorLink").attr("href", "https://dev21310.service-now.com/haloportal/?id=potential_indicator_summary&indicator_id="+indicatorSysId);
+					}
+				}
+				
+			}
+			
+			
+		};
+		
+	}]);
+	
+})();
+
+]]></script>
+        <script_name>incidentSummary</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-04 20:49:54</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6e76921ddba232001cf8dec0cf96196f</sys_id>
+        <sys_mod_count>107</sys_mod_count>
+        <sys_name>x_19668_halo.incidentSummary</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_ui_script_6e76921ddba232001cf8dec0cf96196f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-26 17:07:06</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <default>false</default>
+        <homepage display_value="home">1645b014db0232001cf8dec0cf96197d</homepage>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page display_value="halo_login">a3580f30db3632001cf8dec0cf96198a</login_page>
+        <logo/>
+        <notfound_page/>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu/>
+        <sqanda_knowledge_base/>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-06 14:31:22</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>be437c90db0232001cf8dec0cf96198f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Halo</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_portal_be437c90db0232001cf8dec0cf96198f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-15 21:30:23</sys_updated_on>
+        <theme/>
+        <title>Halo</title>
+        <url_suffix>haloportal</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=be437c90db0232001cf8dec0cf96198f"/>
+</record_update>

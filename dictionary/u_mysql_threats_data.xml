@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="Threats Data Source" max_length="40" name="u_mysql_threats_data" type="collection">
+        <element attributes="import_attribute_name=threat_data,edge_encryption_enabled=true" label="threat_data" max_length="45" name="u_threat_data" type="string"/>
+        <element attributes="import_attribute_name=threat_id,edge_encryption_enabled=true" label="threat_id" max_length="45" name="u_threat_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="threat_level" max_length="40" name="u_threat_level" type="string"/>
+        <element attributes="import_attribute_name=threat_type,edge_encryption_enabled=true" label="threat_type" max_length="45" name="u_threat_type" type="string"/>
+    </element>
+</database>

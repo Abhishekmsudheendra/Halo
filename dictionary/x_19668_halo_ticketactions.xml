@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="TicketActions" max_length="40" name="x_19668_halo_ticketactions" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Ticket Action Description" max_length="255" name="ticket_action_description" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Ticket Action Id" max_length="40" name="ticket_action_id" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Ticket Action Name" max_length="255" name="ticket_action_name" type="string"/>
+        <element label="Ticket Action Notes" max_length="4000" name="ticket_action_notes" type="journal"/>
+    </element>
+</database>

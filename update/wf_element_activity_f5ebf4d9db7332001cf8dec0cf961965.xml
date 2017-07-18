@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="JDBC">1bce1222d7123100a70f42285e6103b1</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_jdbc.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"threat_data","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script><![CDATA[activityInput.threat_data=activityInput.threat_data+'';]]></input_process_script>
+        <input_transform>{"jdbc_connection":"55893819db7332001cf8dec0cf96194d","fixed_credential_id":"728c381ddb7332001cf8dec0cf96194a","sql_statement":"SELECT threat_level FROM threat where threat_data=${activityInput.threat_data}","maximum_rows":"1,000","maximum_payload_size":"64","connection_timeout":"0","query_timeout":"0","midCapabilities":"1eaec4a0d7012200171f42285e610340","stored_procedure":"false","stored_procedure_name":"","stored_procedure_variables":"[]"}</input_transform>
+        <local_variables>{"name":"Local","type":"DATA_OBJECT","properties":[{"name":"localErrorMessages","type":"STRING"},{"name":"localProbeCompletedEccId","type":"STRING"},{"name":"localTotalRows","type":"INTEGER"},{"name":"localOutput","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[{"name":"threat_level","type":"STRING"}]}]}]}</local_variables>
+        <name>Query Threat Data</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"errorMessages","type":"STRING"},{"name":"probeCompletedEccId","type":"STRING"},{"name":"totalRows","type":"INTEGER"},{"name":"output","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[{"name":"threat_level","type":"STRING"}]}]}]}</output_meta>
+        <output_process_script><![CDATA[ActivityLogger.info(" Threat Level :"+activityLocal.localOutput);]]></output_process_script>
+        <output_transform>[{"toLink":"activityLocal.localOutput","description":"","to":"localOutput","toType":"string","toDestination":"activityLocal","sourceLabel":"executionResult.output","from":"${executionResult.output}","fromSource":"executionResult","type":"JSON","children":"[]","translation":"$[0].threat_level.content"},{"toLink":"activityLocal.localErrorMessages","description":"","to":"localErrorMessages","toType":"string","toDestination":"activityLocal","sourceLabel":"executionResult.errorMessages","from":"${executionResult.errorMessages}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""},{"toLink":"activityLocal.localProbeCompletedEccId","description":"","to":"localProbeCompletedEccId","toType":"string","toDestination":"activityLocal","sourceLabel":"executionResult.probeCompletedEccId","from":"${executionResult.probeCompletedEccId}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""},{"toLink":"activityLocal.localTotalRows","description":"","to":"localTotalRows","toType":"string","toDestination":"activityLocal","sourceLabel":"executionResult.totalRows","from":"${executionResult.totalRows}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{"executionResult.output":{"payload":"[{\"threat_level\":{\"length\":\"40\",\"type\":\"12\",\"class\":\"java.lang.String\",\"content\":\"Critical\"}}]","type":"json"},"executionResult.errorMessages":{"payload":"\"\"","type":"direct"},"executionResult.probeCompletedEccId":{"payload":"e8048911dbb332001cf8dec0cf9619c3","type":"direct"},"executionResult.totalRows":{"payload":1,"type":"direct"},"activityLocal.localOutput":{"payload":"Critical","type":"json"}}</sample_payloads>
+        <short_description>Get threats data from My SQL server</short_description>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-05 17:33:29</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f5ebf4d9db7332001cf8dec0cf961965</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Query Threat Data</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>wf_element_activity_f5ebf4d9db7332001cf8dec0cf961965</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-05 18:33:22</sys_updated_on>
+        <version_container_id>eb2c341ddb7332001cf8dec0cf9619a8</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=f5ebf4d9db7332001cf8dec0cf961965"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-07-05 17:33:29</sys_created_on>
+        <sys_id>232c341ddb7332001cf8dec0cf9619aa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-05 18:33:22</sys_updated_on>
+        <valid_from>2017-07-05 18:15:03</valid_from>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>eb2c341ddb7332001cf8dec0cf9619a8</version_container_id>
+        <wf_element_definition display_value="Query Threat Data">f5ebf4d9db7332001cf8dec0cf961965</wf_element_definition>
+    </wf_versionable>
+    <wf_versionable action="update_multiple" query="version_container_id=eb2c341ddb7332001cf8dec0cf9619a8^sys_id!=232c341ddb7332001cf8dec0cf9619aa">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=eb2c341ddb7332001cf8dec0cf9619a8">
+        <new_activity_definition>f5ebf4d9db7332001cf8dec0cf961965</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity. To update the activity, check out the workflow, select the activity, right click and select update activity to use the latest version.</notes>
+    </wf_activity>
+</record_update>

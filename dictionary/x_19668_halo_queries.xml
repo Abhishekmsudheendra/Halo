@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Queries" max_length="40" name="x_19668_halo_queries" type="collection">
+        <element label="Datasource Id" max_length="32" name="datasource_id" reference="x_19668_halo_datasources" type="reference"/>
+        <element label="Indicator Type" max_length="255" name="indicator_type" type="string"/>
+        <element label="Other Parameters" max_length="255" name="other_parameters" type="string"/>
+        <element label="Query Id" max_length="40" name="query_id" type="string"/>
+        <element label="Query Text" max_length="255" name="query_text" type="string"/>
+        <index name="index">
+            <element name="datasource_id"/>
+        </index>
+    </element>
+</database>

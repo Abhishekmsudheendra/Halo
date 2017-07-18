@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="Halo Source" max_length="40" name="u_mysql_halo_data" type="collection">
+        <element attributes="import_attribute_name=description,edge_encryption_enabled=true" label="description" max_length="500" name="u_description" type="string"/>
+        <element attributes="import_attribute_name=in_database,edge_encryption_enabled=true" label="in_database" max_length="40" name="u_in_database" type="string"/>
+        <element attributes="import_attribute_name=source,edge_encryption_enabled=true" label="source" max_length="100" name="u_source" type="string"/>
+        <element attributes="import_attribute_name=threat_level,edge_encryption_enabled=true" label="threat_level" max_length="40" name="u_threat_level" type="string"/>
+        <element attributes="import_attribute_name=threat_type,edge_encryption_enabled=true" label="threat_type" max_length="40" name="u_threat_type" type="string"/>
+    </element>
+</database>

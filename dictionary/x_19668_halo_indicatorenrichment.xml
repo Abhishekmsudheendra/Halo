@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="IndicatorEnrichment" max_length="40" name="x_19668_halo_indicatorenrichment" type="collection">
+        <element label="DataSource EnrichmentSet Id" max_length="32" name="ds_enrichmentset_id" reference="x_19668_halo_datasourceenrichmentset" type="reference"/>
+        <element label="Enrichment Data" max_length="100000" name="enrichment_data" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Enrichment Id" max_length="40" name="enrichment_id" read_only="true" type="string"/>
+        <element choice="3" default="High" label="Enrichment Impact Level" mandatory="true" max_length="255" name="enrichment_impactlevel" type="string">
+            <choice>
+                <element label="High" sequence="0" value="High"/>
+                <element label="Medium" sequence="1" value="Medium"/>
+                <element label="Low" sequence="2" value="Low"/>
+            </choice>
+        </element>
+        <element choice="1" label="Enrichment Status" mandatory="true" max_length="255" name="enrichment_status" type="string">
+            <choice>
+                <element label="New" sequence="0" value="New"/>
+                <element label="Processed" sequence="1" value="Processed"/>
+            </choice>
+        </element>
+        <element label="Enrichment Value" mandatory="true" max_length="255" name="enrichment_value" type="string"/>
+        <element label="Enrichment Impact Level Timestamp" max_length="40" name="enrichmnet_impactlevel_ts" type="glide_date_time"/>
+        <element label="Indicator Id" mandatory="true" max_length="32" name="indicator_id" reference="x_19668_halo_potentialindicators" type="reference"/>
+        <element label="Query Execution Timestamp" max_length="40" name="query_execution_ts" type="glide_date_time"/>
+        <element label="Query Id" max_length="32" name="query_id" reference="x_19668_halo_queries" type="reference"/>
+        <element label="Query Response timestamp" max_length="40" name="query_response_ts" type="glide_date_time"/>
+        <index name="index">
+            <element name="query_id"/>
+        </index>
+        <index name="index2">
+            <element name="ds_enrichmentset_id"/>
+        </index>
+        <index name="index3">
+            <element name="indicator_id"/>
+        </index>
+    </element>
+</database>

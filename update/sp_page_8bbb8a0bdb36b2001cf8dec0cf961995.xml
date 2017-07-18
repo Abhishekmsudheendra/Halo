@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <css>body&#13;
+{&#13;
+ background-color:white;&#13;
+&#13;
+}&#13;
+&#13;
+.col-md-10, .col-lg-10,  .col-md-2, .col-lg-2, .col-md-9, .col-lg-9,  .col-md-3, .col-lg-3, .col-md-4&#13;
+{ &#13;
+  padding:0px !important;&#13;
+}&#13;
+&#13;
+&#13;
+</css>
+        <id>search_incident</id>
+        <internal>false</internal>
+        <public>true</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-22 16:47:59</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8bbb8a0bdb36b2001cf8dec0cf961995</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>search_incident</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_page_8bbb8a0bdb36b2001cf8dec0cf961995</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-21 17:54:27</sys_updated_on>
+        <title>Search Incident</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=8bbb8a0bdb36b2001cf8dec0cf961995"/>
+</record_update>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="r_telephone_number" label="Telephone Number" language="en" table="x_19668_halo_remedy_ticket">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>r_telephone_number</element>
+            <help/>
+            <hint/>
+            <label>Telephone Number</label>
+            <language>en</language>
+            <name>x_19668_halo_remedy_ticket</name>
+            <plural>Telephone Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-16 17:01:39</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>fe6ccd25db6132001cf8dec0cf96196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Telephone Number</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_documentation_x_19668_halo_remedy_ticket_r_telephone_number_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-16 17:01:39</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

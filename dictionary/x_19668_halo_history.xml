@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="History" max_length="40" name="x_19668_halo_history" type="collection">
+        <element label="Indicator Id" max_length="32" name="indicator_id" reference="x_19668_halo_potentialindicators" type="reference"/>
+        <element label="Log Content" max_length="4000" name="log_content" type="journal"/>
+        <element label="Log Id" max_length="40" name="log_id" type="string"/>
+        <element label="Incident Id" max_length="32" name="r_incident_id" reference="x_19668_halo_incident" type="reference"/>
+        <index name="index">
+            <element name="r_incident_id"/>
+        </index>
+        <index name="index2">
+            <element name="indicator_id"/>
+        </index>
+    </element>
+</database>

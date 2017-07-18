@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Selcted Ticket Course of Action" max_length="40" name="x_19668_halo_selcted_ticket_course_of_action" type="collection">
+        <element label="Incident Id" mandatory="true" max_length="32" name="incident_id" reference="x_19668_halo_incident" type="reference"/>
+        <element label="Ticket Course of Action Reasoning" max_length="255" name="ticket_coa_reasoning" type="string"/>
+        <element display="true" label="Ticket Course of Action Recommended Id" mandatory="true" max_length="32" name="ticket_coa_recommended_id" reference="x_19668_halo_courseofactions" type="reference"/>
+        <element label="Ticket Course of Action Recommended Timestamp" max_length="40" name="ticket_coa_recommended_ts" type="glide_date"/>
+        <element label="Ticket Course of Action Selected Id" max_length="32" name="ticket_coa_selected_id" reference="x_19668_halo_courseofactions" type="reference"/>
+        <index name="index">
+            <element name="incident_id"/>
+        </index>
+        <index name="index2">
+            <element name="ticket_coa_selected_id"/>
+        </index>
+        <index name="index3">
+            <element name="ticket_coa_recommended_id"/>
+        </index>
+    </element>
+</database>

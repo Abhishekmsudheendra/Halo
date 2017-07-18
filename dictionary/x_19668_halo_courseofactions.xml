@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="CourseOfActions" max_length="40" name="x_19668_halo_courseofactions" type="collection">
+        <element label="Ticket Course Of Action Description" max_length="255" name="ticket_coa_description" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Ticket Course Of Action Id" max_length="40" name="ticket_coa_id" read_only="true" type="string"/>
+        <element display="true" label="Ticket Course Of Action Name" max_length="255" name="ticket_coa_name" type="string"/>
+        <element label="Ticket Course Of Action Notes" max_length="700" name="ticket_coa_notes" type="journal"/>
+    </element>
+</database>

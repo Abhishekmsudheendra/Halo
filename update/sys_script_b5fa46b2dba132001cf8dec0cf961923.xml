@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_19668_halo_incident</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Prevent Duplicate Numbers</name>
+        <order>50</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/)
+ {
+
+	var curNum = current.incident_id + '';
+	
+	if(curNum) 
+	{
+		var recordClass = current.getRecordClassName();
+		var gr = new GlideRecord(recordClass);
+		gr.addQuery('incident_id', curNum);
+		gr.query();
+		
+		if(gr.getRowCount() > 0) 
+		{
+			var newNum = global.getNextObjNumberPadded();
+			current.incident_id = newNum;
+		}
+	}
+	
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-03-20 18:48:15</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b5fa46b2dba132001cf8dec0cf961923</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Prevent Duplicate Numbers</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_script_b5fa46b2dba132001cf8dec0cf961923</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-19 16:41:11</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=b5fa46b2dba132001cf8dec0cf961923"/>
+</record_update>

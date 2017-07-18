@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_19668_halo.RightWidgetUtils</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>RightWidgetUtils</name>
+        <script><![CDATA[var RightWidgetUtils = Class.create();
+RightWidgetUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
+{
+	
+	myIncidentsData:function()
+	{
+		var json=new global.JSON();
+		var myIncidentsData=[];
+		var userId=gs.getUserID();
+		gr=new GlideRecord('x_19668_halo_incident');
+		gr.addQuery('assigned_to',userId);
+		gr.addQuery('ticket_status','!=','Closed');
+		gr.query();
+		while(gr.next())
+		{			myIncidentsData.push({incidentId:gr.incident_id+'',incidentSysId:gr.sys_id+'',incidentStatus:gr.ticket_status+'',createdDate:gr.sys_created_on+''});	
+		}
+		
+	  return json.encode(myIncidentsData);
+	},
+	
+	myGroupIncidentsData:function()
+	{
+		var json=new global.JSON();
+		var list=[];
+		var i=1;
+
+		var groupsList=[];
+		var gr1=new GlideRecord('sys_user_grmember');
+		gr1.addQuery('user',gs.getUserID());
+		gr1.query();
+		while(gr1.next())
+		{
+			groupsList.push(gr1.group+'');
+		}
+
+		/* populate the 'data' object */
+		/* e.g., data.table = $sp.getValue('table'); */
+
+		var gr=new GlideRecord('x_19668_halo_incident');
+		gr.addQuery('assign_to_group','IN',groupsList);
+		gr.orderByDesc('incident_id');
+		gr.query();
+		while(gr.next())
+		{
+			list.push({incidentId:gr.incident_id+'',incidentType:gr.incident_type.name+'',indicatorCount:gr.complted_indicator_count+'',incidentStatus:gr.ticket_status+'',createdDate:gr.sys_created_on+'',lastUpdated:gr.sys_updated_on+'',sysId:gr.sys_id+'',groupName:gr.assign_to_group.name+'',incidentSysId:gr.sys_id+''});
+		}
+
+		return json.encode(list);
+	},
+	
+	last24HoursIncidentsData:function()
+	{
+		var json=new global.JSON();
+		var list=[];
+	    var gr = new GlideRecord('x_19668_halo_incident');
+		gr.addQuery('ticket_status','!=', 'Closed');
+		gr.addQuery('sys_created_on', '<', gs.hoursAgo(24));
+		gr.orderByDesc('sys_created_on');
+		gr.query();
+		while(gr.next())
+		{
+			list.push({incidentId:gr.incident_id+'',incidentType:gr.incident_type.name+'',indicatorCount:gr.complted_indicator_count+'',incidentStatus:gr.ticket_status+'',createdDate:gr.sys_created_on+'',lastUpdated:gr.sys_updated_on+'',sysId:gr.sys_id+'',groupName:gr.assign_to_group.name+'',incidentSysId:gr.sys_id+''});
+		}
+		
+		return json.encode(list);
+	},
+	
+	openIncidentsData:function()
+	{
+		var json=new global.JSON();
+		var list=[];	
+		var count = new GlideAggregate('x_19668_halo_incident');
+		count.addQuery('ticket_status','!=', 'Closed');
+		count.addAggregate('COUNT', 'ticket_status');
+		gr.orderByDesc('sys_created_on');
+		count.query();   
+		while (count.next()) 
+		{
+		   var status = count.ticket_status;
+		   var statusCount = count.getAggregate('COUNT', 'ticket_status');
+		   list.push({status:status+'',statusCount:statusCount});
+		}
+		return json.encode(list);
+	},
+	
+	highPriorityIncidentsData:function()
+	{
+		var json=new global.JSON();
+		var list=[];
+		var gr = new GlideRecord('x_19668_halo_incident');
+		gr.addQuery('ticket_status','!=', 'Closed');
+		gr.query();   
+		while (gr.next()) 
+		{
+			var incidentRanking=[];
+			var gr1=new GlideRecord('x_19668_halo_potentialindicators');
+			gr1.addQuery('incident_id',gr.sys_id);
+			gr1.addQuery('overall_urgency_ranking','=','CRITICAL');
+			gr1.query();
+			if(gr1.next())
+				{
+					list.push({rank:'CRITICAL',incidentId:gr.incident_id+''});
+					continue;
+				}
+			
+			gr1=new GlideRecord('x_19668_halo_potentialindicators');
+			gr1.addQuery('incident_id',gr.sys_id);
+			gr1.addQuery('overall_urgency_ranking','=','SEVERE');
+			gr1.query();
+			if(gr1.next())
+				{
+					list.push({rank:'SEVERE',incidentId:gr.incident_id+''});
+					continue;
+				}
+			
+			gr1=new GlideRecord('x_19668_halo_potentialindicators');
+			gr1.addQuery('incident_id',gr.sys_id);
+			gr1.addQuery('overall_urgency_ranking','=','IMPORTANT');
+			gr1.query();
+			if(gr1.next())
+				{
+					list.push({rank:'IMPORTANT',incidentId:gr.incident_id+''});
+					continue;
+				}
+			
+			gr1=new GlideRecord('x_19668_halo_potentialindicators');
+			gr1.addQuery('incident_id',gr.sys_id);
+			gr1.addQuery('overall_urgency_ranking','=','MODERATE'+'');
+			gr1.query();
+			if(gr1.next())
+				{
+					list.push({rank:'MODERATE',incidentId:gr.incident_id+''});
+					continue;
+				}
+			
+			gr1=new GlideRecord('x_19668_halo_potentialindicators');
+			gr1.addQuery('incident_id',gr.sys_id);
+			gr1.addQuery('overall_urgency_ranking','=','LOW');
+			gr1.query();
+			if(gr1.next())
+				{
+					list.push({rank:'LOW',incidentId:gr.incident_id}+'');
+					continue;
+				}
+			
+		}
+		
+		return json.encode(list);
+		
+	},
+	
+	recentlyClosedIncidentsData:function()
+	{
+		var json=new global.JSON();
+		var list=[];
+	    var gr = new GlideRecord('x_19668_halo_incident');
+		gr.addQuery('ticket_status', 'Closed');
+		gr.addQuery('sys_updated_on', '<', gs.hoursAgo(24));
+		gr.orderByDesc('sys_updated_on');
+		gr.query();
+		while(gr.next())
+		{
+			list.push({incidentId:gr.incident_id+'',incidentStatus:gr.ticket_status+'',createdDate:gr.sys_created_on+'',lastUpdated:gr.sys_updated_on+'',incidentSysId:gr.sys_id+''});
+		}
+		
+		return json.encode(list);
+	},
+	
+	totalIncidentsData:function()
+	{
+		var json=new global.JSON();
+		var list=[];
+		var totalIncidents=0,totalOpenIncidents=0,totalClosedIncidents=0,totalMitigatedIncidents=0;
+		var count = new GlideAggregate('x_19668_halo_incident');
+		count.addAggregate('COUNT', 'ticket_status');
+		count.query();   
+		while (count.next()) 
+		{
+		   var status = count.ticket_status;
+		   var statusCount = count.getAggregate('COUNT', 'ticket_status');
+			
+		    if(status == 'Closed')
+				{
+					totalClosedIncidents=statusCount;
+				}
+			else if(status == 'Mitigated')
+				{
+					totalMitigatedIncidents=statusCount;
+				}
+		
+			
+		}
+		
+		var gr = new GlideRecord('x_19668_halo_incident');
+		gr.query();
+		totalIncidents=gr.getRowCount();
+		
+		gr = new GlideRecord('x_19668_halo_incident');
+		gr.addQuery('ticket_status','IN','Open,Ready for Review,Enrich Indicators');
+		gr.query();
+		totalOpenIncidents=gr.getRowCount();
+		
+		
+		list.push({totalIncidents:totalIncidents,totalOpenIncidents:totalOpenIncidents+'',totalClosedIncidents:totalClosedIncidents,totalMitigatedIncidents:totalMitigatedIncidents});
+		return json.encode(list);
+	},
+	
+	userData:function()
+	{
+		var json=new global.JSON();
+		var list=[];
+		list.push({displayName:gs.getUserDisplayName()+'',sysId:gs.getUserID()+''});
+		return json.encode(list);
+	}
+    
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-24 17:59:07</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2c2fa4b7db7232001cf8dec0cf9619ef</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>RightWidgetUtils</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_script_include_2c2fa4b7db7232001cf8dec0cf9619ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-21 17:24:09</sys_updated_on>
+    </sys_script_include>
+</record_update>

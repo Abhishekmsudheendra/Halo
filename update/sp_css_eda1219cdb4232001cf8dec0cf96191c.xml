@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>@font-face &#13;
+{&#13;
+   font-family: 'Glyphicons Halflings';&#13;
+      src: url('/sys_attachment.do?sys_id=2a9892d8dbc232001cf8dec0cf961923');&#13;
+      src: url('/sys_attachment.do?sys_id=2a9892d8dbc232001cf8dec0cf961923?#iefix') format('embedded-opentype'),&#13;
+           url('/sys_attachment.do?sys_id=fe9892d8dbc232001cf8dec0cf961929') format('woff'),&#13;
+           url('/sys_attachment.do?sys_id=3e9892d8dbc232001cf8dec0cf96192b') format('woff2'),&#13;
+           url('/sys_attachment.do?sys_id=329892d8dbc232001cf8dec0cf961928') format('truetype'),&#13;
+           url('/sys_attachment.do?sys_id=e29892d8dbc232001cf8dec0cf961925') format('svg');&#13;
+   font-weight: normal;&#13;
+   font-style: normal;&#13;
+}&#13;
+&#13;
+@font-face &#13;
+{&#13;
+   font-family: 'FontAwesome';&#13;
+      src: url('/sys_attachment.do?sys_id=06981e98dbc232001cf8dec0cf9619a5');&#13;
+      src: url('/sys_attachment.do?sys_id=06981e98dbc232001cf8dec0cf9619a5?#iefix') format('embedded-opentype'),&#13;
+           url('/sys_attachment.do?sys_id=3e9892d8dbc232001cf8dec0cf96192b') format('woff'),&#13;
+           url('/sys_attachment.do?sys_id=a69892d8dbc232001cf8dec0cf961919') format('woff2'),&#13;
+           url('/sys_attachment.do?sys_id=d6981e98dbc232001cf8dec0cf9619aa') format('truetype'),&#13;
+          &#13;
+   font-weight: normal;&#13;
+   font-style: normal;&#13;
+}&#13;
+&#13;
+/*&#13;
+.left_col&#13;
+{&#13;
+ &#13;
+    width: 230px !important;&#13;
+  &#13;
+}&#13;
+&#13;
+.col-md-3&#13;
+{&#13;
+   width: 230px !important;&#13;
+}&#13;
+&#13;
+&#13;
+body&#13;
+&#13;
+{&#13;
+  &#13;
+   background-color:#F7F7F7 !important;&#13;
+}&#13;
+&#13;
+body .padding-top&#13;
+{&#13;
+  padding-top:0px !important; &#13;
+}&#13;
+&#13;
+@media only screen and (min-height: 500px) {&#13;
+    .left_col &#13;
+    {&#13;
+          height: 2000px;&#13;
+    }&#13;
+}&#13;
+&#13;
+*/&#13;
+&#13;
+&#13;
+body&#13;
+&#13;
+{&#13;
+  &#13;
+   background-color:#F7F7F7 !important;&#13;
+}&#13;
+&#13;
+body .padding-top&#13;
+{&#13;
+  padding-top:0px !important; &#13;
+}</css>
+        <name>custom.css</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-06 17:53:42</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>eda1219cdb4232001cf8dec0cf96191c</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>custom.css</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sp_css_eda1219cdb4232001cf8dec0cf96191c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-12 20:57:05</sys_updated_on>
+    </sp_css>
+</record_update>

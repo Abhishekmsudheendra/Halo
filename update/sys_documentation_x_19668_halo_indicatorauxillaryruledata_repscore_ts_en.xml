@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="repscore_ts" label="Repscore Timestamp" language="en" table="x_19668_halo_indicatorauxillaryruledata">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>repscore_ts</element>
+            <help/>
+            <hint/>
+            <label>Repscore Timestamp</label>
+            <language>en</language>
+            <name>x_19668_halo_indicatorauxillaryruledata</name>
+            <plural>Repscore Timestamps</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-03-09 19:38:37</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>f53de9dfdb5132001cf8dec0cf96193d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Repscore Timestamp</sys_name>
+            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+            <sys_update_name>sys_documentation_x_19668_halo_indicatorauxillaryruledata_repscore_ts_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-03-09 19:38:37</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
