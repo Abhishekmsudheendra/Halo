@@ -1089,7 +1089,7 @@ ga('send', 'pageview');
         <sys_class_name>content_block_programmatic</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-03-15 15:19:02</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>954b2fc1db2132001cf8dec0cf961978</sys_id>
         <sys_mod_count>13</sys_mod_count>
         <sys_name>Halo Home Page</sys_name>

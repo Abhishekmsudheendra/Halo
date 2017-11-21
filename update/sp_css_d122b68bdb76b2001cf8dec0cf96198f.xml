@@ -1316,7 +1316,7 @@ a.ui-button:active,&#13;
         <sys_class_name>sp_css</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-22 19:35:37</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>d122b68bdb76b2001cf8dec0cf96198f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>jquery-ui.css</sys_name>

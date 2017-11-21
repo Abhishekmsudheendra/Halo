@@ -4,62 +4,47 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="content_css" element="NULL" name="content_css" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38399c95db6132001cf8dec0cf9619c3</list_id>
+            <list_id display_value="content_css" element="NULL" name="content_css" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2558617e0a0a0b8d0083c43b2151684d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-03-15 18:39:22</sys_created_on>
-            <sys_id>7c399c95db6132001cf8dec0cf9619c3</sys_id>
+            <sys_created_by>pat.casey</sys_created_by>
+            <sys_created_on>2010-07-30 21:53:23</sys_created_on>
+            <sys_id>255861940a0a0b8d00862efe737ba537</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-03-15 18:39:22</sys_updated_on>
-        </sys_ui_list_element>
-        <sys_ui_list_element action="INSERT_OR_UPDATE">
-            <average_value>false</average_value>
-            <element>style</element>
-            <list_id display_value="content_css" element="NULL" name="content_css" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38399c95db6132001cf8dec0cf9619c3</list_id>
-            <max_value>false</max_value>
-            <min_value>false</min_value>
-            <position>1</position>
-            <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-03-15 18:39:22</sys_created_on>
-            <sys_id>fc399c95db6132001cf8dec0cf9619c3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-03-15 18:39:22</sys_updated_on>
+            <sys_updated_by>pat.casey</sys_updated_by>
+            <sys_updated_on>2010-07-30 21:53:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>type</element>
-            <list_id display_value="content_css" element="NULL" name="content_css" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38399c95db6132001cf8dec0cf9619c3</list_id>
+            <list_id display_value="content_css" element="NULL" name="content_css" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2558617e0a0a0b8d0083c43b2151684d</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>pat.casey</sys_created_by>
+            <sys_created_on>2010-07-30 21:53:23</sys_created_on>
+            <sys_id>255861a60a0a0b8d000d246014a77a67</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pat.casey</sys_updated_by>
+            <sys_updated_on>2010-07-30 21:53:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>description</element>
+            <list_id display_value="content_css" element="NULL" name="content_css" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2558617e0a0a0b8d0083c43b2151684d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-03-15 18:39:22</sys_created_on>
-            <sys_id>70399c95db6132001cf8dec0cf9619c4</sys_id>
+            <sys_created_by>pat.casey</sys_created_by>
+            <sys_created_on>2010-07-30 21:53:23</sys_created_on>
+            <sys_id>255861ab0a0a0b8d009ff0533522cc26</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-03-15 18:39:22</sys_updated_on>
-        </sys_ui_list_element>
-        <sys_ui_list_element action="INSERT_OR_UPDATE">
-            <average_value>false</average_value>
-            <element>url</element>
-            <list_id display_value="content_css" element="NULL" name="content_css" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38399c95db6132001cf8dec0cf9619c3</list_id>
-            <max_value>false</max_value>
-            <min_value>false</min_value>
-            <position>3</position>
-            <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-03-15 18:39:22</sys_created_on>
-            <sys_id>f0399c95db6132001cf8dec0cf9619c4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-03-15 18:39:22</sys_updated_on>
+            <sys_updated_by>pat.casey</sys_updated_by>
+            <sys_updated_on>2010-07-30 21:53:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -73,20 +58,20 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-03-15 18:39:32</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_created_on>2017-10-16 21:22:00</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>5b39d855db6132001cf8dec0cf96193d</sys_id>
+            <sys_id>173c0462db3503001cf8dec0cf9619db</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>content_css</sys_name>
-            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_name/>
+            <sys_package/>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
-            <sys_update_name>sys_ui_list_content_css_null</sys_update_name>
+            <sys_update_name/>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-03-15 18:39:32</sys_updated_on>
+            <sys_updated_on>2017-10-16 21:22:00</sys_updated_on>
             <sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

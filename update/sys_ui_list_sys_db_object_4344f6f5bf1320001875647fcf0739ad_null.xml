@@ -13,20 +13,20 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-03-16 15:20:52</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_created_on>2017-08-03 18:11:42</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>ee553c69db2132001cf8dec0cf9619a2</sys_id>
+            <sys_id>420b9aaadb5003001cf8dec0cf9619d2</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>sys_dictionary</sys_name>
-            <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+            <sys_name/>
+            <sys_package/>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
-            <sys_update_name>sys_ui_list_sys_db_object_4344f6f5bf1320001875647fcf0739ad_null</sys_update_name>
+            <sys_update_name/>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-03-16 15:20:52</sys_updated_on>
+            <sys_updated_on>2017-08-03 18:11:42</sys_updated_on>
             <sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

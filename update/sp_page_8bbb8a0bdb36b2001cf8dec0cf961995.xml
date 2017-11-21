@@ -14,6 +14,7 @@
 &#13;
 &#13;
 </css>
+        <draft>false</draft>
         <id>search_incident</id>
         <internal>false</internal>
         <public>true</public>
@@ -22,7 +23,7 @@
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-22 16:47:59</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>8bbb8a0bdb36b2001cf8dec0cf961995</sys_id>
         <sys_mod_count>30</sys_mod_count>
         <sys_name>search_incident</sys_name>

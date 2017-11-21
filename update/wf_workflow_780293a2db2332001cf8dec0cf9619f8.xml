@@ -2,7 +2,7 @@
 <record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_stages>{"subflows":[],"stages":{},"activities":{},"ends":["3f5c4335db7332001cf8dec0cf961959"]}</activity_stages>
+        <activity_stages>{"activities":{},"ends":["39649769db4203001cf8dec0cf961948"],"subflows":[],"stages":{}}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
         <checked_out_by/>
@@ -14,10 +14,10 @@
         </condition>
         <condition_type>run_match</condition_type>
         <description/>
-        <expected_sequences>ff5c4335db7332001cf8dec0cf961962,735c4335db7332001cf8dec0cf961962,3b5ccff1db7332001cf8dec0cf9619a9,bf5c4335db7332001cf8dec0cf96195c,3f5c4335db7332001cf8dec0cf961959</expected_sequences>
+        <expected_sequences>b5649fa9db4203001cf8dec0cf961995,75649769db4203001cf8dec0cf96194a,8df4dfa9db4203001cf8dec0cf961972,f5649fa9db4203001cf8dec0cf961991,39649769db4203001cf8dec0cf961948</expected_sequences>
         <expected_time>1970-01-01 14:00:00</expected_time>
         <expected_time_type/>
-        <full_sequences>ff5c4335db7332001cf8dec0cf961962,735c4335db7332001cf8dec0cf961962,3b5ccff1db7332001cf8dec0cf9619a9,bf5c4335db7332001cf8dec0cf96195c,bb5c4335db7332001cf8dec0cf961955,3f5c4335db7332001cf8dec0cf961959,f35c4335db7332001cf8dec0cf961957,f35c4335db7332001cf8dec0cf96195b,b35ccff1db7332001cf8dec0cf9619ad,3f5c4335db7332001cf8dec0cf96195e,375ccff1db7332001cf8dec0cf9619a8,b75c4335db7332001cf8dec0cf961960,735ccff1db7332001cf8dec0cf9619ac,b35c4335db7332001cf8dec0cf961961,7f5c4335db7332001cf8dec0cf96195d,375c4335db7332001cf8dec0cf96195a,f35ccff1db7332001cf8dec0cf9619ab,7b5c4335db7332001cf8dec0cf961963,bf5c4335db7332001cf8dec0cf961958,375c4335db7332001cf8dec0cf961956</full_sequences>
+        <full_sequences>b5649fa9db4203001cf8dec0cf961995,75649769db4203001cf8dec0cf96194a,8df4dfa9db4203001cf8dec0cf961972,f5649fa9db4203001cf8dec0cf961991,b9649fa9db4203001cf8dec0cf96198f,39649769db4203001cf8dec0cf961948,2a86532ddb4203001cf8dec0cf96199d,4ff553e9db4203001cf8dec0cf961903,26c6932ddb4203001cf8dec0cf961934,4d36dfe9db4203001cf8dec0cf961906,f5649769db4203001cf8dec0cf96194e,58849fa9db4203001cf8dec0cf9619f1,b9649769db4203001cf8dec0cf96194d,79649769db4203001cf8dec0cf96194b,79649769db4203001cf8dec0cf961946,7d649769db4203001cf8dec0cf96194c,b9649fa9db4203001cf8dec0cf961990,b9649fa9db4203001cf8dec0cf961994,3d649769db4203001cf8dec0cf961945,b9649769db4203001cf8dec0cf961944</full_sequences>
         <journal/>
         <max_activity_count>100</max_activity_count>
         <name>Enrich Potential Indicators for FQDN (Domains) </name>
@@ -32,13 +32,13 @@
         <schedule/>
         <stage_field/>
         <stage_order>computed</stage_order>
-        <start display_value="Begin">ff5c4335db7332001cf8dec0cf961962</start>
+        <start display_value="Begin">b5649fa9db4203001cf8dec0cf961995</start>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5ccff1db7332001cf8dec0cf9619a6</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b5649769db4203001cf8dec0cf961943</sys_id>
+        <sys_mod_count>22</sys_mod_count>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2017-07-07 18:25:45</sys_updated_on>
+        <sys_updated_on>2017-10-26 20:29:04</sys_updated_on>
         <table>x_19668_halo_potentialindicators</table>
         <timezone/>
         <validated>true</validated>
@@ -52,7 +52,7 @@
         <sys_class_name>wf_workflow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-06-27 15:24:49</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>780293a2db2332001cf8dec0cf9619f8</sys_id>
@@ -71,7 +71,7 @@
         <vars/>
     </wf_workflow>
     <wf_activity action="INSERT_OR_UPDATE">
-        <activity_definition display_value="Is Threat Exists">aa7403fddb3332001cf8dec0cf9619bb</activity_definition>
+        <activity_definition display_value="Is Threat Exists">c24c0252db2103001cf8dec0cf961934</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
         <databus_lookup_id>23</databus_lookup_id>
         <height/>
@@ -86,21 +86,21 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>735ccff1db7332001cf8dec0cf9619ac</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>79649769db4203001cf8dec0cf96194b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>578</x>
         <y>809</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=735ccff1db7332001cf8dec0cf9619ac"/>
+    <sys_variable_value action="delete_multiple" query="document_key=79649769db4203001cf8dec0cf96194b"/>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="">735ccff1db7332001cf8dec0cf9619ac</activity>
+        <activity display_value="">79649769db4203001cf8dec0cf96194b</activity>
         <condition>(totalRows &gt;= 1) &amp;&amp; (threatLevel!='')</condition>
         <condition_default display_value="Threat Found">36eb75e5db7332001cf8dec0cf9619ca</condition_default>
         <condition_type>standard</condition_type>
@@ -114,14 +114,14 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7b5ccff1db7332001cf8dec0cf9619ac</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>35649769db4203001cf8dec0cf96194c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="">735ccff1db7332001cf8dec0cf9619ac</activity>
+        <activity display_value="">79649769db4203001cf8dec0cf96194b</activity>
         <condition>(totalRows &lt;1) ||(threatLevel =='')</condition>
         <condition_default display_value="Threat Not Found">7eeb75e5db7332001cf8dec0cf9619ca</condition_default>
         <condition_type>standard</condition_type>
@@ -135,11 +135,11 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>fb5ccff1db7332001cf8dec0cf9619ac</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b5649769db4203001cf8dec0cf96194c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
@@ -157,21 +157,21 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf961962</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>b5649fa9db4203001cf8dec0cf961995</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>26</x>
         <y>49</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=ff5c4335db7332001cf8dec0cf961962"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b5649fa9db4203001cf8dec0cf961995"/>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Begin">ff5c4335db7332001cf8dec0cf961962</activity>
+        <activity display_value="Begin">b5649fa9db4203001cf8dec0cf961995</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -185,11 +185,11 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b35c4335db7332001cf8dec0cf961963</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>79649fa9db4203001cf8dec0cf961995</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -207,30 +207,30 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5c4335db7332001cf8dec0cf96195c</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f5649fa9db4203001cf8dec0cf961991</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>1197</x>
         <y>616</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=bf5c4335db7332001cf8dec0cf96195c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f5649fa9db4203001cf8dec0cf961991"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>bf5c4335db7332001cf8dec0cf96195c</document_key>
+        <document_key>f5649fa9db4203001cf8dec0cf961991</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>335c4335db7332001cf8dec0cf96195d</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>79649fa9db4203001cf8dec0cf961991</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>var gdt = new GlideDateTime();&#13;
 current.indicator_status='Calculate Urgency Rank';&#13;
 current.completed_enrich_count=current.enrichment_count;&#13;
@@ -240,15 +240,15 @@ current.update();</value>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>bf5c4335db7332001cf8dec0cf96195c</document_key>
+        <document_key>f5649fa9db4203001cf8dec0cf961991</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>335c4335db7332001cf8dec0cf96195d</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>79649fa9db4203001cf8dec0cf961991</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>var gdt = new GlideDateTime();&#13;
 current.indicator_status='Calculate Urgency Rank';&#13;
 current.completed_enrich_count=current.enrichment_count;&#13;
@@ -257,7 +257,7 @@ current.update();</value>
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Change Status">bf5c4335db7332001cf8dec0cf96195c</activity>
+        <activity display_value="Change Status">f5649fa9db4203001cf8dec0cf961991</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -271,190 +271,11 @@ current.update();</value>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b75c4335db7332001cf8dec0cf96195d</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>7d649fa9db4203001cf8dec0cf961991</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-    </wf_condition>
-    <wf_activity action="INSERT_OR_UPDATE">
-        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
-        <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>15</databus_lookup_id>
-        <height/>
-        <input>{}</input>
-        <is_parent>false</is_parent>
-        <name>Check if FQDN is empty</name>
-        <new_activity_definition/>
-        <notes/>
-        <out_of_date>false</out_of_date>
-        <parent/>
-        <pinned>false</pinned>
-        <pinned_version/>
-        <stage/>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3b5ccff1db7332001cf8dec0cf9619a9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <timeout>1970-01-01 00:00:00</timeout>
-        <vars/>
-        <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>588</x>
-        <y>32</y>
-    </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=3b5ccff1db7332001cf8dec0cf9619a9"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>3b5ccff1db7332001cf8dec0cf9619a9</document_key>
-        <order>300</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375ccff1db7332001cf8dec0cf9619aa</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
-//&#13;
-// For example,&#13;
-//&#13;
-answer = ifScript();&#13;
-&#13;
-function ifScript()&#13;
-{&#13;
-	if(workflow.scratchpad.fqdn == '')&#13;
-		return 'yes';&#13;
-	return 'no';&#13;
-}&#13;
-</value>
-        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>3b5ccff1db7332001cf8dec0cf9619a9</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5ccff1db7332001cf8dec0cf9619a9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>3b5ccff1db7332001cf8dec0cf9619a9</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5ccff1db7332001cf8dec0cf9619a9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>3b5ccff1db7332001cf8dec0cf9619a9</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5ccff1db7332001cf8dec0cf9619a9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>3b5ccff1db7332001cf8dec0cf9619a9</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5ccff1db7332001cf8dec0cf9619a9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>3b5ccff1db7332001cf8dec0cf9619a9</document_key>
-        <order>300</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375ccff1db7332001cf8dec0cf9619aa</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
-//&#13;
-// For example,&#13;
-//&#13;
-answer = ifScript();&#13;
-&#13;
-function ifScript()&#13;
-{&#13;
-	if(workflow.scratchpad.fqdn == '')&#13;
-		return 'yes';&#13;
-	return 'no';&#13;
-}&#13;
-</value>
-        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
-    </sys_variable_value>
-    <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Check if FQDN is empty">3b5ccff1db7332001cf8dec0cf9619a9</activity>
-        <condition>activity.result == 'no'</condition>
-        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
-        <condition_type>standard</condition_type>
-        <else_flag>false</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <is_positive>false</is_positive>
-        <name>No</name>
-        <order>200</order>
-        <short_description/>
-        <skip_during_generate>true</skip_during_generate>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5ccff1db7332001cf8dec0cf9619aa</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-    </wf_condition>
-    <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Check if FQDN is empty">3b5ccff1db7332001cf8dec0cf9619a9</activity>
-        <condition>activity.result == 'yes'</condition>
-        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
-        <condition_type>standard</condition_type>
-        <else_flag>false</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <is_positive>true</is_positive>
-        <name>Yes</name>
-        <order>100</order>
-        <short_description/>
-        <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5ccff1db7332001cf8dec0cf9619aa</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Branch">a246173ac0a8016400a47421cd41e42c</activity_definition>
@@ -472,21 +293,21 @@ function ifScript()&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf961955</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b9649fa9db4203001cf8dec0cf96198f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:42:47</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>7</x>
-        <y>518</y>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>89</x>
+        <y>533</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=bb5c4335db7332001cf8dec0cf961955"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b9649fa9db4203001cf8dec0cf96198f"/>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Contact All Data Sources">bb5c4335db7332001cf8dec0cf961955</activity>
+        <activity display_value="Contact All Data Sources">b9649fa9db4203001cf8dec0cf96198f</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -500,20 +321,20 @@ function ifScript()&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7f5c4335db7332001cf8dec0cf961955</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f1649fa9db4203001cf8dec0cf961990</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>16</databus_lookup_id>
+        <databus_lookup_id>27</databus_lookup_id>
         <height/>
         <input>{}</input>
         <is_parent>false</is_parent>
-        <name>DataSource Google Safe Browsing Selected ?</name>
+        <name>Datasource Google Safe Browsing selected?</name>
         <new_activity_definition/>
         <notes/>
         <out_of_date>false</out_of_date>
@@ -522,30 +343,30 @@ function ifScript()&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5c4335db7332001cf8dec0cf96195e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>4ff553e9db4203001cf8dec0cf961903</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:52</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>308</x>
-        <y>169</y>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>326</x>
+        <y>171</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=3f5c4335db7332001cf8dec0cf96195e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4ff553e9db4203001cf8dec0cf961903"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>3f5c4335db7332001cf8dec0cf96195e</document_key>
+        <document_key>4ff553e9db4203001cf8dec0cf961903</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3b5c4335db7332001cf8dec0cf96195f</sys_id>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>4b06d3e9db4203001cf8dec0cf961972</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:30</sys_updated_on>
         <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
 //&#13;
 // For example,&#13;
@@ -568,71 +389,71 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>3f5c4335db7332001cf8dec0cf96195e</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5c4335db7332001cf8dec0cf96195e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>3f5c4335db7332001cf8dec0cf96195e</document_key>
+        <document_key>4ff553e9db4203001cf8dec0cf961903</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f35c4335db7332001cf8dec0cf96195f</sys_id>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>8706d3e9db4203001cf8dec0cf961972</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:30</sys_updated_on>
         <value>1</value>
         <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>3f5c4335db7332001cf8dec0cf96195e</document_key>
+        <document_key>4ff553e9db4203001cf8dec0cf961903</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5c4335db7332001cf8dec0cf96195e</sys_id>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>c306d3e9db4203001cf8dec0cf961972</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:30</sys_updated_on>
         <value/>
         <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>3f5c4335db7332001cf8dec0cf96195e</document_key>
+        <document_key>4ff553e9db4203001cf8dec0cf961903</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>c306d3e9db4203001cf8dec0cf961972</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:45:30</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4ff553e9db4203001cf8dec0cf961903</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f35c4335db7332001cf8dec0cf96195f</sys_id>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>8706d3e9db4203001cf8dec0cf961972</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:30</sys_updated_on>
         <value>1</value>
         <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>3f5c4335db7332001cf8dec0cf96195e</document_key>
+        <document_key>4ff553e9db4203001cf8dec0cf961903</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3b5c4335db7332001cf8dec0cf96195f</sys_id>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>4b06d3e9db4203001cf8dec0cf961972</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:30</sys_updated_on>
         <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
 //&#13;
 // For example,&#13;
@@ -654,7 +475,7 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="DataSource Google Safe Browsing Selected ?">3f5c4335db7332001cf8dec0cf96195e</activity>
+        <activity display_value="Datasource Google Safe Browsing selected?">4ff553e9db4203001cf8dec0cf961903</activity>
         <condition>activity.result == 'no'</condition>
         <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
         <condition_type>standard</condition_type>
@@ -668,14 +489,14 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <short_description/>
         <skip_during_generate>true</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5c4335db7332001cf8dec0cf96195f</sys_id>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>0306d3e9db4203001cf8dec0cf961973</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:30</sys_updated_on>
     </wf_condition>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="DataSource Google Safe Browsing Selected ?">3f5c4335db7332001cf8dec0cf96195e</activity>
+        <activity display_value="Datasource Google Safe Browsing selected?">4ff553e9db4203001cf8dec0cf961903</activity>
         <condition>activity.result == 'yes'</condition>
         <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
         <condition_type>standard</condition_type>
@@ -689,20 +510,20 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>335c4335db7332001cf8dec0cf961960</sys_id>
+        <sys_created_on>2017-10-26 19:45:30</sys_created_on>
+        <sys_id>8f06d3e9db4203001cf8dec0cf961972</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:30</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>22</databus_lookup_id>
+        <databus_lookup_id>30</databus_lookup_id>
         <height/>
         <input>{}</input>
         <is_parent>false</is_parent>
-        <name>Datasource Maxim Threat Database Selected ?</name>
+        <name>Datasource Maxim Threat selected?</name>
         <new_activity_definition/>
         <notes/>
         <out_of_date>false</out_of_date>
@@ -711,58 +532,30 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f35c4335db7332001cf8dec0cf96195b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>26c6932ddb4203001cf8dec0cf961934</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:21:14</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:49:31</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>282</x>
-        <y>810</y>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>301</x>
+        <y>789</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=f35c4335db7332001cf8dec0cf96195b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=26c6932ddb4203001cf8dec0cf961934"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf96195b</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775c4335db7332001cf8dec0cf96195b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf96195b</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf96195b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf96195b</document_key>
+        <document_key>26c6932ddb4203001cf8dec0cf961934</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf96195b</sys_id>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>3bd6d32ddb4203001cf8dec0cf9619ba</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:21:14</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:49:27</sys_updated_on>
         <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
 //&#13;
 // For example,&#13;
@@ -783,43 +576,71 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf96195b</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775c4335db7332001cf8dec0cf96195b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf96195b</document_key>
+        <document_key>26c6932ddb4203001cf8dec0cf961934</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf96195b</sys_id>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>77d6d32ddb4203001cf8dec0cf9619ba</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:49:06</sys_updated_on>
         <value>1</value>
         <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf96195b</document_key>
+        <document_key>26c6932ddb4203001cf8dec0cf961934</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>b3d6d32ddb4203001cf8dec0cf9619ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:49:06</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>26c6932ddb4203001cf8dec0cf961934</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>b3d6d32ddb4203001cf8dec0cf9619ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:49:06</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>26c6932ddb4203001cf8dec0cf961934</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>77d6d32ddb4203001cf8dec0cf9619ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:49:06</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>26c6932ddb4203001cf8dec0cf961934</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf96195b</sys_id>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>3bd6d32ddb4203001cf8dec0cf9619ba</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:21:14</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:49:27</sys_updated_on>
         <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
 //&#13;
 // For example,&#13;
@@ -839,7 +660,7 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Datasource Maxim Threat Database Selected ?">f35c4335db7332001cf8dec0cf96195b</activity>
+        <activity display_value="Datasource Maxim Threat selected?">26c6932ddb4203001cf8dec0cf961934</activity>
         <condition>activity.result == 'no'</condition>
         <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
         <condition_type>standard</condition_type>
@@ -853,14 +674,14 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <short_description/>
         <skip_during_generate>true</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f75c4335db7332001cf8dec0cf96195c</sys_id>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>ffd6d32ddb4203001cf8dec0cf9619ba</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:49:06</sys_updated_on>
     </wf_condition>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Datasource Maxim Threat Database Selected ?">f35c4335db7332001cf8dec0cf96195b</activity>
+        <activity display_value="Datasource Maxim Threat selected?">26c6932ddb4203001cf8dec0cf961934</activity>
         <condition>activity.result == 'yes'</condition>
         <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
         <condition_type>standard</condition_type>
@@ -874,20 +695,20 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775c4335db7332001cf8dec0cf96195c</sys_id>
+        <sys_created_on>2017-10-26 19:49:06</sys_created_on>
+        <sys_id>7fd6d32ddb4203001cf8dec0cf9619ba</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:49:06</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>17</databus_lookup_id>
+        <databus_lookup_id>28</databus_lookup_id>
         <height/>
         <input>{}</input>
         <is_parent>false</is_parent>
-        <name>Datasource Phish Tank Selected ?</name>
+        <name>Datasource Phish Tank selected?</name>
         <new_activity_definition/>
         <notes/>
         <out_of_date>false</out_of_date>
@@ -896,60 +717,31 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f35c4335db7332001cf8dec0cf961957</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>4d36dfe9db4203001cf8dec0cf961906</sys_id>
+        <sys_mod_count>8</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:49:52</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>299</x>
-        <y>382</y>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>303</x>
+        <y>344</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=f35c4335db7332001cf8dec0cf961957"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4d36dfe9db4203001cf8dec0cf961906"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf961957</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775c4335db7332001cf8dec0cf961957</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf961957</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf961957</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf961957</document_key>
+        <document_key>4d36dfe9db4203001cf8dec0cf961906</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf961957</sys_id>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>7146d769db4203001cf8dec0cf9619db</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>&#13;
-   answer = ifScript();&#13;
+        <sys_updated_on>2017-10-26 19:46:30</sys_updated_on>
+        <value>   answer = ifScript();&#13;
 &#13;
    function ifScript() &#13;
    {&#13;
@@ -966,45 +758,72 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf961957</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775c4335db7332001cf8dec0cf961957</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf961957</document_key>
+        <document_key>4d36dfe9db4203001cf8dec0cf961906</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf961957</sys_id>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>bd46d769db4203001cf8dec0cf9619da</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:46:30</sys_updated_on>
         <value>1</value>
         <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>f35c4335db7332001cf8dec0cf961957</document_key>
+        <document_key>4d36dfe9db4203001cf8dec0cf961906</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>f946d769db4203001cf8dec0cf9619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:46:30</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4d36dfe9db4203001cf8dec0cf961906</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>f946d769db4203001cf8dec0cf9619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:46:30</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4d36dfe9db4203001cf8dec0cf961906</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>bd46d769db4203001cf8dec0cf9619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:46:30</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4d36dfe9db4203001cf8dec0cf961906</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf961957</sys_id>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>7146d769db4203001cf8dec0cf9619db</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>&#13;
-   answer = ifScript();&#13;
+        <sys_updated_on>2017-10-26 19:46:30</sys_updated_on>
+        <value>   answer = ifScript();&#13;
 &#13;
    function ifScript() &#13;
    {&#13;
@@ -1020,7 +839,7 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Datasource Phish Tank Selected ?">f35c4335db7332001cf8dec0cf961957</activity>
+        <activity display_value="Datasource Phish Tank selected?">4d36dfe9db4203001cf8dec0cf961906</activity>
         <condition>activity.result == 'no'</condition>
         <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
         <condition_type>standard</condition_type>
@@ -1034,14 +853,14 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <short_description/>
         <skip_during_generate>true</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775c4335db7332001cf8dec0cf961958</sys_id>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>3946d769db4203001cf8dec0cf9619db</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:46:30</sys_updated_on>
     </wf_condition>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Datasource Phish Tank Selected ?">f35c4335db7332001cf8dec0cf961957</activity>
+        <activity display_value="Datasource Phish Tank selected?">4d36dfe9db4203001cf8dec0cf961906</activity>
         <condition>activity.result == 'yes'</condition>
         <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
         <condition_type>standard</condition_type>
@@ -1055,20 +874,20 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f75c4335db7332001cf8dec0cf961958</sys_id>
+        <sys_created_on>2017-10-26 19:46:30</sys_created_on>
+        <sys_id>b546d769db4203001cf8dec0cf9619db</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:46:30</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>18</databus_lookup_id>
+        <databus_lookup_id>29</databus_lookup_id>
         <height/>
         <input>{}</input>
         <is_parent>false</is_parent>
-        <name>Datasource Virus Total Selected ?</name>
+        <name>Datasource Virustotal Selected?</name>
         <new_activity_definition/>
         <notes/>
         <out_of_date>false</out_of_date>
@@ -1077,58 +896,30 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b35ccff1db7332001cf8dec0cf9619ad</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>2a86532ddb4203001cf8dec0cf96199d</sys_id>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:49:55</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>295</x>
-        <y>598</y>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>294</x>
+        <y>632</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=b35ccff1db7332001cf8dec0cf9619ad"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2a86532ddb4203001cf8dec0cf96199d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b35ccff1db7332001cf8dec0cf9619ad</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375ccff1db7332001cf8dec0cf9619ad</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>b35ccff1db7332001cf8dec0cf9619ad</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7b5ccff1db7332001cf8dec0cf9619ad</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>b35ccff1db7332001cf8dec0cf9619ad</document_key>
+        <document_key>2a86532ddb4203001cf8dec0cf96199d</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5ccff1db7332001cf8dec0cf9619ad</sys_id>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>1b9657e9db4203001cf8dec0cf961958</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:47:58</sys_updated_on>
         <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
 //&#13;
 // For example,&#13;
@@ -1149,43 +940,71 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b35ccff1db7332001cf8dec0cf9619ad</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375ccff1db7332001cf8dec0cf9619ad</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>b35ccff1db7332001cf8dec0cf9619ad</document_key>
+        <document_key>2a86532ddb4203001cf8dec0cf96199d</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7b5ccff1db7332001cf8dec0cf9619ad</sys_id>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>579657e9db4203001cf8dec0cf961958</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:47:58</sys_updated_on>
         <value>1</value>
         <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b35ccff1db7332001cf8dec0cf9619ad</document_key>
+        <document_key>2a86532ddb4203001cf8dec0cf96199d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>939657e9db4203001cf8dec0cf961958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:47:58</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2a86532ddb4203001cf8dec0cf96199d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>939657e9db4203001cf8dec0cf961958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:47:58</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2a86532ddb4203001cf8dec0cf96199d</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>579657e9db4203001cf8dec0cf961958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:47:58</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2a86532ddb4203001cf8dec0cf96199d</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5ccff1db7332001cf8dec0cf9619ad</sys_id>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>1b9657e9db4203001cf8dec0cf961958</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:47:58</sys_updated_on>
         <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
 //&#13;
 // For example,&#13;
@@ -1205,7 +1024,7 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Datasource Virus Total Selected ?">b35ccff1db7332001cf8dec0cf9619ad</activity>
+        <activity display_value="Datasource Virustotal Selected?">2a86532ddb4203001cf8dec0cf96199d</activity>
         <condition>activity.result == 'no'</condition>
         <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
         <condition_type>standard</condition_type>
@@ -1219,14 +1038,14 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <short_description/>
         <skip_during_generate>true</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b75ccff1db7332001cf8dec0cf9619ae</sys_id>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>df9657e9db4203001cf8dec0cf961958</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:47:58</sys_updated_on>
     </wf_condition>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Datasource Virus Total Selected ?">b35ccff1db7332001cf8dec0cf9619ad</activity>
+        <activity display_value="Datasource Virustotal Selected?">2a86532ddb4203001cf8dec0cf96199d</activity>
         <condition>activity.result == 'yes'</condition>
         <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
         <condition_type>standard</condition_type>
@@ -1240,11 +1059,11 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375ccff1db7332001cf8dec0cf9619ae</sys_id>
+        <sys_created_on>2017-10-26 19:47:58</sys_created_on>
+        <sys_id>5f9657e9db4203001cf8dec0cf961958</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:47:58</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
@@ -1262,19 +1081,40 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5c4335db7332001cf8dec0cf961959</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>39649769db4203001cf8dec0cf961948</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>1225</x>
         <y>795</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=3f5c4335db7332001cf8dec0cf961959"/>
+    <sys_variable_value action="delete_multiple" query="document_key=39649769db4203001cf8dec0cf961948"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="End">39649769db4203001cf8dec0cf961948</activity>
+        <condition>True</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f9649769db4203001cf8dec0cf961948</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
+    </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
@@ -1291,30 +1131,30 @@ gs.info("workflow.scratchpad.dataSources  :"+dataSourcesList);&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7f5c4335db7332001cf8dec0cf96195d</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b9649769db4203001cf8dec0cf96194d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>582</x>
         <y>172</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=7f5c4335db7332001cf8dec0cf96195d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b9649769db4203001cf8dec0cf96194d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>7f5c4335db7332001cf8dec0cf96195d</document_key>
+        <document_key>b9649769db4203001cf8dec0cf96194d</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf96195d</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>3d649769db4203001cf8dec0cf96194d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>var r = new sn_ws.RESTMessageV2('x_19668_halo.Google Safe Search', 'Post');&#13;
 &#13;
 var obj=[];&#13;
@@ -1364,15 +1204,15 @@ workflow.scratchpad.googleEnrichmentData=responseBody;</value>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>7f5c4335db7332001cf8dec0cf96195d</document_key>
+        <document_key>b9649769db4203001cf8dec0cf96194d</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf96195d</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>3d649769db4203001cf8dec0cf96194d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>var r = new sn_ws.RESTMessageV2('x_19668_halo.Google Safe Search', 'Post');&#13;
 &#13;
 var obj=[];&#13;
@@ -1421,7 +1261,7 @@ workflow.scratchpad.googleEnrichmentData=responseBody;</value>
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Execute REST Google Safe Browsing Post Message">7f5c4335db7332001cf8dec0cf96195d</activity>
+        <activity display_value="Execute REST Google Safe Browsing Post Message">b9649769db4203001cf8dec0cf96194d</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1435,20 +1275,20 @@ workflow.scratchpad.googleEnrichmentData=responseBody;</value>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775c4335db7332001cf8dec0cf96195e</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>31649769db4203001cf8dec0cf96194e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
-        <activity_definition display_value="Join">7c9a2ba9c0a801650021ada408de0ebd</activity_definition>
+        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>21</databus_lookup_id>
+        <databus_lookup_id>26</databus_lookup_id>
         <height/>
         <input>{}</input>
         <is_parent>false</is_parent>
-        <name>Join All Datasources Response</name>
+        <name>is FQDN empty?</name>
         <new_activity_definition/>
         <notes/>
         <out_of_date>false</out_of_date>
@@ -1457,21 +1297,190 @@ workflow.scratchpad.googleEnrichmentData=responseBody;</value>
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b75c4335db7332001cf8dec0cf961960</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>8df4dfa9db4203001cf8dec0cf961972</sys_id>
+        <sys_mod_count>8</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:47:16</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>1188</x>
-        <y>370</y>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>35</x>
+        <y>344</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=b75c4335db7332001cf8dec0cf961960"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8df4dfa9db4203001cf8dec0cf961972"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8df4dfa9db4203001cf8dec0cf961972</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>0905d769db4203001cf8dec0cf9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:59</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8df4dfa9db4203001cf8dec0cf961972</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>8d05d769db4203001cf8dec0cf9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:59</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript()&#13;
+{&#13;
+	if(workflow.scratchpad.fqdn == '')&#13;
+		return 'yes';&#13;
+	return 'no';&#13;
+}</value>
+        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8df4dfa9db4203001cf8dec0cf961972</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>c905d769db4203001cf8dec0cf9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:59</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8df4dfa9db4203001cf8dec0cf961972</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>0905d769db4203001cf8dec0cf9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:59</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8df4dfa9db4203001cf8dec0cf961972</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>c905d769db4203001cf8dec0cf9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:59</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8df4dfa9db4203001cf8dec0cf961972</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>8d05d769db4203001cf8dec0cf9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:59</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript()&#13;
+{&#13;
+	if(workflow.scratchpad.fqdn == '')&#13;
+		return 'yes';&#13;
+	return 'no';&#13;
+}</value>
+        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</activity>
+        <activity display_value="is FQDN empty?">8df4dfa9db4203001cf8dec0cf961972</activity>
+        <condition>activity.result == 'no'</condition>
+        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>No</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>4505d769db4203001cf8dec0cf9619a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:59</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="is FQDN empty?">8df4dfa9db4203001cf8dec0cf961972</activity>
+        <condition>activity.result == 'yes'</condition>
+        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Yes</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:40:59</sys_created_on>
+        <sys_id>c105d769db4203001cf8dec0cf9619a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:59</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Join">7c9a2ba9c0a801650021ada408de0ebd</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>25</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Join data sources response</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 19:39:05</sys_created_on>
+        <sys_id>58849fa9db4203001cf8dec0cf9619f1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 19:40:00</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>1169</x>
+        <y>479</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=58849fa9db4203001cf8dec0cf9619f1"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</activity>
         <condition>activity.result == 'complete'</condition>
         <condition_default display_value="Complete">6dd6ac3e0a6a803f16b5e594347ea01c</condition_default>
         <condition_type>standard</condition_type>
@@ -1485,14 +1494,14 @@ workflow.scratchpad.googleEnrichmentData=responseBody;</value>
         <short_description>All predecessor activities have transitioned to this activity</short_description>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>fb5c4335db7332001cf8dec0cf961960</sys_id>
+        <sys_created_on>2017-10-26 19:39:05</sys_created_on>
+        <sys_id>019457e5db4203001cf8dec0cf961927</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:39:05</sys_updated_on>
     </wf_condition>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</activity>
+        <activity display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</activity>
         <condition>activity.result == 'incomplete'</condition>
         <condition_default display_value="Incomplete">6dd49ad30a6a803f03a5a18c4085b1c7</condition_default>
         <condition_type>standard</condition_type>
@@ -1506,11 +1515,11 @@ workflow.scratchpad.googleEnrichmentData=responseBody;</value>
         <short_description>At least one predecessor activities did not transition to this activity</short_description>
         <skip_during_generate>true</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7b5c4335db7332001cf8dec0cf961960</sys_id>
+        <sys_created_on>2017-10-26 19:39:05</sys_created_on>
+        <sys_id>8d9457e5db4203001cf8dec0cf961926</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:39:05</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -1528,30 +1537,30 @@ workflow.scratchpad.googleEnrichmentData=responseBody;</value>
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5c4335db7332001cf8dec0cf961958</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b9649fa9db4203001cf8dec0cf961990</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:45:54</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>863</x>
-        <y>184</y>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>865</x>
+        <y>162</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=bf5c4335db7332001cf8dec0cf961958"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b9649fa9db4203001cf8dec0cf961990"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>bf5c4335db7332001cf8dec0cf961958</document_key>
+        <document_key>b9649fa9db4203001cf8dec0cf961990</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>335c4335db7332001cf8dec0cf961959</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>3d649fa9db4203001cf8dec0cf961990</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>var result=workflow.scratchpad.googleSafeSearchOuput;&#13;
 if(result.matches.length &gt;0 )&#13;
 for(var i=0;i&lt; result.matches.length;i++)&#13;
@@ -1583,15 +1592,15 @@ for(var i=0;i&lt; result.matches.length;i++)&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>bf5c4335db7332001cf8dec0cf961958</document_key>
+        <document_key>b9649fa9db4203001cf8dec0cf961990</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>335c4335db7332001cf8dec0cf961959</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>3d649fa9db4203001cf8dec0cf961990</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>var result=workflow.scratchpad.googleSafeSearchOuput;&#13;
 if(result.matches.length &gt;0 )&#13;
 for(var i=0;i&lt; result.matches.length;i++)&#13;
@@ -1622,7 +1631,7 @@ for(var i=0;i&lt; result.matches.length;i++)&#13;
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Process Google Safe Search results">bf5c4335db7332001cf8dec0cf961958</activity>
+        <activity display_value="Process Google Safe Search results">b9649fa9db4203001cf8dec0cf961990</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1636,11 +1645,11 @@ for(var i=0;i&lt; result.matches.length;i++)&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b75c4335db7332001cf8dec0cf961959</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>31649fa9db4203001cf8dec0cf961991</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -1658,30 +1667,30 @@ for(var i=0;i&lt; result.matches.length;i++)&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375c4335db7332001cf8dec0cf96195a</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>3d649769db4203001cf8dec0cf961945</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>863</x>
         <y>406</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=375c4335db7332001cf8dec0cf96195a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3d649769db4203001cf8dec0cf961945"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>375c4335db7332001cf8dec0cf96195a</document_key>
+        <document_key>3d649769db4203001cf8dec0cf961945</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b75c4335db7332001cf8dec0cf96195a</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>bd649769db4203001cf8dec0cf961945</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try&#13;
 {&#13;
 	var xmlDoc = new XMLDocument2();&#13;
@@ -1715,15 +1724,15 @@ catch(ex)&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>375c4335db7332001cf8dec0cf96195a</document_key>
+        <document_key>3d649769db4203001cf8dec0cf961945</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b75c4335db7332001cf8dec0cf96195a</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>bd649769db4203001cf8dec0cf961945</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try&#13;
 {&#13;
 	var xmlDoc = new XMLDocument2();&#13;
@@ -1756,7 +1765,7 @@ catch(ex)&#13;
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Process Phishtank search Results">375c4335db7332001cf8dec0cf96195a</activity>
+        <activity display_value="Process Phishtank search Results">3d649769db4203001cf8dec0cf961945</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1770,11 +1779,11 @@ catch(ex)&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5c4335db7332001cf8dec0cf96195a</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b1649769db4203001cf8dec0cf961946</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -1792,30 +1801,30 @@ catch(ex)&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f35ccff1db7332001cf8dec0cf9619ab</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b9649fa9db4203001cf8dec0cf961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:21:44</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>920</x>
         <y>910</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=f35ccff1db7332001cf8dec0cf9619ab"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b9649fa9db4203001cf8dec0cf961994"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>f35ccff1db7332001cf8dec0cf9619ab</document_key>
+        <document_key>b9649fa9db4203001cf8dec0cf961994</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775ccff1db7332001cf8dec0cf9619ab</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>3d649fa9db4203001cf8dec0cf961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:21:44</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>var gdt = new GlideDateTime();&#13;
 var enrichData= " Threat found in Maxim Threat Database\n";&#13;
 //enrichData+="\n Threat Type: "+threat;&#13;
@@ -1836,15 +1845,15 @@ current.enrichment_count=++current.enrichment_count;</value>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>f35ccff1db7332001cf8dec0cf9619ab</document_key>
+        <document_key>b9649fa9db4203001cf8dec0cf961994</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>775ccff1db7332001cf8dec0cf9619ab</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>3d649fa9db4203001cf8dec0cf961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:21:44</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>var gdt = new GlideDateTime();&#13;
 var enrichData= " Threat found in Maxim Threat Database\n";&#13;
 //enrichData+="\n Threat Type: "+threat;&#13;
@@ -1864,7 +1873,7 @@ current.enrichment_count=++current.enrichment_count;</value>
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Process Threat Database results">f35ccff1db7332001cf8dec0cf9619ab</activity>
+        <activity display_value="Process Threat Database results">b9649fa9db4203001cf8dec0cf961994</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1878,11 +1887,11 @@ current.enrichment_count=++current.enrichment_count;</value>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>fb5ccff1db7332001cf8dec0cf9619ab</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>31649fa9db4203001cf8dec0cf961995</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -1900,30 +1909,30 @@ current.enrichment_count=++current.enrichment_count;</value>
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375c4335db7332001cf8dec0cf961956</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b9649769db4203001cf8dec0cf961944</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>901</x>
         <y>751</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=375c4335db7332001cf8dec0cf961956"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b9649769db4203001cf8dec0cf961944"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>375c4335db7332001cf8dec0cf961956</document_key>
+        <document_key>b9649769db4203001cf8dec0cf961944</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b75c4335db7332001cf8dec0cf961956</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>bd649769db4203001cf8dec0cf961944</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try&#13;
 {&#13;
 	var result=workflow.scratchpad.virusTotalOutput;&#13;
@@ -1979,15 +1988,15 @@ finally&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>375c4335db7332001cf8dec0cf961956</document_key>
+        <document_key>b9649769db4203001cf8dec0cf961944</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b75c4335db7332001cf8dec0cf961956</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>bd649769db4203001cf8dec0cf961944</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try&#13;
 {&#13;
 	var result=workflow.scratchpad.virusTotalOutput;&#13;
@@ -2042,7 +2051,7 @@ finally&#13;
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Process Virus Total Results">375c4335db7332001cf8dec0cf961956</activity>
+        <activity display_value="Process Virus Total Results">b9649769db4203001cf8dec0cf961944</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -2056,11 +2065,11 @@ finally&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5c4335db7332001cf8dec0cf961956</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b1649769db4203001cf8dec0cf961945</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -2078,30 +2087,30 @@ finally&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7b5c4335db7332001cf8dec0cf961963</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>7d649769db4203001cf8dec0cf96194c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>884</x>
         <y>615</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=7b5c4335db7332001cf8dec0cf961963"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7d649769db4203001cf8dec0cf96194c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>7b5c4335db7332001cf8dec0cf961963</document_key>
+        <document_key>7d649769db4203001cf8dec0cf96194c</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>fb5c4335db7332001cf8dec0cf961963</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>fd649769db4203001cf8dec0cf96194c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try &#13;
 {&#13;
 	var r = new sn_ws.RESTMessageV2('x_19668_halo.Virus Total', 'Get Post Request Response');&#13;
@@ -2120,15 +2129,15 @@ catch(ex)&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>7b5c4335db7332001cf8dec0cf961963</document_key>
+        <document_key>7d649769db4203001cf8dec0cf96194c</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>fb5c4335db7332001cf8dec0cf961963</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>fd649769db4203001cf8dec0cf96194c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try &#13;
 {&#13;
 	var r = new sn_ws.RESTMessageV2('x_19668_halo.Virus Total', 'Get Post Request Response');&#13;
@@ -2146,7 +2155,7 @@ catch(ex)&#13;
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="REST Message - Get Response from Virus Total">7b5c4335db7332001cf8dec0cf961963</activity>
+        <activity display_value="REST Message - Get Response from Virus Total">7d649769db4203001cf8dec0cf96194c</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -2160,11 +2169,11 @@ catch(ex)&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>735c4335db7332001cf8dec0cf961964</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f1649769db4203001cf8dec0cf96194d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -2182,30 +2191,30 @@ catch(ex)&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375ccff1db7332001cf8dec0cf9619a8</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>79649769db4203001cf8dec0cf961946</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>573</x>
         <y>397</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=375ccff1db7332001cf8dec0cf9619a8"/>
+    <sys_variable_value action="delete_multiple" query="document_key=79649769db4203001cf8dec0cf961946"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>375ccff1db7332001cf8dec0cf9619a8</document_key>
+        <document_key>79649769db4203001cf8dec0cf961946</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3b5ccff1db7332001cf8dec0cf9619a8</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f9649769db4203001cf8dec0cf961946</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try &#13;
 {&#13;
 	var r = new sn_ws.RESTMessageV2('x_19668_halo.Phish Tank', 'Post');&#13;
@@ -2226,15 +2235,15 @@ catch(ex)&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>375ccff1db7332001cf8dec0cf9619a8</document_key>
+        <document_key>79649769db4203001cf8dec0cf961946</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3b5ccff1db7332001cf8dec0cf9619a8</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f9649769db4203001cf8dec0cf961946</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try &#13;
 {&#13;
 	var r = new sn_ws.RESTMessageV2('x_19668_halo.Phish Tank', 'Post');&#13;
@@ -2254,7 +2263,7 @@ catch(ex)&#13;
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="REST Message - Send Request to Phishtank">375ccff1db7332001cf8dec0cf9619a8</activity>
+        <activity display_value="REST Message - Send Request to Phishtank">79649769db4203001cf8dec0cf961946</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -2268,11 +2277,11 @@ catch(ex)&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5ccff1db7332001cf8dec0cf9619a8</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>fd649769db4203001cf8dec0cf961946</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -2290,30 +2299,30 @@ catch(ex)&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b35c4335db7332001cf8dec0cf961961</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f5649769db4203001cf8dec0cf96194e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
         <x>571</x>
         <y>619</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=b35c4335db7332001cf8dec0cf961961"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f5649769db4203001cf8dec0cf96194e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b35c4335db7332001cf8dec0cf961961</document_key>
+        <document_key>f5649769db4203001cf8dec0cf96194e</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375c4335db7332001cf8dec0cf961961</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>79649769db4203001cf8dec0cf96194e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try &#13;
 {&#13;
 	var r = new sn_ws.RESTMessageV2('x_19668_halo.Virus Total', 'Post Request');&#13;
@@ -2331,15 +2340,15 @@ catch(ex)&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b35c4335db7332001cf8dec0cf961961</document_key>
+        <document_key>f5649769db4203001cf8dec0cf96194e</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375c4335db7332001cf8dec0cf961961</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>79649769db4203001cf8dec0cf96194e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>try &#13;
 {&#13;
 	var r = new sn_ws.RESTMessageV2('x_19668_halo.Virus Total', 'Post Request');&#13;
@@ -2356,7 +2365,7 @@ catch(ex)&#13;
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="REST Message - Send Request to Virus Total">b35c4335db7332001cf8dec0cf961961</activity>
+        <activity display_value="REST Message - Send Request to Virus Total">f5649769db4203001cf8dec0cf96194e</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -2370,11 +2379,11 @@ catch(ex)&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf961961</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>b1649fa9db4203001cf8dec0cf96198d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -2392,30 +2401,30 @@ catch(ex)&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>735c4335db7332001cf8dec0cf961962</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>75649769db4203001cf8dec0cf96194a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:47:17</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
-        <x>312</x>
-        <y>38</y>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
+        <x>42</x>
+        <y>188</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=735c4335db7332001cf8dec0cf961962"/>
+    <sys_variable_value action="delete_multiple" query="document_key=75649769db4203001cf8dec0cf96194a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>735c4335db7332001cf8dec0cf961962</document_key>
+        <document_key>75649769db4203001cf8dec0cf96194a</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f35c4335db7332001cf8dec0cf961962</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f5649769db4203001cf8dec0cf96194a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>workflow.scratchpad.fqdn=current.indicator_data;&#13;
 workflow.scratchpad.incidentId=current.incident_id;&#13;
 workflow.scratchpad.indicatorId=current.sys_id;&#13;
@@ -2435,15 +2444,15 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>735c4335db7332001cf8dec0cf961962</document_key>
+        <document_key>75649769db4203001cf8dec0cf96194a</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f35c4335db7332001cf8dec0cf961962</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f5649769db4203001cf8dec0cf96194a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
         <value>workflow.scratchpad.fqdn=current.indicator_data;&#13;
 workflow.scratchpad.incidentId=current.incident_id;&#13;
 workflow.scratchpad.indicatorId=current.sys_id;&#13;
@@ -2462,7 +2471,7 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Retrieve FQDN and Datasources Selected">735c4335db7332001cf8dec0cf961962</activity>
+        <activity display_value="Retrieve FQDN and Datasources Selected">75649769db4203001cf8dec0cf96194a</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -2476,330 +2485,330 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7b5c4335db7332001cf8dec0cf961962</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>f9649769db4203001cf8dec0cf96194a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
     </wf_condition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7f5c4335db7332001cf8dec0cf961955</condition>
-        <from display_value="Contact All Data Sources">bb5c4335db7332001cf8dec0cf961955</from>
+        <condition display_value="Always">f1649fa9db4203001cf8dec0cf961990</condition>
+        <from display_value="Contact All Data Sources">b9649fa9db4203001cf8dec0cf96198f</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>335c4335db7332001cf8dec0cf961969</sys_id>
+        <sys_created_on>2017-10-26 19:48:10</sys_created_on>
+        <sys_id>02a657e9db4203001cf8dec0cf9619ba</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Datasource Phish Tank Selected ?">f35c4335db7332001cf8dec0cf961957</to>
+        <sys_updated_on>2017-10-26 19:48:10</sys_updated_on>
+        <to display_value="Datasource Virustotal Selected?">2a86532ddb4203001cf8dec0cf96199d</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Yes">775c4335db7332001cf8dec0cf96195c</condition>
-        <from display_value="Datasource Maxim Threat Database Selected ?">f35c4335db7332001cf8dec0cf96195b</from>
+        <condition display_value="No">4505d769db4203001cf8dec0cf9619a9</condition>
+        <from display_value="is FQDN empty?">8df4dfa9db4203001cf8dec0cf961972</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375c4335db7332001cf8dec0cf961965</sys_id>
+        <sys_created_on>2017-10-26 19:41:37</sys_created_on>
+        <sys_id>062557e5db4203001cf8dec0cf961928</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="">735ccff1db7332001cf8dec0cf9619ac</to>
+        <sys_updated_on>2017-10-26 19:41:37</sys_updated_on>
+        <to display_value="Contact All Data Sources">b9649fa9db4203001cf8dec0cf96198f</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="No">b75ccff1db7332001cf8dec0cf9619ae</condition>
-        <from display_value="Datasource Virus Total Selected ?">b35ccff1db7332001cf8dec0cf9619ad</from>
+        <condition display_value="No">ffd6d32ddb4203001cf8dec0cf9619ba</condition>
+        <from display_value="Datasource Maxim Threat selected?">26c6932ddb4203001cf8dec0cf961934</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375c4335db7332001cf8dec0cf961966</sys_id>
+        <sys_created_on>2017-10-26 19:49:41</sys_created_on>
+        <sys_id>14071b2ddb4203001cf8dec0cf96195d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:49:41</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">bb5c4335db7332001cf8dec0cf961961</condition>
-        <from display_value="REST Message - Send Request to Virus Total">b35c4335db7332001cf8dec0cf961961</from>
+        <condition display_value="Always">f1649fa9db4203001cf8dec0cf961990</condition>
+        <from display_value="Contact All Data Sources">b9649fa9db4203001cf8dec0cf96198f</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375c4335db7332001cf8dec0cf961967</sys_id>
+        <sys_created_on>2017-10-26 19:45:40</sys_created_on>
+        <sys_id>191617e9db4203001cf8dec0cf96191b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="REST Message - Get Response from Virus Total">7b5c4335db7332001cf8dec0cf961963</to>
+        <sys_updated_on>2017-10-26 19:45:40</sys_updated_on>
+        <to display_value="Datasource Google Safe Browsing selected?">4ff553e9db4203001cf8dec0cf961903</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">3f5c4335db7332001cf8dec0cf961956</condition>
-        <from display_value="Process Virus Total Results">375c4335db7332001cf8dec0cf961956</from>
+        <condition display_value="Yes">5f9657e9db4203001cf8dec0cf961958</condition>
+        <from display_value="Datasource Virustotal Selected?">2a86532ddb4203001cf8dec0cf96199d</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>375c4335db7332001cf8dec0cf961968</sys_id>
+        <sys_created_on>2017-10-26 19:48:24</sys_created_on>
+        <sys_id>29b6dfe9db4203001cf8dec0cf9619df</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:48:24</sys_updated_on>
+        <to display_value="REST Message - Send Request to Virus Total">f5649769db4203001cf8dec0cf96194e</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">bf5ccff1db7332001cf8dec0cf9619a8</condition>
-        <from display_value="REST Message - Send Request to Phishtank">375ccff1db7332001cf8dec0cf9619a8</from>
+        <condition display_value="Always">31649fa9db4203001cf8dec0cf961991</condition>
+        <from display_value="Process Google Safe Search results">b9649fa9db4203001cf8dec0cf961990</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5c4335db7332001cf8dec0cf961965</sys_id>
+        <sys_created_on>2017-10-26 19:40:21</sys_created_on>
+        <sys_id>2bd49fa9db4203001cf8dec0cf9619bc</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Process Phishtank search Results">375c4335db7332001cf8dec0cf96195a</to>
+        <sys_updated_on>2017-10-26 19:40:21</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="No">3f5ccff1db7332001cf8dec0cf9619aa</condition>
-        <from display_value="Check if FQDN is empty">3b5ccff1db7332001cf8dec0cf9619a9</from>
+        <condition display_value="Always">f1649fa9db4203001cf8dec0cf961990</condition>
+        <from display_value="Contact All Data Sources">b9649fa9db4203001cf8dec0cf96198f</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5c4335db7332001cf8dec0cf961966</sys_id>
+        <sys_created_on>2017-10-26 19:49:35</sys_created_on>
+        <sys_id>3af6d72ddb4203001cf8dec0cf9619b9</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Contact All Data Sources">bb5c4335db7332001cf8dec0cf961955</to>
+        <sys_updated_on>2017-10-26 19:49:35</sys_updated_on>
+        <to display_value="Datasource Maxim Threat selected?">26c6932ddb4203001cf8dec0cf961934</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Yes">f75c4335db7332001cf8dec0cf961958</condition>
-        <from display_value="Datasource Phish Tank Selected ?">f35c4335db7332001cf8dec0cf961957</from>
+        <condition display_value="Complete">019457e5db4203001cf8dec0cf961927</condition>
+        <from display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5c4335db7332001cf8dec0cf961967</sys_id>
+        <sys_created_on>2017-10-26 19:40:27</sys_created_on>
+        <sys_id>41e4d769db4203001cf8dec0cf9619d7</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="REST Message - Send Request to Phishtank">375ccff1db7332001cf8dec0cf9619a8</to>
+        <sys_updated_on>2017-10-26 19:40:27</sys_updated_on>
+        <to display_value="Change Status">f5649fa9db4203001cf8dec0cf961991</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7f5c4335db7332001cf8dec0cf961955</condition>
-        <from display_value="Contact All Data Sources">bb5c4335db7332001cf8dec0cf961955</from>
+        <condition display_value="Threat Not Found">b5649769db4203001cf8dec0cf96194c</condition>
+        <from display_value="">79649769db4203001cf8dec0cf96194b</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>3f5c4335db7332001cf8dec0cf961968</sys_id>
+        <sys_created_on>2017-10-26 19:39:22</sys_created_on>
+        <sys_id>51a4d769db4203001cf8dec0cf9619a3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Datasource Maxim Threat Database Selected ?">f35c4335db7332001cf8dec0cf96195b</to>
+        <sys_updated_on>2017-10-26 19:39:22</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Incomplete">7b5c4335db7332001cf8dec0cf961960</condition>
-        <from display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</from>
+        <condition display_value="Always">f1649fa9db4203001cf8dec0cf961990</condition>
+        <from display_value="Contact All Data Sources">b9649fa9db4203001cf8dec0cf96198f</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>735c4335db7332001cf8dec0cf961967</sys_id>
+        <sys_created_on>2017-10-26 19:46:49</sys_created_on>
+        <sys_id>5656132ddb4203001cf8dec0cf961927</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Change Status">bf5c4335db7332001cf8dec0cf96195c</to>
+        <sys_updated_on>2017-10-26 19:46:49</sys_updated_on>
+        <to display_value="Datasource Phish Tank selected?">4d36dfe9db4203001cf8dec0cf961906</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Yes">335c4335db7332001cf8dec0cf961960</condition>
-        <from display_value="DataSource Google Safe Browsing Selected ?">3f5c4335db7332001cf8dec0cf96195e</from>
+        <condition display_value="No">0306d3e9db4203001cf8dec0cf961973</condition>
+        <from display_value="Datasource Google Safe Browsing selected?">4ff553e9db4203001cf8dec0cf961903</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>735c4335db7332001cf8dec0cf961968</sys_id>
+        <sys_created_on>2017-10-26 19:45:49</sys_created_on>
+        <sys_id>6f1657e9db4203001cf8dec0cf96193b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Execute REST Google Safe Browsing Post Message">7f5c4335db7332001cf8dec0cf96195d</to>
+        <sys_updated_on>2017-10-26 19:45:49</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Threat Not Found">fb5ccff1db7332001cf8dec0cf9619ac</condition>
-        <from display_value="">735ccff1db7332001cf8dec0cf9619ac</from>
+        <condition display_value="Always">7d649fa9db4203001cf8dec0cf961991</condition>
+        <from display_value="Change Status">f5649fa9db4203001cf8dec0cf961991</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7b5c4335db7332001cf8dec0cf961965</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>71649fa9db4203001cf8dec0cf961997</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
+        <to display_value="End">39649769db4203001cf8dec0cf961948</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">b75c4335db7332001cf8dec0cf961959</condition>
-        <from display_value="Process Google Safe Search results">bf5c4335db7332001cf8dec0cf961958</from>
+        <condition display_value="Always">b1649fa9db4203001cf8dec0cf96198d</condition>
+        <from display_value="REST Message - Send Request to Virus Total">f5649769db4203001cf8dec0cf96194e</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>7f5c4335db7332001cf8dec0cf961969</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>71649fa9db4203001cf8dec0cf961999</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
+        <to display_value="REST Message - Get Response from Virus Total">7d649769db4203001cf8dec0cf96194c</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="No">f75c4335db7332001cf8dec0cf96195c</condition>
-        <from display_value="Datasource Maxim Threat Database Selected ?">f35c4335db7332001cf8dec0cf96195b</from>
+        <condition display_value="Always">31649fa9db4203001cf8dec0cf961995</condition>
+        <from display_value="Process Threat Database results">b9649fa9db4203001cf8dec0cf961994</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b35c4335db7332001cf8dec0cf961965</sys_id>
+        <sys_created_on>2017-10-26 19:39:37</sys_created_on>
+        <sys_id>74b45369db4203001cf8dec0cf96195f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:39:37</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Yes">375ccff1db7332001cf8dec0cf9619ae</condition>
-        <from display_value="Datasource Virus Total Selected ?">b35ccff1db7332001cf8dec0cf9619ad</from>
+        <condition display_value="Always">fd649769db4203001cf8dec0cf961946</condition>
+        <from display_value="REST Message - Send Request to Phishtank">79649769db4203001cf8dec0cf961946</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>b35c4335db7332001cf8dec0cf961966</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>75649fa9db4203001cf8dec0cf961997</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="REST Message - Send Request to Virus Total">b35c4335db7332001cf8dec0cf961961</to>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
+        <to display_value="Process Phishtank search Results">3d649769db4203001cf8dec0cf961945</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Yes">bb5ccff1db7332001cf8dec0cf9619aa</condition>
-        <from display_value="Check if FQDN is empty">3b5ccff1db7332001cf8dec0cf9619a9</from>
+        <condition display_value="Yes">8f06d3e9db4203001cf8dec0cf961972</condition>
+        <from display_value="Datasource Google Safe Browsing selected?">4ff553e9db4203001cf8dec0cf961903</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf961966</sys_id>
+        <sys_created_on>2017-10-26 19:45:43</sys_created_on>
+        <sys_id>8216dfa9db4203001cf8dec0cf961906</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Change Status">bf5c4335db7332001cf8dec0cf96195c</to>
+        <sys_updated_on>2017-10-26 19:45:43</sys_updated_on>
+        <to display_value="Execute REST Google Safe Browsing Post Message">b9649769db4203001cf8dec0cf96194d</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="No">775c4335db7332001cf8dec0cf961958</condition>
-        <from display_value="Datasource Phish Tank Selected ?">f35c4335db7332001cf8dec0cf961957</from>
+        <condition display_value="No">3946d769db4203001cf8dec0cf9619db</condition>
+        <from display_value="Datasource Phish Tank selected?">4d36dfe9db4203001cf8dec0cf961906</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf961967</sys_id>
+        <sys_created_on>2017-10-26 19:47:00</sys_created_on>
+        <sys_id>856657e9db4203001cf8dec0cf961995</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:47:00</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7f5c4335db7332001cf8dec0cf961955</condition>
-        <from display_value="Contact All Data Sources">bb5c4335db7332001cf8dec0cf961955</from>
+        <condition display_value="Yes">c105d769db4203001cf8dec0cf9619a9</condition>
+        <from display_value="is FQDN empty?">8df4dfa9db4203001cf8dec0cf961972</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf961968</sys_id>
+        <sys_created_on>2017-10-26 19:41:17</sys_created_on>
+        <sys_id>991517e9db4203001cf8dec0cf96197d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Datasource Virus Total Selected ?">b35ccff1db7332001cf8dec0cf9619ad</to>
+        <sys_updated_on>2017-10-26 19:41:17</sys_updated_on>
+        <to display_value="Change Status">f5649fa9db4203001cf8dec0cf961991</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">fb5ccff1db7332001cf8dec0cf9619ab</condition>
-        <from display_value="Process Threat Database results">f35ccff1db7332001cf8dec0cf9619ab</from>
+        <condition display_value="Always">f9649769db4203001cf8dec0cf96194a</condition>
+        <from display_value="Retrieve FQDN and Datasources Selected">75649769db4203001cf8dec0cf96194a</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bb5c4335db7332001cf8dec0cf961969</sys_id>
+        <sys_created_on>2017-10-26 19:41:10</sys_created_on>
+        <sys_id>9b0517e9db4203001cf8dec0cf961918</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:41:10</sys_updated_on>
+        <to display_value="is FQDN empty?">8df4dfa9db4203001cf8dec0cf961972</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7f5c4335db7332001cf8dec0cf961955</condition>
-        <from display_value="Contact All Data Sources">bb5c4335db7332001cf8dec0cf961955</from>
+        <condition display_value="Incomplete">8d9457e5db4203001cf8dec0cf961926</condition>
+        <from display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>bf5c4335db7332001cf8dec0cf961968</sys_id>
+        <sys_created_on>2017-10-26 19:40:24</sys_created_on>
+        <sys_id>9ce45369db4203001cf8dec0cf96195f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="DataSource Google Safe Browsing Selected ?">3f5c4335db7332001cf8dec0cf96195e</to>
+        <sys_updated_on>2017-10-26 19:40:24</sys_updated_on>
+        <to display_value="Change Status">f5649fa9db4203001cf8dec0cf961991</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">735c4335db7332001cf8dec0cf961964</condition>
-        <from display_value="REST Message - Get Response from Virus Total">7b5c4335db7332001cf8dec0cf961963</from>
+        <condition display_value="Always">b1649769db4203001cf8dec0cf961946</condition>
+        <from display_value="Process Phishtank search Results">3d649769db4203001cf8dec0cf961945</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f35c4335db7332001cf8dec0cf961969</sys_id>
+        <sys_created_on>2017-10-26 19:39:27</sys_created_on>
+        <sys_id>aea4d769db4203001cf8dec0cf9619d5</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Process Virus Total Results">375c4335db7332001cf8dec0cf961956</to>
+        <sys_updated_on>2017-10-26 19:39:27</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Threat Found">7b5ccff1db7332001cf8dec0cf9619ac</condition>
-        <from display_value="">735ccff1db7332001cf8dec0cf9619ac</from>
+        <condition display_value="No">df9657e9db4203001cf8dec0cf961958</condition>
+        <from display_value="Datasource Virustotal Selected?">2a86532ddb4203001cf8dec0cf96199d</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f75c4335db7332001cf8dec0cf961965</sys_id>
+        <sys_created_on>2017-10-26 19:48:34</sys_created_on>
+        <sys_id>bbb6532ddb4203001cf8dec0cf96193d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Process Threat Database results">f35ccff1db7332001cf8dec0cf9619ab</to>
+        <sys_updated_on>2017-10-26 19:48:34</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">775c4335db7332001cf8dec0cf96195e</condition>
-        <from display_value="Execute REST Google Safe Browsing Post Message">7f5c4335db7332001cf8dec0cf96195d</from>
+        <condition display_value="Threat Found">35649769db4203001cf8dec0cf96194c</condition>
+        <from display_value="">79649769db4203001cf8dec0cf96194b</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f75c4335db7332001cf8dec0cf961966</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>bd649fa9db4203001cf8dec0cf961996</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Process Google Safe Search results">bf5c4335db7332001cf8dec0cf961958</to>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
+        <to display_value="Process Threat Database results">b9649fa9db4203001cf8dec0cf961994</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">3f5c4335db7332001cf8dec0cf96195a</condition>
-        <from display_value="Process Phishtank search Results">375c4335db7332001cf8dec0cf96195a</from>
+        <condition display_value="Always">b1649769db4203001cf8dec0cf961945</condition>
+        <from display_value="Process Virus Total Results">b9649769db4203001cf8dec0cf961944</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f75c4335db7332001cf8dec0cf961967</sys_id>
+        <sys_created_on>2017-10-26 19:39:31</sys_created_on>
+        <sys_id>dba4dfa9db4203001cf8dec0cf961971</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:39:31</sys_updated_on>
+        <to display_value="Join data sources response">58849fa9db4203001cf8dec0cf9619f1</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">b75c4335db7332001cf8dec0cf96195d</condition>
-        <from display_value="Change Status">bf5c4335db7332001cf8dec0cf96195c</from>
+        <condition display_value="Yes">b546d769db4203001cf8dec0cf9619db</condition>
+        <from display_value="Datasource Phish Tank selected?">4d36dfe9db4203001cf8dec0cf961906</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f75c4335db7332001cf8dec0cf961968</sys_id>
+        <sys_created_on>2017-10-26 19:46:54</sys_created_on>
+        <sys_id>e756532ddb4203001cf8dec0cf961980</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="End">3f5c4335db7332001cf8dec0cf961959</to>
+        <sys_updated_on>2017-10-26 19:46:54</sys_updated_on>
+        <to display_value="REST Message - Send Request to Phishtank">79649769db4203001cf8dec0cf961946</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">b35c4335db7332001cf8dec0cf961963</condition>
-        <from display_value="Begin">ff5c4335db7332001cf8dec0cf961962</from>
+        <condition display_value="Yes">7fd6d32ddb4203001cf8dec0cf9619ba</condition>
+        <from display_value="Datasource Maxim Threat selected?">26c6932ddb4203001cf8dec0cf961934</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>f75c4335db7332001cf8dec0cf961969</sys_id>
+        <sys_created_on>2017-10-26 19:49:38</sys_created_on>
+        <sys_id>e7f657e9db4203001cf8dec0cf9619bd</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Retrieve FQDN and Datasources Selected">735c4335db7332001cf8dec0cf961962</to>
+        <sys_updated_on>2017-10-26 19:49:38</sys_updated_on>
+        <to display_value="">79649769db4203001cf8dec0cf96194b</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7b5c4335db7332001cf8dec0cf961962</condition>
-        <from display_value="Retrieve FQDN and Datasources Selected">735c4335db7332001cf8dec0cf961962</from>
+        <condition display_value="Always">31649769db4203001cf8dec0cf96194e</condition>
+        <from display_value="Execute REST Google Safe Browsing Post Message">b9649769db4203001cf8dec0cf96194d</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf961965</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>f5649fa9db4203001cf8dec0cf961999</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Check if FQDN is empty">3b5ccff1db7332001cf8dec0cf9619a9</to>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
+        <to display_value="Process Google Safe Search results">b9649fa9db4203001cf8dec0cf961990</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Complete">fb5c4335db7332001cf8dec0cf961960</condition>
-        <from display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</from>
+        <condition display_value="Always">79649fa9db4203001cf8dec0cf961995</condition>
+        <from display_value="Begin">b5649fa9db4203001cf8dec0cf961995</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf961966</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>f9649fa9db4203001cf8dec0cf961997</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Change Status">bf5c4335db7332001cf8dec0cf96195c</to>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
+        <to display_value="Retrieve FQDN and Datasources Selected">75649769db4203001cf8dec0cf96194a</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="No">bf5c4335db7332001cf8dec0cf96195f</condition>
-        <from display_value="DataSource Google Safe Browsing Selected ?">3f5c4335db7332001cf8dec0cf96195e</from>
+        <condition display_value="Always">f1649769db4203001cf8dec0cf96194d</condition>
+        <from display_value="REST Message - Get Response from Virus Total">7d649769db4203001cf8dec0cf96194c</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>ff5c4335db7332001cf8dec0cf961967</sys_id>
+        <sys_created_on>2017-10-26 19:38:19</sys_created_on>
+        <sys_id>f9649fa9db4203001cf8dec0cf961998</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <to display_value="Join All Datasources Response">b75c4335db7332001cf8dec0cf961960</to>
+        <sys_updated_on>2017-10-26 19:38:19</sys_updated_on>
+        <to display_value="Process Virus Total Results">b9649769db4203001cf8dec0cf961944</to>
     </wf_transition>
     <var_dictionary action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -2859,7 +2868,7 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
         <sys_class_name>var_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-06-27 15:24:50</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>0d029f26db2332001cf8dec0cf9619a3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Hash Code</sys_name>
@@ -2939,7 +2948,7 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
         <sys_class_name>var_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-06-27 15:24:50</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>f8029f26db2332001cf8dec0cf961990</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Incident Id</sys_name>
@@ -2973,7 +2982,7 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-06-27 15:24:50</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_id>45029f26db2332001cf8dec0cf961999</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Incident Id</sys_name>
@@ -3000,7 +3009,7 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-06-27 15:24:51</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_id>59029f26db2332001cf8dec0cf9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Hash Code</sys_name>
@@ -3020,14 +3029,14 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
         <no_of_data_points>1</no_of_data_points>
         <percentage_threshold_ert>20</percentage_threshold_ert>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-07-07 17:20:26</sys_created_on>
-        <sys_id>735ccff1db7332001cf8dec0cf9619a7</sys_id>
+        <sys_created_on>2017-10-26 19:38:18</sys_created_on>
+        <sys_id>39649769db4203001cf8dec0cf961943</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:20:26</sys_updated_on>
-        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">ff5ccff1db7332001cf8dec0cf9619a6</workflow_version>
+        <sys_updated_on>2017-10-26 19:38:18</sys_updated_on>
+        <workflow_version display_value="Enrich Potential Indicators for FQDN (Domains) ">b5649769db4203001cf8dec0cf961943</workflow_version>
     </wf_estimated_runtime_config>
-    <wf_workflow_version action="update_multiple" query="workflow=780293a2db2332001cf8dec0cf9619f8^sys_id!=ff5ccff1db7332001cf8dec0cf9619a6">
+    <wf_workflow_version action="update_multiple" query="workflow=780293a2db2332001cf8dec0cf9619f8^sys_id!=b5649769db4203001cf8dec0cf961943">
         <published>false</published>
     </wf_workflow_version>
 </record_update>

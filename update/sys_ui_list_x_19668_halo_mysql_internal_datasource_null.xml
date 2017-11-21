@@ -3,18 +3,63 @@
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_19668_halo_mysql_internal_datasource" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>sys_created_on</element>
-            <list_id display_value="x_19668_halo_mysql_internal_datasource" element="NULL" name="x_19668_halo_mysql_internal_datasource" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">116b4748dba332001cf8dec0cf961907</list_id>
+            <element>threat_data</element>
+            <list_id display_value="x_19668_halo_mysql_internal_datasource" element="NULL" name="x_19668_halo_mysql_internal_datasource" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">338567a5db8203001cf8dec0cf96192e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-06-19 20:31:06</sys_created_on>
-            <sys_id>d96b4748dba332001cf8dec0cf961907</sys_id>
+            <sys_created_on>2017-10-26 20:53:16</sys_created_on>
+            <sys_id>b78567a5db8203001cf8dec0cf96192e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-06-19 20:31:06</sys_updated_on>
+            <sys_updated_on>2017-10-26 20:53:16</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>threat_id</element>
+            <list_id display_value="x_19668_halo_mysql_internal_datasource" element="NULL" name="x_19668_halo_mysql_internal_datasource" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">338567a5db8203001cf8dec0cf96192e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-26 20:53:16</sys_created_on>
+            <sys_id>3b8567a5db8203001cf8dec0cf96192e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-26 20:53:16</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>threat_level</element>
+            <list_id display_value="x_19668_halo_mysql_internal_datasource" element="NULL" name="x_19668_halo_mysql_internal_datasource" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">338567a5db8203001cf8dec0cf96192e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-26 20:53:16</sys_created_on>
+            <sys_id>bb8567a5db8203001cf8dec0cf96192e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-26 20:53:16</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>threat_type</element>
+            <list_id display_value="x_19668_halo_mysql_internal_datasource" element="NULL" name="x_19668_halo_mysql_internal_datasource" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">338567a5db8203001cf8dec0cf96192e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-26 20:53:16</sys_created_on>
+            <sys_id>3f8567a5db8203001cf8dec0cf96192e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-26 20:53:16</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -29,11 +74,11 @@
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-06-19 20:39:27</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>e34d4b4cdba332001cf8dec0cf961978</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_name>x_19668_halo_mysql_internal_datasource</sys_name>
             <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
             <sys_policy/>
@@ -41,7 +86,7 @@
             <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
             <sys_update_name>sys_ui_list_x_19668_halo_mysql_internal_datasource_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-06-19 20:39:27</sys_updated_on>
+            <sys_updated_on>2017-08-01 18:44:50</sys_updated_on>
             <sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

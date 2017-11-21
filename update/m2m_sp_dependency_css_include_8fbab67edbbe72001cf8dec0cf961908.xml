@@ -7,7 +7,7 @@
         <sys_class_name>m2m_sp_dependency_css_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-22 01:34:30</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>8fbab67edbbe72001cf8dec0cf961908</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>smart_wizard_theme_circles.css.jQuery Smart Wizard Dependencies</sys_name>

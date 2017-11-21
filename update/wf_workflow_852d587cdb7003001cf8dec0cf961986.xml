@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"activities":{},"ends":["e16b0b65db4203001cf8dec0cf9619bd"],"subflows":[],"stages":{}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition table="x_19668_halo_incident">report_to_flare=true^ORticket_status=Closed^EQ<item endquery="false" field="report_to_flare" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="ticket_status" goto="false" newquery="false" operator="=" or="true" value="Closed"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <condition_type>run_match</condition_type>
+        <description/>
+        <expected_sequences>6d6b0b65db4203001cf8dec0cf9619bb,2d6b0b65db4203001cf8dec0cf9619ba,6d6b0b65db4203001cf8dec0cf9619be,e16b0b65db4203001cf8dec0cf9619bd</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>6d6b0b65db4203001cf8dec0cf9619bb,2d6b0b65db4203001cf8dec0cf9619ba,6d6b0b65db4203001cf8dec0cf9619be,e16b0b65db4203001cf8dec0cf9619bd,e56b0b65db4203001cf8dec0cf9619bc,a96b0b65db4203001cf8dec0cf9619bd</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Report to Flare</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field/>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">6d6b0b65db4203001cf8dec0cf9619bb</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>e56b0b65db4203001cf8dec0cf9619b9</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>abraham.lincoln</sys_updated_by>
+        <sys_updated_on>2017-10-30 15:46:58</sys_updated_on>
+        <table>x_19668_halo_incident</table>
+        <timezone/>
+        <validated>true</validated>
+        <workflow display_value="Report to Flare">852d587cdb7003001cf8dec0cf961986</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Report to Flare</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-08-22 19:03:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>852d587cdb7003001cf8dec0cf961986</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Report to Flare</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>wf_workflow_852d587cdb7003001cf8dec0cf961986</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-08-22 20:12:07</sys_updated_on>
+        <table>x_19668_halo_incident</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Create File">f5eb24f9db1103001cf8dec0cf961955</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{"targetHost":"${workflow.scratchpad.targetHost}","stixFileContent":"${workflow.scratchpad.stixFileContent}","directory":"${workflow.scratchpad.directory}","filename":"${workflow.scratchpad.filename}","credentialsTag":"${workflow.scratchpad.credentialsTag}"}</input>
+        <is_parent>false</is_parent>
+        <name/>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>a96b0b65db4203001cf8dec0cf9619bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report to Flare">e56b0b65db4203001cf8dec0cf9619b9</workflow_version>
+        <x>467</x>
+        <y>400</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=a96b0b65db4203001cf8dec0cf9619bd"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="">a96b0b65db4203001cf8dec0cf9619bd</activity>
+        <condition>errorMessage != ""</condition>
+        <condition_default display_value="Failure">ef923822dbe003001cf8dec0cf961968</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Failure</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>a56b0b65db4203001cf8dec0cf9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="">a96b0b65db4203001cf8dec0cf9619bd</activity>
+        <condition>errorMessage == ""</condition>
+        <condition_default display_value="Success">27923822dbe003001cf8dec0cf961969</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>256b0b65db4203001cf8dec0cf9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>6</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>All Indicators Processed</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>6d6b0b65db4203001cf8dec0cf9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report to Flare">e56b0b65db4203001cf8dec0cf9619b9</workflow_version>
+        <x>438</x>
+        <y>129</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=6d6b0b65db4203001cf8dec0cf9619be"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6d6b0b65db4203001cf8dec0cf9619be</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>656b0b65db4203001cf8dec0cf9619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value>  answer = ifScript();&#13;
+&#13;
+function ifScript()&#13;
+{&#13;
+	gs.info("workflow.scratchpad.indicatorsCount :  "+workflow.scratchpad.indicatorsCount);&#13;
+	gs.info("workflow.scratchpad.counter :  "+workflow.scratchpad.counter);&#13;
+	if (workflow.scratchpad.indicatorsCount == workflow.scratchpad.counter)&#13;
+	{&#13;
+		return 'yes';&#13;
+	}&#13;
+	return 'no';&#13;
+}&#13;
+</value>
+        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6d6b0b65db4203001cf8dec0cf9619be</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>a16b0b65db4203001cf8dec0cf9619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6d6b0b65db4203001cf8dec0cf9619be</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>ed6b0b65db4203001cf8dec0cf9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6d6b0b65db4203001cf8dec0cf9619be</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>ed6b0b65db4203001cf8dec0cf9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value/>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6d6b0b65db4203001cf8dec0cf9619be</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>a16b0b65db4203001cf8dec0cf9619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6d6b0b65db4203001cf8dec0cf9619be</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>656b0b65db4203001cf8dec0cf9619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value>  answer = ifScript();&#13;
+&#13;
+function ifScript()&#13;
+{&#13;
+	gs.info("workflow.scratchpad.indicatorsCount :  "+workflow.scratchpad.indicatorsCount);&#13;
+	gs.info("workflow.scratchpad.counter :  "+workflow.scratchpad.counter);&#13;
+	if (workflow.scratchpad.indicatorsCount == workflow.scratchpad.counter)&#13;
+	{&#13;
+		return 'yes';&#13;
+	}&#13;
+	return 'no';&#13;
+}&#13;
+</value>
+        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="All Indicators Processed">6d6b0b65db4203001cf8dec0cf9619be</activity>
+        <condition>activity.result == 'no'</condition>
+        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>No</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>696b0b65db4203001cf8dec0cf9619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="All Indicators Processed">6d6b0b65db4203001cf8dec0cf9619be</activity>
+        <condition>activity.result == 'yes'</condition>
+        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Yes</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>e96b0b65db4203001cf8dec0cf9619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>6d6b0b65db4203001cf8dec0cf9619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Report to Flare">e56b0b65db4203001cf8dec0cf9619b9</workflow_version>
+        <x>174</x>
+        <y>24</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=6d6b0b65db4203001cf8dec0cf9619bb"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">6d6b0b65db4203001cf8dec0cf9619bb</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>216b0b65db4203001cf8dec0cf9619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Create STIX File</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>e56b0b65db4203001cf8dec0cf9619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report to Flare">e56b0b65db4203001cf8dec0cf9619b9</workflow_version>
+        <x>133</x>
+        <y>397</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=e56b0b65db4203001cf8dec0cf9619bc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e56b0b65db4203001cf8dec0cf9619bc</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>696b0b65db4203001cf8dec0cf9619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value>//workflow.scratchpad.indicatorsCount=workflow.scratchpad.indicatorsCount-1;&#13;
+workflow.scratchpad.indicatorId=indicatorsArray[workflow.scratchpad.counter];&#13;
+workflow.scratchpad.counter=workflow.scratchpad.counter+1;&#13;
+&#13;
+var uuidGenerator=new UUIDGenerator();&#13;
+workflow.scratchpad.directory='/tmp/halo';&#13;
+workflow.scratchpad.targetHost='192.168.6.82';&#13;
+workflow.scratchpad.filename='StixFile'+workflow.scratchpad.counter+'.xml';&#13;
+workflow.scratchpad.credentialsTag='flare_credentials';&#13;
+&#13;
+//Get Glide Object&#13;
+var gr=new GlideRecord('x_19668_halo_potentialindicators');&#13;
+gr.addQuery('sys_id',workflow.scratchpad.indicatorId);&#13;
+gr.query();&#13;
+			&#13;
+//Get Enrichment Data&#13;
+workflow.scratchpad.indicatorDescription='';&#13;
+var gr1=new GlideRecord('x_19668_halo_indicatorenrichment');&#13;
+gr1.addQuery('indicator_id',workflow.scratchpad.indicatorId);&#13;
+gr1.query();&#13;
+while(gr.next())&#13;
+	{&#13;
+		workflow.scratchpad.indicatorDescription+=gr1.enrichment_data+"\n";&#13;
+	}&#13;
+&#13;
+workflow.scratchpad.incidentDescription=" Indicators: Halo Indicator: "+gr.indicator_id+" ,  part of Incident: "+current.incident_id;&#13;
+workflow.scratchpad.indicatorCreatedTime=gr.sys_created_on+'';&#13;
+workflow.scratchpad.indicatorName=gr.indicator_type.name+'';&#13;
+workflow.scratchpad.indicatorId="example:indicator-"+uuidGenerator.getUuid();&#13;
+workflow.scratchpad.indicatorType=gr.indicator_type.name+'';&#13;
+workflow.scratchpad.indicatorObservableId="example:Observable-"+uuidGenerator.getUuid();&#13;
+workflow.scratchpad.indicatorCyboxId="example:Address-"+uuidGenerator.getUuid();&#13;
+workflow.scratchpad.addressCategory="ipv4-addr";&#13;
+workflow.scratchpad.addressValue=gr.indicator_data+'';&#13;
+workflow.scratchpad.ttpId="example:ttp-"+uuidGenerator.getUuid();&#13;
+workflow.scratchpad.ttpCreatedDate=gr.sys_created_on+'';&#13;
+workflow.scratchpad.ttpTitle=current.r_description+'';&#13;
+&#13;
+&#13;
+workflow.scratchpad.stixFileContent='&lt;stix:STIX_Package  xmlns:cyboxCommon="http://cybox.mitre.org/common-2"  xmlns:cybox="http://cybox.mitre.org/cybox-2"   xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"  xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"   xmlns:PortObj="http://cybox.mitre.org/objects#PortObject-2"  xmlns:marking="http://data-marking.mitre.org/Marking-1"  xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"  xmlns:coa="http://stix.mitre.org/CourseOfAction-1"  xmlns:indicator="http://stix.mitre.org/Indicator-2"  xmlns:ttp="http://stix.mitre.org/TTP-1" xmlns:stixCommon="http://stix.mitre.org/common-1"   xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"  xmlns:stix="http://stix.mitre.org/stix-1"  xmlns:CFM="http://www.anl.gov/cfm/stix"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="  http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd  http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd   http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd   http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd   http://cybox.mitre.org/objects#PortObject-2 http://cybox.mitre.org/XMLSchema/objects/Port/2.1/Port_Object.xsd   http://data-marking.mitre.org/Marking-1 http://stix.mitre.org/XMLSchema/data_marking/1.1.1/data_marking.xsd   http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.1.1/tlp_marking.xsd   http://stix.mitre.org/CourseOfAction-1 http://stix.mitre.org/XMLSchema/course_of_action/1.1.1/course_of_action.xsd    http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.2/ttp.xsd http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd  http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd  http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd" id="CFM:STIXPackage-498d92ed-bd54-4508-b63c-58770fab46bd" version="1.1.1" timestamp="2017-08-09T19:15:35+00:00"&gt; &lt;stix:STIX_Header&gt;   &lt;stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0"&gt;'+workflow.scratchpad.incidentDescription+'&lt;/stix:Package_Intent&gt;    &lt;stix:Handling&gt;     &lt;marking:Marking&gt;     &lt;marking:Controlled_Structure&gt;//node() | //@*&lt;/marking:Controlled_Structure&gt;    &lt;marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="AMBER"/&gt;   &lt;/marking:Marking&gt;   &lt;/stix:Handling&gt;   &lt;stix:Information_Source&gt; &lt;stixCommon:Description&gt;'+workflow.scratchpad.indicatorDescription+'&lt;/stixCommon:Description&gt;  &lt;stixCommon:Identity&gt;  &lt;stixCommon:Name&gt;'+workflow.scratchpad.indicatorName+'&lt;/stixCommon:Name&gt;  &lt;/stixCommon:Identity&gt;   &lt;stixCommon:Time&gt;   &lt;cyboxCommon:Produced_Time&gt;'+workflow.scratchpad.indicatorCreatedTime+'&lt;/cyboxCommon:Produced_Time&gt;  &lt;/stixCommon:Time&gt;   &lt;/stix:Information_Source&gt;  &lt;/stix:STIX_Header&gt;  &lt;stix:Indicators&gt;    &lt;stix:Indicator id="'+workflow.scratchpad.indicatorId+'" timestamp="'+workflow.scratchpad.indicatorCreatedTime+'" xsi:type="indicator:IndicatorType" negate="false" version="2.1.1"&gt;    &lt;indicator:Title&gt;'+workflow.scratchpad.indicatorType+'&lt;/indicator:Title&gt;   &lt;indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1"&gt;'+workflow.scratchpad.indicatorType+'&lt;/indicator:Type&gt;   &lt;indicator:Observable id="'+workflow.scratchpad.indicatorObservableId+'"&gt;    &lt;cybox:Object id="'+workflow.scratchpad.indicatorCyboxId+'"&gt;  &lt;cybox:Properties xsi:type="AddressObj:AddressObjectType" category="'+workflow.scratchpad.addressCategory+'"&gt;  &lt;AddressObj:Address_Value condition="Equals"&gt;'+workflow.scratchpad.addressValue+'&lt;/AddressObj:Address_Value&gt; &lt;/cybox:Properties&gt;  &lt;/cybox:Object&gt;  &lt;/indicator:Observable&gt;  &lt;indicator:Indicated_TTP&gt;  &lt;stixCommon:TTP idref="'+workflow.scratchpad.ttpId+'" xsi:type="ttp:TTPType" version="1.2"/&gt;  &lt;/indicator:Indicated_TTP&gt;  &lt;/stix:Indicator&gt;  &lt;/stix:Indicators&gt; &lt;stix:TTPs&gt;   &lt;stix:TTP id="'+workflow.scratchpad.ttpId+'" timestamp="'+workflow.scratchpad.ttpCreatedDate+'" xsi:type="ttp:TTPType" version="1.2"&gt; &lt;ttp:Title&gt;'+workflow.scratchpad.ttpTitle+'&lt;/ttp:Title&gt;  &lt;/stix:TTP&gt; &lt;/stix:TTPs&gt; &lt;/stix:STIX_Package&gt;';&#13;
+&#13;
+&#13;
+gs.info("workflow.scratchpad.stixFileContent  : "+workflow.scratchpad.stixFileContent);&#13;
+</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e56b0b65db4203001cf8dec0cf9619bc</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>696b0b65db4203001cf8dec0cf9619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value>//workflow.scratchpad.indicatorsCount=workflow.scratchpad.indicatorsCount-1;&#13;
+workflow.scratchpad.indicatorId=indicatorsArray[workflow.scratchpad.counter];&#13;
+workflow.scratchpad.counter=workflow.scratchpad.counter+1;&#13;
+&#13;
+var uuidGenerator=new UUIDGenerator();&#13;
+workflow.scratchpad.directory='/tmp/halo';&#13;
+workflow.scratchpad.targetHost='192.168.6.82';&#13;
+workflow.scratchpad.filename='StixFile'+workflow.scratchpad.counter+'.xml';&#13;
+workflow.scratchpad.credentialsTag='flare_credentials';&#13;
+&#13;
+//Get Glide Object&#13;
+var gr=new GlideRecord('x_19668_halo_potentialindicators');&#13;
+gr.addQuery('sys_id',workflow.scratchpad.indicatorId);&#13;
+gr.query();&#13;
+			&#13;
+//Get Enrichment Data&#13;
+workflow.scratchpad.indicatorDescription='';&#13;
+var gr1=new GlideRecord('x_19668_halo_indicatorenrichment');&#13;
+gr1.addQuery('indicator_id',workflow.scratchpad.indicatorId);&#13;
+gr1.query();&#13;
+while(gr.next())&#13;
+	{&#13;
+		workflow.scratchpad.indicatorDescription+=gr1.enrichment_data+"\n";&#13;
+	}&#13;
+&#13;
+workflow.scratchpad.incidentDescription=" Indicators: Halo Indicator: "+gr.indicator_id+" ,  part of Incident: "+current.incident_id;&#13;
+workflow.scratchpad.indicatorCreatedTime=gr.sys_created_on+'';&#13;
+workflow.scratchpad.indicatorName=gr.indicator_type.name+'';&#13;
+workflow.scratchpad.indicatorId="example:indicator-"+uuidGenerator.getUuid();&#13;
+workflow.scratchpad.indicatorType=gr.indicator_type.name+'';&#13;
+workflow.scratchpad.indicatorObservableId="example:Observable-"+uuidGenerator.getUuid();&#13;
+workflow.scratchpad.indicatorCyboxId="example:Address-"+uuidGenerator.getUuid();&#13;
+workflow.scratchpad.addressCategory="ipv4-addr";&#13;
+workflow.scratchpad.addressValue=gr.indicator_data+'';&#13;
+workflow.scratchpad.ttpId="example:ttp-"+uuidGenerator.getUuid();&#13;
+workflow.scratchpad.ttpCreatedDate=gr.sys_created_on+'';&#13;
+workflow.scratchpad.ttpTitle=current.r_description+'';&#13;
+&#13;
+&#13;
+workflow.scratchpad.stixFileContent='&lt;stix:STIX_Package  xmlns:cyboxCommon="http://cybox.mitre.org/common-2"  xmlns:cybox="http://cybox.mitre.org/cybox-2"   xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"  xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"   xmlns:PortObj="http://cybox.mitre.org/objects#PortObject-2"  xmlns:marking="http://data-marking.mitre.org/Marking-1"  xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"  xmlns:coa="http://stix.mitre.org/CourseOfAction-1"  xmlns:indicator="http://stix.mitre.org/Indicator-2"  xmlns:ttp="http://stix.mitre.org/TTP-1" xmlns:stixCommon="http://stix.mitre.org/common-1"   xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"  xmlns:stix="http://stix.mitre.org/stix-1"  xmlns:CFM="http://www.anl.gov/cfm/stix"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="  http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd  http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd   http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd   http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd   http://cybox.mitre.org/objects#PortObject-2 http://cybox.mitre.org/XMLSchema/objects/Port/2.1/Port_Object.xsd   http://data-marking.mitre.org/Marking-1 http://stix.mitre.org/XMLSchema/data_marking/1.1.1/data_marking.xsd   http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.1.1/tlp_marking.xsd   http://stix.mitre.org/CourseOfAction-1 http://stix.mitre.org/XMLSchema/course_of_action/1.1.1/course_of_action.xsd    http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.2/ttp.xsd http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd  http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd  http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd" id="CFM:STIXPackage-498d92ed-bd54-4508-b63c-58770fab46bd" version="1.1.1" timestamp="2017-08-09T19:15:35+00:00"&gt; &lt;stix:STIX_Header&gt;   &lt;stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0"&gt;'+workflow.scratchpad.incidentDescription+'&lt;/stix:Package_Intent&gt;    &lt;stix:Handling&gt;     &lt;marking:Marking&gt;     &lt;marking:Controlled_Structure&gt;//node() | //@*&lt;/marking:Controlled_Structure&gt;    &lt;marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="AMBER"/&gt;   &lt;/marking:Marking&gt;   &lt;/stix:Handling&gt;   &lt;stix:Information_Source&gt; &lt;stixCommon:Description&gt;'+workflow.scratchpad.indicatorDescription+'&lt;/stixCommon:Description&gt;  &lt;stixCommon:Identity&gt;  &lt;stixCommon:Name&gt;'+workflow.scratchpad.indicatorName+'&lt;/stixCommon:Name&gt;  &lt;/stixCommon:Identity&gt;   &lt;stixCommon:Time&gt;   &lt;cyboxCommon:Produced_Time&gt;'+workflow.scratchpad.indicatorCreatedTime+'&lt;/cyboxCommon:Produced_Time&gt;  &lt;/stixCommon:Time&gt;   &lt;/stix:Information_Source&gt;  &lt;/stix:STIX_Header&gt;  &lt;stix:Indicators&gt;    &lt;stix:Indicator id="'+workflow.scratchpad.indicatorId+'" timestamp="'+workflow.scratchpad.indicatorCreatedTime+'" xsi:type="indicator:IndicatorType" negate="false" version="2.1.1"&gt;    &lt;indicator:Title&gt;'+workflow.scratchpad.indicatorType+'&lt;/indicator:Title&gt;   &lt;indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1"&gt;'+workflow.scratchpad.indicatorType+'&lt;/indicator:Type&gt;   &lt;indicator:Observable id="'+workflow.scratchpad.indicatorObservableId+'"&gt;    &lt;cybox:Object id="'+workflow.scratchpad.indicatorCyboxId+'"&gt;  &lt;cybox:Properties xsi:type="AddressObj:AddressObjectType" category="'+workflow.scratchpad.addressCategory+'"&gt;  &lt;AddressObj:Address_Value condition="Equals"&gt;'+workflow.scratchpad.addressValue+'&lt;/AddressObj:Address_Value&gt; &lt;/cybox:Properties&gt;  &lt;/cybox:Object&gt;  &lt;/indicator:Observable&gt;  &lt;indicator:Indicated_TTP&gt;  &lt;stixCommon:TTP idref="'+workflow.scratchpad.ttpId+'" xsi:type="ttp:TTPType" version="1.2"/&gt;  &lt;/indicator:Indicated_TTP&gt;  &lt;/stix:Indicator&gt;  &lt;/stix:Indicators&gt; &lt;stix:TTPs&gt;   &lt;stix:TTP id="'+workflow.scratchpad.ttpId+'" timestamp="'+workflow.scratchpad.ttpCreatedDate+'" xsi:type="ttp:TTPType" version="1.2"&gt; &lt;ttp:Title&gt;'+workflow.scratchpad.ttpTitle+'&lt;/ttp:Title&gt;  &lt;/stix:TTP&gt; &lt;/stix:TTPs&gt; &lt;/stix:STIX_Package&gt;';&#13;
+&#13;
+&#13;
+gs.info("workflow.scratchpad.stixFileContent  : "+workflow.scratchpad.stixFileContent);&#13;
+</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Create STIX File">e56b0b65db4203001cf8dec0cf9619bc</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>6d6b0b65db4203001cf8dec0cf9619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>e16b0b65db4203001cf8dec0cf9619bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Report to Flare">e56b0b65db4203001cf8dec0cf9619b9</workflow_version>
+        <x>828</x>
+        <y>426</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=e16b0b65db4203001cf8dec0cf9619bd"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Get Number of Indicators</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>2d6b0b65db4203001cf8dec0cf9619ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report to Flare">e56b0b65db4203001cf8dec0cf9619b9</workflow_version>
+        <x>146</x>
+        <y>212</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=2d6b0b65db4203001cf8dec0cf9619ba"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2d6b0b65db4203001cf8dec0cf9619ba</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>216b0b65db4203001cf8dec0cf9619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value>var indicatorsArray=[];&#13;
+var gr=new GlideRecord('x_19668_halo_potentialindicators');&#13;
+gr.addQuery('incident_id',current.sys_id);&#13;
+gr.query();&#13;
+workflow.scratchpad.indicatorsCount=gr.getRowCount();&#13;
+&#13;
+workflow.scratchpad.counter=0;&#13;
+while(gr.next())&#13;
+{&#13;
+	indicatorsArray.push(gr.sys_id+'');&#13;
+}</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2d6b0b65db4203001cf8dec0cf9619ba</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>216b0b65db4203001cf8dec0cf9619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <value>var indicatorsArray=[];&#13;
+var gr=new GlideRecord('x_19668_halo_potentialindicators');&#13;
+gr.addQuery('incident_id',current.sys_id);&#13;
+gr.query();&#13;
+workflow.scratchpad.indicatorsCount=gr.getRowCount();&#13;
+&#13;
+workflow.scratchpad.counter=0;&#13;
+while(gr.next())&#13;
+{&#13;
+	indicatorsArray.push(gr.sys_id+'');&#13;
+}</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Get Number of Indicators">2d6b0b65db4203001cf8dec0cf9619ba</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>256b0b65db4203001cf8dec0cf9619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">256b0b65db4203001cf8dec0cf9619bb</condition>
+        <from display_value="Get Number of Indicators">2d6b0b65db4203001cf8dec0cf9619ba</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>2d6b8b65db4203001cf8dec0cf961974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <to display_value="All Indicators Processed">6d6b0b65db4203001cf8dec0cf9619be</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="No">696b0b65db4203001cf8dec0cf9619bf</condition>
+        <from display_value="All Indicators Processed">6d6b0b65db4203001cf8dec0cf9619be</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>616b8b65db4203001cf8dec0cf961974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <to display_value="Create STIX File">e56b0b65db4203001cf8dec0cf9619bc</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Failure">a56b0b65db4203001cf8dec0cf9619be</condition>
+        <from display_value="">a96b0b65db4203001cf8dec0cf9619bd</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>696b8b65db4203001cf8dec0cf961974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <to display_value="All Indicators Processed">6d6b0b65db4203001cf8dec0cf9619be</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">6d6b0b65db4203001cf8dec0cf9619bc</condition>
+        <from display_value="Create STIX File">e56b0b65db4203001cf8dec0cf9619bc</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>a16b8b65db4203001cf8dec0cf961975</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <to display_value="">a96b0b65db4203001cf8dec0cf9619bd</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Yes">e96b0b65db4203001cf8dec0cf9619bf</condition>
+        <from display_value="All Indicators Processed">6d6b0b65db4203001cf8dec0cf9619be</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>e16b8b65db4203001cf8dec0cf961974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <to display_value="End">e16b0b65db4203001cf8dec0cf9619bd</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Success">256b0b65db4203001cf8dec0cf9619be</condition>
+        <from display_value="">a96b0b65db4203001cf8dec0cf9619bd</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>e56b8b65db4203001cf8dec0cf961974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <to display_value="All Indicators Processed">6d6b0b65db4203001cf8dec0cf9619be</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">216b0b65db4203001cf8dec0cf9619bc</condition>
+        <from display_value="Begin">6d6b0b65db4203001cf8dec0cf9619bb</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>ed6b8b65db4203001cf8dec0cf961974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <to display_value="Get Number of Indicators">2d6b0b65db4203001cf8dec0cf9619ba</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-26 18:58:58</sys_created_on>
+        <sys_id>696b0b65db4203001cf8dec0cf9619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-26 18:58:58</sys_updated_on>
+        <workflow_version display_value="Report to Flare">e56b0b65db4203001cf8dec0cf9619b9</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=852d587cdb7003001cf8dec0cf961986^sys_id!=e56b0b65db4203001cf8dec0cf9619b9">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

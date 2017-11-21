@@ -38,7 +38,7 @@
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-15 20:02:28</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>ec3572b4dbf232001cf8dec0cf9619d6</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>Incidents Reported in past 7 days</sys_name>

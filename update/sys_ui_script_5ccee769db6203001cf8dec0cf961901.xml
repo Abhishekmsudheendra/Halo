@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_19668_halo.GetOrSetIncidentRecords</name>
+        <script><![CDATA[function getIncidentRecord($scope,c,sysId)
+{
+	//Convert backend true/false string values to Boolean
+	c.convertToBoolean=function(string)
+	{
+		if(string == "false" || string  == "")
+			return false;
+		else
+			return true;
+	};
+	
+	c.populateValues=function(incidentStatus,courseOfActionsData)
+	{
+		//Make COA section read-only when Incident is Closed
+		if(incidentStatus == 'Closed')
+		{
+			jQuery("#section3 :input").attr("disabled",true);
+			jQuery("#section3 :input").prop("disabled",true);
+		}
+		if(courseOfActionsData[0].selectedName != '')
+		{
+			$scope.selectedValue=courseOfActionsData[0].selectedName;
+		}
+
+		//Set ng-model (checkboxes) variables to show/hide content
+		$scope.sendEmailUpdateToReporter=c.convertToBoolean(courseOfActionsData[0].sendEmailUpdateToReporter);
+		$scope.notifyIsp=c.convertToBoolean(courseOfActionsData[0].notifyIsp);
+		$scope.notifyDomainRegistrar=c.convertToBoolean(courseOfActionsData[0].notifyDomainRegistrar);
+		$scope.sendEmailReceipt=c.convertToBoolean(courseOfActionsData[0].sendEmailReceipt);
+		$scope.setStatusOfTicketToResolved=c.convertToBoolean(courseOfActionsData[0].setStatusOfTicketToResolved);
+		$scope.notifyProduction=c.convertToBoolean(courseOfActionsData[0].notifyProduction);
+		$scope.assignToNextTier=c.convertToBoolean(courseOfActionsData[0].assignToNextTier);
+		$scope.assignToGroup=c.convertToBoolean(courseOfActionsData[0].assignToGroup);
+		$scope.resolveAndCloseTicket=c.convertToBoolean(courseOfActionsData[0].resolveAndCloseTicket);
+		$scope.reportToFlare=c.convertToBoolean(courseOfActionsData[0].reportToFlare);
+		$scope.doYouWantadditionalActions=c.convertToBoolean(courseOfActionsData[0].doYouWantadditionalActions);
+		$scope.assignToGroup=c.convertToBoolean(courseOfActionsData[0].assignToGroup);
+		$scope.groupName=courseOfActionsData[0].groupName;
+		$scope.groupSelectedValue=courseOfActionsData[0].groupName;
+	};
+	
+	c.server.get({sysId:sysId}).then(
+		function(response)
+		{  
+			c.data.incidentData= angular.fromJson(response.data.incidentData);
+			c.data.ipIndicatorsData= angular.fromJson(response.data.ipIndicatorsData)	;
+			c.data.domainIndicatorsData= angular.fromJson(response.data.domainIndicatorsData);
+			c.data.hashCodeIndicatorsData= angular.fromJson(response.data.hashCodeIndicatorsData);
+			c.data.courseOfActionsData= angular.fromJson(response.data.courseOfActionsData);
+			c.data.ListOfCourseOfActionsData= angular.fromJson(response.data.ListOfCourseOfActionsData);
+			c.data.indicatorsData=angular.fromJson(response.data.indicatorsData);
+			c.data.commentshistory=angular.fromJson(response.data.commentshistory);
+			c.data.groupUsers=angular.fromJson(response.data.groupUsers);
+
+			//Store JSON in Session
+			sessionStorage.setItem('ipIndicatorsData', JSON.stringify(c.data.ipIndicatorsData));
+			sessionStorage.setItem('domainIndicatorsData', JSON.stringify(c.data.domainIndicatorsData));
+			sessionStorage.setItem('hashCodeIndicatorsData', JSON.stringify(c.data.hashCodeIndicatorsData));
+			sessionStorage.setItem('indicatorsData', JSON.stringify(c.data.indicatorsData));
+
+			//Populate Values
+			c.populateValues(c.data.incidentData[0].incidentStatus,c.data.courseOfActionsData);
+
+		});
+}
+
+
+function updateIncidentRecord($scope,c)
+{
+	var selectedCoa=jQuery("#sel1 option:selected").text();
+	var sendEmailUpdateToReporter=jQuery("#sendEmailUpdateToReporter").is(":checked");
+	var notifyIsp=jQuery("#notifyIsp").is(":checked");
+	var notifyDomainRegistrar=jQuery("#notifyDomainRegistrar").is(":checked");
+	var sendEmailReceipt=jQuery("#sendEmailReceipt").is(":checked");
+	var setStatusOfTicketToResolved=jQuery("#setStatusOfTicketToResolved").is(":checked");
+	var notifyProduction=jQuery("#notifyProduction").is(":checked");
+	var assignToNextTier=jQuery("#assignToNextTier").is(":checked");
+	var assignToGroup=jQuery("#assignToGroup").is(":checked");
+	var resolveAndCloseTicket=jQuery("#resolveAndCloseTicket").is(":checked");
+	var reportToFlare=jQuery("#reportToFlare").is(":checked");
+	var doYouWantadditionalActions=jQuery("#doYouWantadditionalActions").is(":checked");
+	var groupName=jQuery("#groupSelectedValue option:selected").text();
+	var assignTo=jQuery("#assignTo option:selected").text();
+	var comments=jQuery("#comments").val();
+	var locationStr=window.location;
+	var pattern=/[a-zA-Z0-9]{32}/;
+	var sysId=pattern.exec(locationStr)+'';
+c.server.get({doYouWantadditionalActions:doYouWantadditionalActions,reportToFlare:reportToFlare,comments:comments,assignTo:assignTo,groupName:groupName,resolveAndCloseTicket:resolveAndCloseTicket,assignToGroup:assignToGroup,assignToNextTier:assignToNextTier,notifyProduction:notifyProduction,setStatusOfTicketToResolved:setStatusOfTicketToResolved,sendEmailReceipt:sendEmailReceipt,sysId:sysId,action:'execute',selectedCoa:selectedCoa,sendEmailUpdateToReporter:sendEmailUpdateToReporter,notifyIsp:notifyIsp,notifyDomainRegistrar:notifyDomainRegistrar}).then(
+	function(response)
+	{  
+		location.reload(true);
+		//location.href=window.location;
+	});	
+}
+
+
+
+]]></script>
+        <script_name>GetOrSetIncidentRecords</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-20 18:04:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5ccee769db6203001cf8dec0cf961901</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>x_19668_halo.GetOrSetIncidentRecords</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_ui_script_5ccee769db6203001cf8dec0cf961901</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-20 19:00:02</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

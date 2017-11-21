@@ -13,13 +13,14 @@
         <quick_start_config/>
         <sc_catalog/>
         <sc_catalog_page/>
+        <sc_category_page/>
         <sp_chat_queue/>
         <sp_rectangle_menu/>
         <sqanda_knowledge_base/>
         <sys_class_name>sp_portal</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-06 14:31:22</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>be437c90db0232001cf8dec0cf96198f</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>Halo</sys_name>

@@ -6,7 +6,7 @@
         <sys_class_name>sp_js_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-20 15:04:03</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>eef081f4db1232001cf8dec0cf96192c</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js</sys_name>

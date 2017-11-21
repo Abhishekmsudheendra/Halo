@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="Subagencies Staging" max_length="40" name="x_19668_halo_subagencies_staging" type="collection">
+        <element attributes="import_attribute_name=Sub Agency,edge_encryption_enabled=true" label="Sub Agency" max_length="75" name="u_sub_agency" type="string"/>
+        <element attributes="import_attribute_name=Sub Agency Value,edge_encryption_enabled=true" label="Sub Agency Value" max_length="40" name="u_sub_agency_value" type="string"/>
+        <element attributes="import_attribute_name=USG Department,edge_encryption_enabled=true" label="USG Department" max_length="40" name="u_usg_department" type="string"/>
+    </element>
+</database>

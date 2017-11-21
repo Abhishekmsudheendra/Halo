@@ -18,7 +18,7 @@
         <sys_class_name>sys_gauge</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-17 19:29:21</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>65e06a37db8232001cf8dec0cf9619f3</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Open Incidents</sys_name>

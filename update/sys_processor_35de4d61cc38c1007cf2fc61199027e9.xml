@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_processor">
+    <sys_processor action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <description>Download Record Processor for downloading Script fields.</description>
+        <interactive>false</interactive>
+        <name>DownloadRecord</name>
+        <parameters>DL</parameters>
+        <params_endpoint/>
+        <path/>
+        <path_endpoint/>
+        <require_csrf>false</require_csrf>
+        <roles/>
+        <script><![CDATA[var table = g_request.getParameter("table").toString();
+var record = g_request.getParameter("record").toString();
+var field = g_request.getParameter("field").toString();
+var ext = "js";
+g_response.setContentType("application/octet-stream");
+
+if(field == "html"){
+ ext = "html";
+}
+
+if(field == "xml"){
+ ext = "html";
+}
+
+if(field == "style"){
+ ext = "css";
+}
+
+var fieldValRec = new GlideRecord(table);
+fieldValRec.get( record );
+var fieldVal = fieldValRec[field];
+
+
+g_response.setHeader("Content-Disposition", 'attachment; filename="' + fieldValRec.name + '.' + ext + '"');
+var writer = g_response.getWriter();
+writer.write( fieldVal );]]></script>
+        <sys_class_name>sys_processor</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2013-04-17 13:07:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>35de4d61cc38c1007cf2fc61199027e9</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>DownloadRecord</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_processor_35de4d61cc38c1007cf2fc61199027e9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2014-03-11 19:01:24</sys_updated_on>
+        <type>script</type>
+    </sys_processor>
+</record_update>

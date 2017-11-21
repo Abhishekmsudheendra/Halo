@@ -180,7 +180,12 @@ RightWidgetUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
 		var json=new global.JSON();
 		var list=[];
 		var totalIncidents=0,totalOpenIncidents=0,totalClosedIncidents=0,totalMitigatedIncidents=0;
+		 
+		//Get incidents reported in last 30 days
+		var gdt = new GlideDateTime();
+		gdt.subtract(2592000000); //Number of seconds for 30 days =2592000000 
 		var count = new GlideAggregate('x_19668_halo_incident');
+		count.addQuery("sys_created_on",">=",gdt);
 		count.addAggregate('COUNT', 'ticket_status');
 		count.query();   
 		while (count.next()) 
@@ -226,9 +231,9 @@ RightWidgetUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-24 17:59:07</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>2c2fa4b7db7232001cf8dec0cf9619ef</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>RightWidgetUtils</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -236,6 +241,6 @@ RightWidgetUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sys_script_include_2c2fa4b7db7232001cf8dec0cf9619ef</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-06-21 17:24:09</sys_updated_on>
+        <sys_updated_on>2017-08-03 18:23:24</sys_updated_on>
     </sys_script_include>
 </record_update>

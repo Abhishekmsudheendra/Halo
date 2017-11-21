@@ -20,7 +20,7 @@
         </element>
         <element label="Indicator Type" mandatory="true" max_length="255" name="indicator_type" reference="x_19668_halo_indicator_type" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Notes" max_length="100000" name="notes" type="string"/>
-        <element calculation="(function calculatedFieldValue(current) &#13;&#10;{&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="3" default="LOW" label="Overall urgency Ranking" max_length="255" name="overall_urgency_ranking" type="string">
+        <element calculation="(function calculatedFieldValue(current) &#10;{&#10;&#10;&#9;&#10;&#9;return '';  // return the calculated value&#10;&#10;})(current);" choice="3" default="LOW" label="Overall urgency Ranking" max_length="255" name="overall_urgency_ranking" type="string">
             <choice>
                 <element label="LOW" sequence="0" value="LOW"/>
                 <element label="MODERATE" sequence="1" value="MODERATE"/>
@@ -34,6 +34,9 @@
         <element label="Urgency Reasoning Timestamp" max_length="40" name="urgency_reasoning_timestamp" type="glide_date_time"/>
         <index name="index">
             <element name="incident_id"/>
+        </index>
+        <index name="index2">
+            <element name="indicator_type"/>
         </index>
     </element>
 </database>

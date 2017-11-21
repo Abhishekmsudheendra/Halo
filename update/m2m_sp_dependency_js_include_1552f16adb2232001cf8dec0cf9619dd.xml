@@ -3,11 +3,11 @@
     <m2m_sp_dependency_js_include action="INSERT_OR_UPDATE">
         <order>100</order>
         <sp_dependency display_value="accordianPaneDependencies">5802796adb2232001cf8dec0cf961941</sp_dependency>
-        <sp_js_include display_value="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.js">4242f96adb2232001cf8dec0cf961963</sp_js_include>
+        <sp_js_include display_value="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js">4242f96adb2232001cf8dec0cf961963</sp_js_include>
         <sys_class_name>m2m_sp_dependency_js_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-08 15:23:59</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>1552f16adb2232001cf8dec0cf9619dd</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>accordianPaneDependencies.https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.js</sys_name>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="SSH">ebee8be6d7022100dfc260affd610368</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_ssh.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"targetHost","type":"STRING","mandatory":true},{"name":"stixFileContent","type":"STRING","mandatory":true},{"name":"directory","type":"STRING","mandatory":true},{"name":"filename","type":"STRING","mandatory":true}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"source":"${activityInput.targetHost}","command":"touch '${activityInput.filename}'","directory":"${activityInput.directory}","credential_tag":"ubuntu_credentials","midCapabilities":"2d20f2760a0006bc095bf17ae4e0d4ee","long_running":"false","must_sudo":"false"}</input_transform>
+        <local_variables/>
+        <name>Create File</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[]}</output_meta>
+        <output_process_script><![CDATA[
+ActivityLogger.info(" Create File Activity Output  : "+executionResult.output );]]></output_process_script>
+        <output_transform>[]</output_transform>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-08-15 20:36:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ae3f6c6edba003001cf8dec0cf96191e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Create File</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>wf_element_activity_ae3f6c6edba003001cf8dec0cf96191e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-08-15 20:46:28</sys_updated_on>
+        <version_container_id>21c3f3dedb2003001cf8dec0cf961920</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=ae3f6c6edba003001cf8dec0cf96191e"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-08-15 20:36:24</sys_created_on>
+        <sys_id>a63f6c6edba003001cf8dec0cf96191f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-08-15 20:46:28</sys_updated_on>
+        <valid_from>2017-08-15 20:37:29</valid_from>
+        <valid_to/>
+        <version>5</version>
+        <version_container_id>21c3f3dedb2003001cf8dec0cf961920</version_container_id>
+        <wf_element_definition display_value="Create File">ae3f6c6edba003001cf8dec0cf96191e</wf_element_definition>
+    </wf_versionable>
+    <wf_versionable action="update_multiple" query="version_container_id=21c3f3dedb2003001cf8dec0cf961920^sys_id!=a63f6c6edba003001cf8dec0cf96191f">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=21c3f3dedb2003001cf8dec0cf961920">
+        <new_activity_definition>ae3f6c6edba003001cf8dec0cf96191e</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

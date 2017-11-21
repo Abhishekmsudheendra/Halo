@@ -43,20 +43,20 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-04-06 15:59:15</sys_created_on>
+            <sys_created_on>2017-10-16 21:27:49</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>3187895cdb0232001cf8dec0cf961995</sys_id>
-            <sys_mod_count>8</sys_mod_count>
-            <sys_name>sp_css</sys_name>
+            <sys_id>689dc4e2db3503001cf8dec0cf961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
             <sys_package/>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
-            <sys_update_name>sys_ui_list_sp_css_null</sys_update_name>
+            <sys_update_name/>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-07-17 16:52:54</sys_updated_on>
+            <sys_updated_on>2017-10-16 21:27:49</sys_updated_on>
             <sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

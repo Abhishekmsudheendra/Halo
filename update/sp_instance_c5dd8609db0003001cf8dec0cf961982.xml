@@ -8,6 +8,7 @@
         <glyph/>
         <id/>
         <order>1</order>
+        <roles/>
         <short_description/>
         <size>md</size>
         <sp_column display_value="2">67bdca09db0003001cf8dec0cf9619bf</sp_column>
@@ -15,7 +16,7 @@
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-07-17 15:07:26</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>c5dd8609db0003001cf8dec0cf961982</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="content_theme_css">
     <content_theme_css action="INSERT_OR_UPDATE">
-        <content_css display_value="custom.css">431752ecdb8a32001cf8dec0cf9619da</content_css>
+        <content_css display_value="halocustom.css">431752ecdb8a32001cf8dec0cf9619da</content_css>
         <content_theme display_value="Halo Theme">23931e2cdb8a32001cf8dec0cf961987</content_theme>
         <order>1000</order>
         <sys_class_name>content_theme_css</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-07 16:25:38</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>0e271eecdb8a32001cf8dec0cf9619af</sys_id>
         <sys_mod_count>4</sys_mod_count>
         <sys_name>custom.css.Halo Theme</sys_name>

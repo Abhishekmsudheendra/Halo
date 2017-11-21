@@ -7,7 +7,7 @@
         <sys_class_name>sys_scope_privilege</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-06-01 18:09:44</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>9b6e7d52db4332001cf8dec0cf96196a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_usdo2_nsdd38_sub_agency</sys_name>

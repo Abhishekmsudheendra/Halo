@@ -5,167 +5,195 @@
             <element>ticket_coa</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>383bdeb0dbb232001cf8dec0cf961978</sys_id>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>9c1ca71edbb103001cf8dec0cf9619e8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>do_you_want_to_select_additionalactions</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>541ca71edbb103001cf8dec0cf9619e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>fc3bdeb0dbb232001cf8dec0cf961978</sys_id>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>d41ca71edbb103001cf8dec0cf9619e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>send_email_update_to_reporter</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>703bdeb0dbb232001cf8dec0cf961979</sys_id>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>581ca71edbb103001cf8dec0cf9619e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>notify_production</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>f03bdeb0dbb232001cf8dec0cf961979</sys_id>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>d81ca71edbb103001cf8dec0cf9619e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>set_status_to_resolved</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>743bdeb0dbb232001cf8dec0cf961979</sys_id>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>5c1ca71edbb103001cf8dec0cf9619e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>resolve_and_close_the_ticket</element>
-            <position>5</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>f43bdeb0dbb232001cf8dec0cf961979</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>assigned_to</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>783bdeb0dbb232001cf8dec0cf961979</sys_id>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>dc1ca71edbb103001cf8dec0cf9619e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>7</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>f83bdeb0dbb232001cf8dec0cf961979</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>notify_isp</element>
-            <position>8</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>7c3bdeb0dbb232001cf8dec0cf961979</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>notify_domain_registrar</element>
-            <position>9</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>fc3bdeb0dbb232001cf8dec0cf961979</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>send_email_receipt_to_reporter</element>
-            <position>10</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>703bdeb0dbb232001cf8dec0cf96197a</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>assign_to_group</element>
-            <position>11</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-05-15 18:08:53</sys_created_on>
-            <sys_id>f03bdeb0dbb232001cf8dec0cf96197a</sys_id>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>501ca71edbb103001cf8dec0cf9619ea</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-05-15 18:08:53</sys_updated_on>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>d01ca71edbb103001cf8dec0cf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notify_isp</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>541ca71edbb103001cf8dec0cf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notify_domain_registrar</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>d41ca71edbb103001cf8dec0cf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>send_email_receipt_to_reporter</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>581ca71edbb103001cf8dec0cf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>report_to_flare</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>d81ca71edbb103001cf8dec0cf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-16 19:01:26</sys_created_on>
+            <sys_id>5c1ca71edbb103001cf8dec0cf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ticket Course of Action" display_value="Ticket Course of Action" name="x_19668_halo_incident" sys_domain="global" view="Default view">67881711dbf932001cf8dec0cf9619b3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-16 19:01:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -177,11 +205,11 @@
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-03-28 18:51:08</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>67881711dbf932001cf8dec0cf9619b3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_name>Ticket Course of Action</sys_name>
             <sys_overrides/>
             <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
@@ -190,7 +218,7 @@
             <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
             <sys_update_name>sys_ui_section_67881711dbf932001cf8dec0cf9619b3</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-03-28 18:51:08</sys_updated_on>
+            <sys_updated_on>2017-08-01 18:44:32</sys_updated_on>
             <sys_user/>
             <title>false</title>
             <view display_value="Default view" name="NULL">Default view</view>

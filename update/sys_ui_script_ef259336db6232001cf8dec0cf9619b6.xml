@@ -99,7 +99,7 @@
         <sys_class_name>sys_ui_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-09 17:14:34</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>ef259336db6232001cf8dec0cf9619b6</sys_id>
         <sys_mod_count>11</sys_mod_count>
         <sys_name>x_19668_halo.loadDataIntoWizard</sys_name>

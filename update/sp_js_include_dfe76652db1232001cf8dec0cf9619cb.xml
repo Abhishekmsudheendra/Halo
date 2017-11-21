@@ -6,7 +6,7 @@
         <sys_class_name>sp_js_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-25 14:29:40</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>dfe76652db1232001cf8dec0cf9619cb</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Open Incidents Controller</sys_name>

@@ -84,8 +84,8 @@
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-03-09 15:57:56</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>ddba341bdb1132001cf8dec0cf961927</sys_id>
-            <sys_mod_count>18</sys_mod_count>
+            <sys_id>b7d314dddb0403001cf8dec0cf9619f3</sys_id>
+            <sys_mod_count>19</sys_mod_count>
             <sys_name>r_status</sys_name>
             <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
             <sys_policy/>
@@ -93,7 +93,7 @@
             <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
             <sys_update_name>sys_choice_x_19668_halo_incident_r_status</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-07-17 16:53:25</sys_updated_on>
+            <sys_updated_on>2017-08-01 18:44:43</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

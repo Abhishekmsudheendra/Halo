@@ -25,7 +25,7 @@ LeftWidgetUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-06-23 15:15:28</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>b889a699db2b32001cf8dec0cf961946</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>LeftWidgetUtils</sys_name>

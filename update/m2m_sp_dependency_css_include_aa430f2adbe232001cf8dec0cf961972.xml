@@ -7,7 +7,7 @@
         <sys_class_name>m2m_sp_dependency_css_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-08 21:17:41</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>aa430f2adbe232001cf8dec0cf961972</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>bootstrap.min.css.jQuery Smart Wizard Dependencies</sys_name>

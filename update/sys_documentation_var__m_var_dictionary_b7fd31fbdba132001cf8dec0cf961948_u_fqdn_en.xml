@@ -12,7 +12,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-03-23 20:26:35</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_id>9d7e3dfbdba132001cf8dec0cf9619c0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>FQDN</sys_name>

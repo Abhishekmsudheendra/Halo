@@ -405,7 +405,7 @@ ul.nav.nav-tabs.step-anchor {font-size: x-large;}
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-08 21:14:24</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>e65207e6dbe232001cf8dec0cf96199b</sys_id>
         <sys_mod_count>162</sys_mod_count>
         <sys_name>End User Incident View</sys_name>

@@ -7,7 +7,7 @@
         <sys_class_name>m2m_sp_dependency_css_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-23 19:46:21</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>468e1931db9232001cf8dec0cf961940</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>ng-table.min.css.NG Tables</sys_name>

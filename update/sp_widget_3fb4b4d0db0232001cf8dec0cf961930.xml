@@ -11,7 +11,7 @@
 	var c = this;
 	c.getData = function() 
 	{
-		c.server.get({}).then(function(response)
+		c.server.get({method:'getLeftWidget'}).then(function(response)
 		{			
 			c.data.userData=angular.fromJson(response.data.userData);
 			c.data.accessData=angular.fromJson(response.data.accessData);
@@ -104,7 +104,7 @@ ul.nav.child_menu li:after {
         <description/>
         <docs/>
         <field_list/>
-        <has_preview>true</has_preview>
+        <has_preview>false</has_preview>
         <id>home-left-widget</id>
         <internal>false</internal>
         <link/>
@@ -114,23 +114,27 @@ ul.nav.child_menu li:after {
         <roles/>
         <script><![CDATA[(function() 
 {
-	var gr;
-	var ref=new RightWidgetUtils();
-	var leftref=new LeftWidgetUtils();
+	//Do not remove this line. Client calls Server Script multiple times and increaes load time if 'input' value not checked
 	if(input)
-	{
-		data.userData=ref.userData();
-		data.accessData=leftref.accessData();
-	}
-
+		{
+			if(input.method == 'getLeftWidget')
+				{
+					var gr;
+					var ref=new RightWidgetUtils();
+					var leftref=new LeftWidgetUtils();
+					var gdt = new GlideDateTime();
+					data.userData=ref.userData();
+					data.accessData=leftref.accessData();
+				}
+		}
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-06 14:37:12</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>3fb4b4d0db0232001cf8dec0cf961930</sys_id>
-        <sys_mod_count>170</sys_mod_count>
+        <sys_mod_count>183</sys_mod_count>
         <sys_name>Home Left Widget</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -138,10 +142,10 @@ ul.nav.child_menu li:after {
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_widget_3fb4b4d0db0232001cf8dec0cf961930</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-17 14:50:39</sys_updated_on>
+        <sys_updated_on>2017-11-17 17:22:46</sys_updated_on>
         <template><![CDATA[    <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="id=home" class="site_title"><i class="fa fa-paw"></i> <span>Halo Home</span></a>
+            <a href="?id=home" class="site_title"><i class="fa fa-paw"></i> <span>Halo Home</span></a>
         </div>
 
         <div class="clearfix"></div>
@@ -168,18 +172,17 @@ ul.nav.child_menu li:after {
               
                     <li class="" ><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="display: none;">
-                            <li class="current-page"><a href="https://dev21310.service-now.com/haloportal/id=home">Dashboard</a></li>
-                            <li class="current-page"><a href="https://dev21310.service-now.com/haloportal/?id=search_incident">Search Incidents</a></li>
+                            <li class="current-page"><a href="/haloportal/?id=home">Dashboard</a></li>
+                            <li class="current-page"><a href="/haloportal/?id=search_incident">Search Incidents</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-edit"></i> Halo <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="">
-                           <li><a href="/haloportal/?id=myincidents">My Incidents</a></li>
-                            <li><a href="/haloportal/?id=open_incidents">Open Incidents</a></li>
-                            <li><a href="/haloportal/?id=closedincidents">Closed Incidents</a></li>
-                  			<li><a href="/haloportal/?id=mygroupincidents">My Group Incidnets</a></li>
-                            <li><a href="/haloportal/?id=search_incident">Search Incidents</a></li>
-
+                          <li><a href="/haloportal/?id=myincidents">My Incidents</a></li>
+                          <li><a href="/haloportal/?id=mygroupincidents">My Group Incidnets</a></li>
+                          <li><a href="/haloportal/?id=open_incidents">Open Incidents</a></li>
+                          <li><a href="/haloportal/?id=search_incident">Search Incidents</a></li>
+                          <li><a href="/haloportal/?id=allincidents">All Incidents</a></li>  
                         </ul>
                     </li>
                     <li ng-show="c.data.accessData[0].isAdmin == 'true'"><a><i class="fa fa-wrench"></i> Halo Administration <span class="fa fa-chevron-down"></span></a>

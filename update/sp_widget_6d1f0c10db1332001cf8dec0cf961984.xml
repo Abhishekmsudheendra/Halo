@@ -3,117 +3,24 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <client_script><![CDATA[function($scope)
 {
-	//location.reload(true);
-	/*
-	var firstLoad=sessionStorage.getItem('firstLoad');
-	if(firstLoad == null || firstLoad == 'no')
-		{
-			sessionStorage.setItem('firstLoad','yes');
-			location.reload();
-		}
-	else
-		{
-			sessionStorage.setItem('firstLoad','no');
-		}
-	*/
 	var locationStr=window.location;
 	var pattern=/[a-zA-Z0-9]{32}/;
-	var sysId=pattern.exec(locationStr);
+	var sysId=pattern.exec(locationStr)+'';
 	var c=this;
-	
-	c.convertToBoolean=function(string)
-	{
-		if(string == "false" || string  == "")
-			return false;
-		else
-			return true;
-	};
-	
-	c.populateValues=function(incidentStatus,courseOfActionsData)
-	{
-		//Make COA section read-only when Incident is Closed
-				if(incidentStatus == 'Closed')
-					{
-						jQuery("#section3 :input").attr("disabled",true);
-						jQuery("#section3 :input").prop("disabled",true);
-					}
-	     if(courseOfActionsData[0].selectedName != '')
-				 {
-					 $scope.selectedValue=courseOfActionsData[0].selectedName;
-				 }
-		jQuery("#sendEmailUpdateToReporter").prop('checked', c.convertToBoolean(courseOfActionsData[0].sendEmailUpdateToReporter));
-		jQuery("#notifyIsp").prop('checked', c.convertToBoolean(courseOfActionsData[0].notifyIsp));
-		jQuery("#notifyDomainRegistrar").prop('checked', c.convertToBoolean(courseOfActionsData[0].notifyDomainRegistrar));
-		jQuery("#sendEmailReceipt").prop('checked', c.convertToBoolean(courseOfActionsData[0].sendEmailReceipt));
-		jQuery("#setStatusOfTicketToResolved").prop('checked', c.convertToBoolean(courseOfActionsData[0].setStatusOfTicketToResolved));
-		jQuery("#notifyProduction").prop('checked', c.convertToBoolean(courseOfActionsData[0].notifyProduction));
-		jQuery("#assignToNextTier").prop('checked', c.convertToBoolean(courseOfActionsData[0].assignToNextTier));
-		jQuery("#assignToGroup").prop('checked', c.convertToBoolean(courseOfActionsData[0].assignToGroup));
-		jQuery("#resolveAndCloseTicket").prop('checked', c.convertToBoolean(courseOfActionsData[0].resolveAndCloseTicket));
-		
-	  $scope.groupName=courseOfActionsData[0].groupName;
-		$scope.groupSelectedValue=courseOfActionsData[0].groupName;
-	};
-	
 	c.getData = function() 
 	{
-		c.server.get({sysId:sysId}).then(
-			function(response)
-			{  
-				c.data.incidentData= angular.fromJson(response.data.incidentData);
-				c.data.ipIndicatorsData= angular.fromJson(response.data.ipIndicatorsData)	;
-				c.data.domainIndicatorsData= angular.fromJson(response.data.domainIndicatorsData);
-				c.data.hashCodeIndicatorsData= angular.fromJson(response.data.hashCodeIndicatorsData);
-				c.data.courseOfActionsData= angular.fromJson(response.data.courseOfActionsData);
-			  c.data.ListOfCourseOfActionsData= angular.fromJson(response.data.ListOfCourseOfActionsData);
-				c.data.indicatorsData=angular.fromJson(response.data.indicatorsData);
-				c.data.commentshistory=angular.fromJson(response.data.commentshistory);
-				c.data.groupUsers=angular.fromJson(response.data.groupUsers);
-				
-				//Store JSON in Session
-				sessionStorage.setItem('ipIndicatorsData', JSON.stringify(c.data.ipIndicatorsData));
-				sessionStorage.setItem('domainIndicatorsData', JSON.stringify(c.data.domainIndicatorsData));
-				sessionStorage.setItem('hashCodeIndicatorsData', JSON.stringify(c.data.hashCodeIndicatorsData));
-				sessionStorage.setItem('indicatorsData', JSON.stringify(c.data.indicatorsData));
-				
-				//Populate Values
-				c.populateValues(c.data.incidentData[0].incidentStatus,c.data.courseOfActionsData);
-				
-			})
+		getIncidentRecord($scope,c,sysId);
+		
 	};
-
+	
 	c.getData();
 
 
-  $scope.sysId=sysId+'';
-	
 	$scope.execute= function() 
 	{
-		//get Values from Form
-			var selectedCoa=jQuery("#sel1 option:selected").text();
-			var sendEmailUpdateToReporter=jQuery("#sendEmailUpdateToReporter").is(":checked");
-			var notifyIsp=jQuery("#notifyIsp").is(":checked");
-			var notifyDomainRegistrar=jQuery("#notifyDomainRegistrar").is(":checked");
-			var sendEmailReceipt=jQuery("#sendEmailReceipt").is(":checked");
-			var setStatusOfTicketToResolved=jQuery("#setStatusOfTicketToResolved").is(":checked");
-			var notifyProduction=jQuery("#notifyProduction").is(":checked");
-			var assignToNextTier=jQuery("#assignToNextTier").is(":checked");
-			var assignToGroup=jQuery("#assignToGroup").is(":checked");
-			var resolveAndCloseTicket=jQuery("#resolveAndCloseTicket").is(":checked");
-		  var groupName=jQuery("#groupSelectedValue option:selected").text();
-			var assignTo=jQuery("#assignTo option:selected").text();
-			var comments=jQuery("#comments").val();
-			var locationStr=window.location;
-			var pattern=/[a-zA-Z0-9]{32}/;
-			var sysId=pattern.exec(locationStr)+'';
-		
-		c.server.get({comments:comments,assignTo:assignTo,groupName:groupName,resolveAndCloseTicket:resolveAndCloseTicket,assignToGroup:assignToGroup,assignToNextTier:assignToNextTier,notifyProduction:notifyProduction,setStatusOfTicketToResolved:setStatusOfTicketToResolved,sendEmailReceipt:sendEmailReceipt,sysId:sysId,action:'execute',selectedCoa:selectedCoa,sendEmailUpdateToReporter:sendEmailUpdateToReporter,notifyIsp:notifyIsp,notifyDomainRegistrar:notifyDomainRegistrar}).then(
-			function(response)
-			{  
-				location.href=window.location;
-			});
-		
-  }//End of uiAction
+		//Call method updateIncidentRecord($scope,c) in x_19668_halo.GetOrSetIncidentRecords UI Script
+		updateIncidentRecord($scope,c);
+  }
 	
 	
 }
@@ -342,7 +249,22 @@ a:hover,a:focus{
 
 .col-md-6.col-sm-6.col-lg-6.ng-binding {
     padding-left: 10px !important;
-}</css>
+}
+
+
+input#doYouWantadditionalActions {
+    margin-top: 0px !important;
+}
+
+
+
+p.control-label.ng-binding.ng-scope {
+    padding-left: 0px !important;
+      margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -446,9 +368,9 @@ a:hover,a:focus{
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-06-07 15:11:09</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>6d1f0c10db1332001cf8dec0cf961984</sys_id>
-        <sys_mod_count>249</sys_mod_count>
+        <sys_mod_count>357</sys_mod_count>
         <sys_name>Incident Summary</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -456,10 +378,8 @@ a:hover,a:focus{
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_widget_6d1f0c10db1332001cf8dec0cf961984</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-06-26 19:44:47</sys_updated_on>
-        <template><![CDATA[<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
-<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+        <sys_updated_on>2017-11-20 21:00:59</sys_updated_on>
+        <template><![CDATA[ <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script> 
 
 <div class="container" -ng-controller="incidentSummaryCtrl">
     <div class="panel panel-primary">
@@ -467,7 +387,110 @@ a:hover,a:focus{
         <div class="panel-body" style="padding:0px">
             <div class="panel-group">
               <uib-tabset active="activeJustified" justified="true">
-                <uib-tab index="0" heading="Incident Information">
+                
+                <uib-tab index="0" heading="Actions to Perform" id="section3" >
+                
+                  <p class="control-label"><label>Recommended Response: </label> {{c.data.courseOfActionsData[0].recommendedName}}  
+                    <i class="fa fa-info-circle icon-right" data-placement="top" data-toggle="tooltip" title="" data-original-title="{{c.data.courseOfActionsData[0].reasoning}}  "></i> </p>
+                 <!-- <p class="control-label"><label>Reasoning: </label> {{c.data.courseOfActionsData[0].reasoning}}  </p> -->
+
+                  <p class="control-label"><label>Select Response: </label>
+                    <select class="form-control" id="sel1" ng-model="selectedValue"  style="max-width:700px"  ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
+                      <option ng-repeat="coa in c.data.ListOfCourseOfActionsData track by $index" value="{{coa.name}}" ng-selected="{{defaultvalue == c.data.courseOfActionsData[0].recommendedName}}">{{coa.name}}</option>
+                    </select> </p>
+
+                  <p><label>Do you want to select additional actions   </label> <input type="checkbox" class="checkbox-inline" id="doYouWantadditionalActions" ng-model="doYouWantadditionalActions" style="width:20px"></p>
+                
+                  <div id="actions" ng-show="doYouWantadditionalActions">
+                    <label class="checkbox-inline"><input type="checkbox" ng-model="reportToFlare"  id="reportToFlare"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Report to FLARE</label>
+                    <label class="checkbox-inline"><input type="checkbox" ng-model="notifyIsp"   id="notifyIsp" ng-model="notifyIsp"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify ISP</label>  
+                    <label class="checkbox-inline"><input type="checkbox"   ng-model="notifyDomainRegistrar"  id="notifyDomainRegistrar" ng-model="notifyDomainRegistrar"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify Domain Registrar</label> <br/>
+                    <label class="checkbox-inline"><input type="checkbox"  ng-model="sendEmailUpdateToReporter"   id="sendEmailUpdateToReporter"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify Reporter Via Email</label>
+                    <label class="checkbox-inline"><input type="checkbox"   ng-model="setStatusOfTicketToResolved"  id="setStatusOfTicketToResolved"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Resolve Ticket</label>
+                    <label class="checkbox-inline"><input type="checkbox"  ng-model="notifyProduction"  id="notifyProduction"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify Production</label><br/>
+                  </div> 
+
+									<br/>
+                  <div class="row assignmentGroupSection">
+                   <p class="control-label"><label>Assignment Group: </label>
+                    <div class="groupName  col-md-3 col-sm-3 col-lg-3" >
+                      <b>Group Name:</b>
+                      <select  id="groupSelectedValue" ng-model="groupSelectedValue"  style="max-width:300px !important"    class="form-control"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
+                        <option value="Tier1">Tier1</option>
+                        <option value="Tier2">Tier2</option>
+                        <option value="Tier3">Tier3</option>
+                        <option value="Tier4">Tier4</option>
+                        <option value="Tier5">Tier5</option>
+                        <option value="Halo Administrator">Halo Administrator</option>
+                      </select>
+                    </div>
+
+
+                    <div class="assignTo  col-md-3 col-sm-3 col-lg-3">
+                      <b>Assign To:</b>
+                      <select  id="assignedTo" class="form-control" style="max-width:300px !important" ng-model="assignTo" ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
+                        <option  ng-repeat="user in (c.data.groupUsers | filter: {'groupName':groupSelectedValue}) track by $index" value="user.name">{{user.name}}</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <br/>
+
+                  <div id="commentsSection" >
+                    <div class="">
+                      <span ng-hide="c.data.incidentData[0].incidentStatus == 'Closed'">
+                        <b>Comments:</b>  <textarea id="comments"  style="max-width:700px" class="form-control"  ng-model="comments"> </textarea> <br/>
+                      </span>
+                    </div>
+                    
+
+                    <div> 
+                       <b>User Activity Log:</b>
+                      <div ng-repeat="text in c.data.commentshistory track by $index">
+                      <div  class="panel panel-default" style="max-width:700px">
+                          <div class="panel-heading"> <span class="glyphicon glyphicon-user"></span> <span id="commentEnteredBy" style="margin-right:20px; margin-left:5px" > {{text.enteredBy}} </span>{{text.enteredDate}} </div>
+                          <div class="panel-body"> {{text.comment}} </div>
+                        </div>
+                      </div> <!-- End of Panel -->
+                      <br/> <br/>
+                      <button type="button" class="btn btn-primary" ng-click="execute()" style="margin-top:20px">Update</button>
+                      <input type="hidden" id="sysId" value="{{sysId}}">
+                    </div>
+     
+                  </div> 
+                
+                </uib-tab>
+                
+                
+                
+              
+
+                <uib-tab index="1" heading="Possible Indicators">
+                  <label>Extracted Potential Indicators</label>
+                  <table class="table table-condensed table-hover table-bordered">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Ranking</th>
+                        <th>Indicator</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="indicator in c.data.indicatorsData track by $index" >
+                        <td>{{indicator.number}}</td>
+                        <td>{{indicator.urgencyRanking}}</td>
+                        <td>{{indicator.indicatorText}}</td>
+                        <td class="{{indicator.cssClass}}"><a href="/haloportal/?id=potential_indicator_summary&indicator_id={{indicator.sysId}}" data-toggle="tooltip" data-placement="top" title="Click here to see more information"  target="_self">{{indicator.indicatorStatus}}</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </uib-tab>
+                
+                
+                
+
+                  <uib-tab index="2" heading="Requester Information">
                   <form class="form-horizontal">
                   <div class="col-md-6 col-sm-6 col-lg-6">
                     
@@ -549,101 +572,6 @@ a:hover,a:focus{
                     </div>
                   </form>
                  
-                </uib-tab>
-
-                <uib-tab index="1" heading="Potential Indicators">
-                  <label>Extracted Potential Indicators</label>
-                  <table class="table table-condensed table-hover table-bordered">
-                    <thead>
-                      <tr>
-                        <th>No</th>
-                        <th>Ranking</th>
-                        <th>Indicator</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr ng-repeat="indicator in c.data.indicatorsData track by $index" >
-                        <td>{{indicator.number}}</td>
-                        <td>{{indicator.urgencyRanking}}</td>
-                        <td>{{indicator.indicatorText}}</td>
-                        <td class="{{indicator.cssClass}}"><a href="https://dev21310.service-now.com/haloportal/?id=potential_indicator_summary&indicator_id={{indicator.sysId}}" data-toggle="tooltip" data-placement="top" title="Click here to see more information"  target="_self">{{indicator.indicatorStatus}}</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </uib-tab>
-
-                <uib-tab index="2" heading="Course Of Action" id="section3" >
-                
-                  <p class="control-label"><label>Recommendation: </label> {{c.data.courseOfActionsData[0].recommendedName}}   </p>
-                  <p class="control-label"><label>Reasoning: </label> {{c.data.courseOfActionsData[0].reasoning}}  </p>
-
-                  <p class="control-label"><label>Select Course of Action: </label>
-                    <select class="form-control" id="sel1" ng-model="selectedValue"  style="max-width:700px"  ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
-                      <option ng-repeat="coa in c.data.ListOfCourseOfActionsData track by $index" value="{{coa.name}}" ng-selected="{{defaultvalue == c.data.courseOfActionsData[0].recommendedName}}">{{coa.name}}</option>
-                    </select> </p>
-
-                  <p><label>Additional Actions: </label>   </p>
-                  <div id="actions">
-                    <label class="checkbox-inline"><input type="checkbox" value="" id="sendEmailUpdateToReporter"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Send Email Update to Reporter</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyIsp" ng-model="notifyIsp"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify ISP</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyDomainRegistrar" ng-model="notifyDomainRegistrar"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify Domain Registrar</label> <br/>
-                    <label class="checkbox-inline"><input type="checkbox" value="" id="sendEmailReceipt"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Send Email Receipt to Reporter</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="" id="setStatusOfTicketToResolved"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Set Status of Ticket Resolved
-                    </label>
-                    <label class="checkbox-inline"><input type="checkbox" value="" id="notifyProduction"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify Production</label><br/>
-                    <label class="checkbox-inline"><input type="checkbox" value="" id="resolveAndCloseTicket"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Resolve and Close Ticket</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="" ng-model="checked" id="assignToGroup"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Assign to Group</label>
-                    <br/>
-                  </div> <br/>
-
-
-                  <div class="row">
-
-                    <div id="assignment" class="col-md-4" style="margin-right:20px!important">
-                      <b>Group Name:</b>
-                      <select  id="groupSelectedValue" ng-model="groupSelectedValue"  style="max-width:700px"    class="form-control"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
-                        <option value="Tier1">Tier1</option>
-                        <option value="Tier2">Tier2</option>
-                        <option value="Tier3">Tier3</option>
-                        <option value="Tier4">Tier4</option>
-                        <option value="Tier5">Tier5</option>
-                        <option value="Halo Administrator">Halo Administrator</option>
-                      </select>
-                    </div>
-
-                    <div class="col-md-4">
-                      <b>Assign To:</b>
-                      <select  id="assignTo" ng-model="assignTo"    style="max-width:700px"  class="form-control"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
-                        <option  ng-repeat="user in (c.data.groupUsers | filter: {'groupName':groupSelectedValue}) track by $index" value="user.name">{{user.name}}</option>
-                      </select>
-                    </div>
-
-                  </div>
-                  <br/>
-
-                  <div id="commentsSection" >
-                    <div class="">
-                      <span ng-hide="c.data.incidentData[0].incidentStatus == 'Closed'">
-                        <b>Comments:</b>  <textarea id="comments"  class="form-control"  ng-model="comments"> </textarea> <br/>
-                      </span>
-                    </div>
-                    <br/>
-
-                    <div> 
-                      <div ng-repeat="text in c.data.commentshistory track by $index">
-                      <div  class="panel panel-default" style="max-width:1060px">
-                          <div class="panel-heading"> <span class="glyphicon glyphicon-user"></span> <span id="commentEnteredBy" style="margin-right:20px; margin-left:5px" > {{text.enteredBy}} </span>{{text.enteredDate}} </div>
-                          <div class="panel-body"> {{text.comment}} </div>
-                        </div>
-                      </div> <!-- End of Panel -->
-                      
-                      <button type="button" class="btn btn-primary" ng-click="execute()" style="margin-top:20px">Execute</button>
-                      <input type="hidden" id="sysId" value="{{sysId}}">
-                    </div>
-     
-                  </div>
-                
                 </uib-tab>
 
               </uib-tabset>

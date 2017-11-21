@@ -91,7 +91,7 @@ SubmitIncidentUtils.prototype = Object.extendsObject(global.AbstractAjaxProcesso
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-18 20:34:44</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>af399a39dbb232001cf8dec0cf9619f6</sys_id>
         <sys_mod_count>14</sys_mod_count>
         <sys_name>SubmitIncidentUtils</sys_name>

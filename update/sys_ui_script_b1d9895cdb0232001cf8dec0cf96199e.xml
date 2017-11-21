@@ -13,7 +13,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
         <sys_class_name>sys_ui_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-06 16:09:21</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>b1d9895cdb0232001cf8dec0cf96199e</sys_id>
         <sys_mod_count>8</sys_mod_count>
         <sys_name>x_19668_halo.jquery.min.js</sys_name>

@@ -6,7 +6,7 @@
         <sys_class_name>sp_js_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-06 17:03:04</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>8f169954db4232001cf8dec0cf961994</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_19668_halo.jquery.vmap.world.js</sys_name>

@@ -15,7 +15,7 @@
         <sys_class_name>content_site</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-03-15 15:16:50</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>b7ba27c1db2132001cf8dec0cf961939</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>Halo</sys_name>

@@ -61,6 +61,9 @@
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=eb2c341ddb7332001cf8dec0cf9619a8">
         <new_activity_definition>20c059d5dbb332001cf8dec0cf9619ab</new_activity_definition>
         <out_of_date>true</out_of_date>
-        <notes>There is a newer version of this activity. To update the activity, check out the workflow, select the activity, right click and select update activity to use the latest version.</notes>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
     </wf_activity>
 </record_update>

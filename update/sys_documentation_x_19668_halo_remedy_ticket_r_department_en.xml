@@ -12,7 +12,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-03-16 14:44:23</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_id>540d20a5db2132001cf8dec0cf9619b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Department</sys_name>

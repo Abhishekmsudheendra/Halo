@@ -38,7 +38,7 @@
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-15 18:32:37</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>20a066b4dbb232001cf8dec0cf961923</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>Edit Profile</sys_name>

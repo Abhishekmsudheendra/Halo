@@ -290,7 +290,7 @@ body
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-18 19:04:03</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>6de42f8cdb5232001cf8dec0cf96194b</sys_id>
         <sys_mod_count>540</sys_mod_count>
         <sys_name>Incident Summary Legacy</sys_name>

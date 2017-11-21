@@ -2,6 +2,7 @@
 <record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
         <css/>
+        <draft>false</draft>
         <id>haloform</id>
         <internal>false</internal>
         <public>false</public>
@@ -10,7 +11,7 @@
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-12 16:18:19</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>4025e2b7dbaa32001cf8dec0cf96198a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>haloform</sys_name>

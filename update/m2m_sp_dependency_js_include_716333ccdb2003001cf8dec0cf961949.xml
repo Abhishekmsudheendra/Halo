@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="m2m_sp_dependency_js_include">
+    <m2m_sp_dependency_js_include action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sp_dependency display_value="Search Incidents Module">8172bf8cdb2003001cf8dec0cf961972</sp_dependency>
+        <sp_js_include display_value="Search Incidents Controller">01f2b3ccdb2003001cf8dec0cf9619a4</sp_js_include>
+        <sys_class_name>m2m_sp_dependency_js_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-08-08 16:28:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>716333ccdb2003001cf8dec0cf961949</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Search Incidents Module.Search Incidents Controller</sys_name>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>m2m_sp_dependency_js_include_716333ccdb2003001cf8dec0cf961949</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-08-08 16:28:42</sys_updated_on>
+    </m2m_sp_dependency_js_include>
+</record_update>

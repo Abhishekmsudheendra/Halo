@@ -6,7 +6,7 @@
         <sys_class_name>sp_js_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-22 19:34:46</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>edb1fe4bdb76b2001cf8dec0cf9619f9</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_19668_halo.jquery-ui.js</sys_name>

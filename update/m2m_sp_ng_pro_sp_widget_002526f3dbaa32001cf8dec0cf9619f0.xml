@@ -6,7 +6,7 @@
         <sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-12 16:18:19</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>002526f3dbaa32001cf8dec0cf9619f0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>spAttachmentManager.HaloForm</sys_name>

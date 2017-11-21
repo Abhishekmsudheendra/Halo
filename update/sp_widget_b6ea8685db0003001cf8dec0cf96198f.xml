@@ -41,7 +41,7 @@
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-07-17 14:54:42</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>b6ea8685db0003001cf8dec0cf96198f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Sectors</sys_name>

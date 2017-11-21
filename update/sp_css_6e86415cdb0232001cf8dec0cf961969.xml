@@ -264,11 +264,12 @@ th {&#13;
         border: 1px solid #ddd!important&#13;
     }&#13;
 }&#13;
+/*&#13;
 @font-face {&#13;
     font-family: 'Glyphicons Halflings';&#13;
     src: url(../fonts/glyphicons-halflings-regular.eot);&#13;
     src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')&#13;
-}&#13;
+}*/&#13;
 .glyphicon {&#13;
     position: relative;&#13;
     top: 1px;&#13;
@@ -6848,9 +6849,9 @@ button.close {&#13;
         <sys_class_name>sp_css</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-06 15:55:16</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>6e86415cdb0232001cf8dec0cf961969</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>bootstrap.min.css</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -6858,6 +6859,6 @@ button.close {&#13;
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_css_6e86415cdb0232001cf8dec0cf961969</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-05-15 16:15:45</sys_updated_on>
+        <sys_updated_on>2017-11-20 20:02:59</sys_updated_on>
     </sp_css>
 </record_update>

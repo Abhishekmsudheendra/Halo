@@ -11,7 +11,7 @@
 		{
 			c.data.searchData=angular.fromJson(response.data.searchData);
 			
-			
+			//jQuery function to auto-complete search bar
 			jQuery( function() 
 			{
 				jQuery.widget( "custom.catcomplete", jQuery.ui.autocomplete, 
@@ -59,6 +59,7 @@
  }
 	c.getData();
 	
+	//get results based on user input
 	$scope.getSelectedIncidentData=function()
 	{
 		 var searchText=$scope.searchText;
@@ -66,6 +67,7 @@
 		c.server.get({action:'getSelectedIncidentData',searchText:searchText,category:category}).then(function(response)
 		{
 			c.data.selectedIncidentData=angular.fromJson(response.data.selectedIncidentData);
+			 $scope.$emit("dataReady", c.data.selectedIncidentData);
 		});
 	};
 	
@@ -191,9 +193,9 @@ table {&#13;
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-22 17:28:17</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>43e4924fdb36b2001cf8dec0cf9619cd</sys_id>
-        <sys_mod_count>120</sys_mod_count>
+        <sys_mod_count>128</sys_mod_count>
         <sys_name>Search Incident</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -201,7 +203,7 @@ table {&#13;
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_widget_43e4924fdb36b2001cf8dec0cf9619cd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-10 15:44:04</sys_updated_on>
+        <sys_updated_on>2017-08-08 17:14:29</sys_updated_on>
         <template><![CDATA[
 <div class="panel panel-primary">
   <div class="panel-heading"><h4>Search Data </h4></div>
@@ -211,6 +213,21 @@ table {&#13;
         <input type="text" id="searchText" ng-model="searchText" placeholder="Enter Incident Id, IP Address, Domain Name or Hash Code"/>
         <button type="button" class="btn btn-primary" ng-nodel="searchButton" ng-click="getSelectedIncidentData()">Search</button>
       </div>
+      
+      <div class="col-md-12 table table-responsive" -ng-controller="searchController">
+        <table ng-table="tableParams" class="table table-condensed table-bordered">
+          <tr ng-repeat="row in $data track by $index" >
+            <td data-title="'#'" class="cell"  filter="{ incidentIndex: 'number'}" sortable="'incidentIndex'">{{$index+1}}</td>
+            <td data-title="'Incident Id'" filter="{ incidentId: 'text'}" sortable="'incidentId'"><a href="/haloportal/?id=incident_summary&incident_id={{row.sysId}}" style="color:#0c4a6f"  target="_self">{{row.incidentId}}</a></td>
+            <td data-title="'Incident Type'"  filter="{ incidentType: 'text'}" sortable="'incidentType'" class="cell">{{row.incidentType}}</td>
+            <td data-title="'Incident Status'"   filter="{ incidentStatus: 'text'}"  sortable="'incidentStatus'" class="cell">{{row.incidentStatus}}</td>
+            <td data-title="'Created Date'"   filter="{ createdDate: 'text'}"  sortable="'createdDate'" class="cell">{{row.createdDate}}</td>
+            <td data-title="'Last Updated'"   filter="{ lastUpdated: 'text'}"   sortable="'lastUpdated'" class="cell">{{row.lastUpdated}}</td>
+          </tr>      
+        </table>
+      </div>
+      
+      <!--
       <div class="searchTableData" id="searchTableData" ng-model="searchTableData">
         <div class="table-responsive">
         <table class="table table-hover">
@@ -227,7 +244,7 @@ table {&#13;
           <tbody>
             <tr ng-repeat="incident in c.data.selectedIncidentData track by $index">
               <td>{{$index+1}}</td>
-              <td><a href="https://dev21310.service-now.com/haloportal/?id=incident_end_user_view&incident_id={{incident.incidentSysId}}">{{incident.incidentId}}</a></td>
+              <td><a href="/haloportal/?id=incident_end_user_view&incident_id={{incident.incidentSysId}}">{{incident.incidentId}}</a></td>
               <td>{{incident.incidentType}}</td>
               <td>{{incident.incidentStatus}}</td>
               <td>{{incident.createdDate}}</td>
@@ -238,6 +255,8 @@ table {&#13;
         </table>
        </div> 
       </div>
+      -->
+      
     </div> <!-- End of Search Widget -->
   </div>
 </div>

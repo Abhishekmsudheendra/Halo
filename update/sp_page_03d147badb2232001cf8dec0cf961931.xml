@@ -2,6 +2,7 @@
 <record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
         <css/>
+        <draft>false</draft>
         <id>incident_end_user_view</id>
         <internal>false</internal>
         <public>true</public>
@@ -10,7 +11,7 @@
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-09 15:49:56</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>03d147badb2232001cf8dec0cf961931</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>incident_end_user_view</sys_name>

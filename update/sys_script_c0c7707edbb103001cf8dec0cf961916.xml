@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_19668_halo_incident</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_19668_halo_incident">report_to_flare=true^ORreport_to_flareCHANGESTOtrue^NQticket_status=Closed^ORticket_statusCHANGESTOClosed^EQ<item endquery="false" field="report_to_flare" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="report_to_flare" goto="false" newquery="false" operator="CHANGESTO" or="true" value="true"/>
+            <item endquery="false" field="ticket_status" goto="false" newquery="true" operator="=" or="false" value="Closed"/>
+            <item endquery="false" field="ticket_status" goto="false" newquery="false" operator="CHANGESTO" or="true" value="Closed"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Report to Flare</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) 
+ {
+	var w = new global.Workflow();
+	// sys_id taken from wf_workflow table
+	var context = w.startFlow('852d587cdb7003001cf8dec0cf961986', current, current.operation(), {incidentSysId:current.sys_id+''});
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-17 19:12:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c0c7707edbb103001cf8dec0cf961916</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Report to Flare</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
+        <sys_update_name>sys_script_c0c7707edbb103001cf8dec0cf961916</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-17 19:22:08</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=c0c7707edbb103001cf8dec0cf961916"/>
+</record_update>

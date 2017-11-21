@@ -11,7 +11,7 @@
         <sys_class_name>db_image</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-06-27 18:15:16</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>dff8b7a6db6332001cf8dec0cf961909</sys_id>
         <sys_mod_count>11</sys_mod_count>
         <sys_name>logo2.jpg</sys_name>

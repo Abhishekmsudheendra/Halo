@@ -62,6 +62,7 @@ footer&#13;
 {&#13;
   border-left:0px !important;&#13;
 }</css>
+        <draft>false</draft>
         <id>home</id>
         <internal>false</internal>
         <public>false</public>
@@ -70,7 +71,7 @@ footer&#13;
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-06 14:40:20</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>1645b014db0232001cf8dec0cf96197d</sys_id>
         <sys_mod_count>10</sys_mod_count>
         <sys_name>home</sys_name>

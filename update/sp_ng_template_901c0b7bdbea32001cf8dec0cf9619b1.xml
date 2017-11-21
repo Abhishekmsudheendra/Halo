@@ -6,7 +6,7 @@
         <sys_class_name>sp_ng_template</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-12 19:08:44</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>901c0b7bdbea32001cf8dec0cf9619b1</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>empty-state-portal-edit1.html</sys_name>

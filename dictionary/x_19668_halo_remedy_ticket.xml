@@ -58,5 +58,8 @@
         <index name="index5">
             <element name="r_incident_id"/>
         </index>
+        <index name="index6">
+            <element name="r_incident_id"/>
+        </index>
     </element>
 </database>

@@ -5,6 +5,7 @@
 {&#13;
  background-color:white;&#13;
 }</css>
+        <draft>false</draft>
         <id>open_incidents_2</id>
         <internal>false</internal>
         <public>false</public>
@@ -13,7 +14,7 @@
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-17 19:47:31</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>a4456a77db8232001cf8dec0cf961995</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>open_incidents_2</sys_name>

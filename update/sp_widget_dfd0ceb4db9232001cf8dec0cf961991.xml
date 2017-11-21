@@ -186,7 +186,7 @@ td
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-04-20 19:42:25</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>dfd0ceb4db9232001cf8dec0cf961991</sys_id>
         <sys_mod_count>87</sys_mod_count>
         <sys_name>Test Incidents</sys_name>

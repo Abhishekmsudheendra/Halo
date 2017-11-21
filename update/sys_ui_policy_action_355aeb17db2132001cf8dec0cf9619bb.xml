@@ -7,7 +7,7 @@
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-03-22 15:00:59</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>355aeb17db2132001cf8dec0cf9619bb</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>enrich_end_timestamp</sys_name>

@@ -6,6 +6,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
+        <category display_value="Incident">6fc5d886db5003001cf8dec0cf9619a8</category>
         <collection>x_19668_halo_incident</collection>
         <condition table="x_19668_halo_incident">resolve_and_close_the_ticket=true^ORresolve_and_close_the_ticketCHANGESTOtrue^NQset_status_to_resolved=true^ORset_status_to_resolvedCHANGESTOtrue^EQ<item endquery="false" field="resolve_and_close_the_ticket" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="false" field="resolve_and_close_the_ticket" goto="false" newquery="false" operator="CHANGESTO" or="true" value="true"/>
@@ -52,11 +53,11 @@
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-31 17:58:02</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>752238c6db4332001cf8dec0cf9619b4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Resolve and Close the Ticket</sys_name>
         <sys_overrides/>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
@@ -65,7 +66,7 @@
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sysevent_email_action_752238c6db4332001cf8dec0cf9619b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-05-31 17:59:34</sys_updated_on>
+        <sys_updated_on>2017-08-10 03:35:00</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>

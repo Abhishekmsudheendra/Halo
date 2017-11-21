@@ -12,7 +12,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-06-19 20:35:36</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_id>d36cc34cdba332001cf8dec0cf96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Threat Data</sys_name>

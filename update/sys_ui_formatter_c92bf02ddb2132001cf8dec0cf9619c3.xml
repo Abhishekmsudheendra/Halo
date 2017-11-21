@@ -8,7 +8,7 @@
         <sys_class_name>sys_ui_formatter</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-03-16 15:46:09</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>c92bf02ddb2132001cf8dec0cf9619c3</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>User Activity</sys_name>

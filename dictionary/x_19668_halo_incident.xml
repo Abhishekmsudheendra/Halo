@@ -9,10 +9,11 @@
         <element default="0" label="Completed Enrich Count" max_length="40" name="completed_enrich_count" type="integer"/>
         <element label="Completed Indicator Count" max_length="40" name="complted_indicator_count" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Description" max_length="400" name="description" type="string"/>
+        <element label="Do you want to select additional actions?" max_length="40" name="do_you_want_to_select_additionalactions" type="boolean"/>
         <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Enrichment Datasources" max_length="1024" name="enrichment_datasources" reference="x_19668_halo_datasources" type="glide_list"/>
         <element label="Has Executed" max_length="40" name="has_executed" type="boolean"/>
         <element label="Has Executed Time" max_length="40" name="has_executed_time" type="glide_date"/>
-        <element attributes="edge_encryption_enabled=true" audit="true" default="javascript:global.getNextObjNumberPadded();&#9;" display="true" label="Incident Id" max_length="40" name="incident_id" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Incident Id" max_length="40" name="incident_id" read_only="true" type="string"/>
         <element audit="true" label="Incident Type" max_length="32" name="incident_type" reference="x_19668_halo_incident_type" type="reference"/>
         <element label="Indicator Count" max_length="40" name="indicator_count" type="integer"/>
         <element label="Notify CIO Group" max_length="40" name="notify_cio_group" type="boolean"/>
@@ -20,6 +21,7 @@
         <element label="Notify ISP" max_length="40" name="notify_isp" type="boolean"/>
         <element label="Notify Production" max_length="40" name="notify_production" type="boolean"/>
         <element label="Notify usual Five 8" max_length="40" name="notify_usual_five8" type="boolean"/>
+        <element label="Report To Flare" max_length="40" name="report_to_flare" type="boolean"/>
         <element label="Resolve and Close the Ticket" max_length="40" name="resolve_and_close_the_ticket" type="boolean"/>
         <element choice="1" label="Category" mandatory="true" max_length="100" name="r_category" type="string">
             <choice>
@@ -87,7 +89,7 @@
                 <element label="Closed" sequence="6" value="Closed"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" calculation="if(current.ticket_status == 'Closed')&#13;&#10;&#9;current.ui_workflow_status='Closed';&#13;&#10;else if(current.ticket_status == 'Open')&#13;&#10;&#9;current.ui_workflow_status='New';&#13;&#10;else&#13;&#10;&#9;current.ui_workflow_status='Executing';" choice="3" default="New" label="UI Workflow Status" max_length="40" name="ui_workflow_status" type="string" virtual="true">
+        <element attributes="edge_encryption_enabled=true" calculation="if(current.ticket_status == 'Closed')&#10;&#9;current.ui_workflow_status='Closed';&#10;else if(current.ticket_status == 'Open')&#10;&#9;current.ui_workflow_status='New';&#10;else&#10;&#9;current.ui_workflow_status='Executing';" choice="3" default="New" label="UI Workflow Status" max_length="40" name="ui_workflow_status" type="string" virtual="true">
             <choice>
                 <element label="New" sequence="0" value="New"/>
                 <element label="Executing" sequence="1" value="Executing"/>

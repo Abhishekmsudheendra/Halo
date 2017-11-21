@@ -6,7 +6,7 @@
         <sys_class_name>sp_ng_template</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-12 19:10:12</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>0a6ccf7bdbea32001cf8dec0cf961932</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>empty-state-page-editor2.html</sys_name>
