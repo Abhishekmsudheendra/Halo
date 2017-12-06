@@ -58,7 +58,7 @@ var totalRows=activityOutput.totalRows;]]></output_process_script>
         <version_container_id>eb2c341ddb7332001cf8dec0cf9619a8</version_container_id>
         <wf_element_definition display_value="Query Threat Data">94c17d21db7332001cf8dec0cf9619ca</wf_element_definition>
     </wf_versionable>
-    <wf_versionable action="update_multiple" query="version_container_id=eb2c341ddb7332001cf8dec0cf9619a8^sys_id!=9cc17d21db7332001cf8dec0cf9619ca">
+    <wf_versionable action="update_multiple" query="version_container_id=eb2c341ddb7332001cf8dec0cf9619a8^sys_id!=9cc17d21db7332001cf8dec0cf9619ca^version&lt;33">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=eb2c341ddb7332001cf8dec0cf9619a8">

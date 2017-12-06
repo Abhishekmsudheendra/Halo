@@ -96,7 +96,7 @@ var totalRows=activityOutput.totalRows;]]></output_process_script>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2017-07-07 16:17:40</sys_updated_on>
     </wf_condition_default>
-    <wf_versionable action="update_multiple" query="version_container_id=eb2c341ddb7332001cf8dec0cf9619a8^sys_id!=d40e723ddb3332001cf8dec0cf961920">
+    <wf_versionable action="update_multiple" query="version_container_id=eb2c341ddb7332001cf8dec0cf9619a8^sys_id!=d40e723ddb3332001cf8dec0cf961920^version&lt;38">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=eb2c341ddb7332001cf8dec0cf9619a8">

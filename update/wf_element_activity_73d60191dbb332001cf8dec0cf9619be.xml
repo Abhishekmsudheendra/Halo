@@ -55,7 +55,7 @@
         <version_container_id>eb2c341ddb7332001cf8dec0cf9619a8</version_container_id>
         <wf_element_definition display_value="Query Threat Data">73d60191dbb332001cf8dec0cf9619be</wf_element_definition>
     </wf_versionable>
-    <wf_versionable action="update_multiple" query="version_container_id=eb2c341ddb7332001cf8dec0cf9619a8^sys_id!=7fd60191dbb332001cf8dec0cf9619be">
+    <wf_versionable action="update_multiple" query="version_container_id=eb2c341ddb7332001cf8dec0cf9619a8^sys_id!=7fd60191dbb332001cf8dec0cf9619be^version&lt;2">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=eb2c341ddb7332001cf8dec0cf9619a8">

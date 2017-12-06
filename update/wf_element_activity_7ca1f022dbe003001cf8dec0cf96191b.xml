@@ -93,7 +93,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2017-08-15 20:46:55</sys_updated_on>
     </wf_condition_default>
-    <wf_versionable action="update_multiple" query="version_container_id=21c3f3dedb2003001cf8dec0cf961920^sys_id!=74a1f022dbe003001cf8dec0cf96191c">
+    <wf_versionable action="update_multiple" query="version_container_id=21c3f3dedb2003001cf8dec0cf961920^sys_id!=74a1f022dbe003001cf8dec0cf96191c^version&lt;7">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=21c3f3dedb2003001cf8dec0cf961920">

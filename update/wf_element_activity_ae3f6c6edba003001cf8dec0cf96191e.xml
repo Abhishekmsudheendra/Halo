@@ -56,7 +56,7 @@ ActivityLogger.info(" Create File Activity Output  : "+executionResult.output );
         <version_container_id>21c3f3dedb2003001cf8dec0cf961920</version_container_id>
         <wf_element_definition display_value="Create File">ae3f6c6edba003001cf8dec0cf96191e</wf_element_definition>
     </wf_versionable>
-    <wf_versionable action="update_multiple" query="version_container_id=21c3f3dedb2003001cf8dec0cf961920^sys_id!=a63f6c6edba003001cf8dec0cf96191f">
+    <wf_versionable action="update_multiple" query="version_container_id=21c3f3dedb2003001cf8dec0cf961920^sys_id!=a63f6c6edba003001cf8dec0cf96191f^version&lt;5">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=21c3f3dedb2003001cf8dec0cf961920">

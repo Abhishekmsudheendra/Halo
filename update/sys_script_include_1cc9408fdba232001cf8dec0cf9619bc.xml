@@ -26,7 +26,7 @@ incidentSummaryUtils.prototype = Object.extendsObject(global.AbstractAjaxProcess
 					gr.set_status_to_resolved=input.setStatusOfTicketToResolved;
 					gr.notify_production=input.notifyProduction;
 					gr.notify_domain_registrar=input.notifyDomainRegistrar;
-					gr.assigned_to=this.finsUserSysId(input.assignTo);
+					gr.assigned_to=this.finsUserSysId(input.assignedTo);
 					gr.assign_to_group=this.findGroupSysId(input.groupName);
 					gr.resolve_and_close_the_ticket=input.resolveAndCloseTicket;
 					gr.report_to_flare=input.reportToFlare;
@@ -162,7 +162,7 @@ incidentSummaryUtils.prototype = Object.extendsObject(global.AbstractAjaxProcess
         <sys_created_on>2017-05-09 21:05:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1cc9408fdba232001cf8dec0cf9619bc</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>incidentSummaryUtils</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -170,6 +170,6 @@ incidentSummaryUtils.prototype = Object.extendsObject(global.AbstractAjaxProcess
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sys_script_include_1cc9408fdba232001cf8dec0cf9619bc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-16 19:11:14</sys_updated_on>
+        <sys_updated_on>2017-11-27 18:05:31</sys_updated_on>
     </sys_script_include>
 </record_update>

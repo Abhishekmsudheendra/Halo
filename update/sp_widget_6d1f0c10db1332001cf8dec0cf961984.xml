@@ -370,7 +370,7 @@ p.control-label.ng-binding.ng-scope {
         <sys_created_on>2017-06-07 15:11:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6d1f0c10db1332001cf8dec0cf961984</sys_id>
-        <sys_mod_count>357</sys_mod_count>
+        <sys_mod_count>372</sys_mod_count>
         <sys_name>Incident Summary</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -378,7 +378,7 @@ p.control-label.ng-binding.ng-scope {
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_widget_6d1f0c10db1332001cf8dec0cf961984</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-11-20 21:00:59</sys_updated_on>
+        <sys_updated_on>2017-11-27 19:01:46</sys_updated_on>
         <template><![CDATA[ <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script> 
 
 <div class="container" -ng-controller="incidentSummaryCtrl">
@@ -426,11 +426,15 @@ p.control-label.ng-binding.ng-scope {
                     </div>
 
 
-                    <div class="assignTo  col-md-3 col-sm-3 col-lg-3">
+                    <div class="assignedTo  col-md-3 col-sm-3 col-lg-3">
                       <b>Assign To:</b>
-                      <select  id="assignedTo" class="form-control" style="max-width:300px !important" ng-model="assignTo" ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">
-                        <option  ng-repeat="user in (c.data.groupUsers | filter: {'groupName':groupSelectedValue}) track by $index" value="user.name">{{user.name}}</option>
-                      </select>
+                      <!--
+                      <select name="assignedTo" id="assignedTo" class="form-control"   style="max-width:300px !important" ng-options="user.name for user in (c.data.groupUsers | filter: {'groupName':groupSelectedValue}) track by user.name" 
+                              ng-model="assignedTo" ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'" ></select> -->
+                      
+                      <select  id="assignedTo" class="form-control" style="max-width:300px !important" ng-model="assignedTo" ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'" >
+                        <option ng-selected= "{{user.name == assignedTo}}"  ng-repeat="user in (c.data.groupUsers | filter: {'groupName':groupSelectedValue}) track by $index" value="user.name">{{user.name}}</option>
+                      </select> 
                     </div>
 
                   </div>
@@ -470,7 +474,7 @@ p.control-label.ng-binding.ng-scope {
                   <table class="table table-condensed table-hover table-bordered">
                     <thead>
                       <tr>
-                        <th>No</th>
+                        <th>#</th>
                         <th>Ranking</th>
                         <th>Indicator</th>
                         <th>Status</th>

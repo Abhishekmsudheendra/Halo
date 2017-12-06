@@ -44,6 +44,7 @@
 		$scope.assignToGroup=c.convertToBoolean(courseOfActionsData[0].assignToGroup);
 		$scope.groupName=courseOfActionsData[0].groupName;
 		$scope.groupSelectedValue=courseOfActionsData[0].groupName;
+		$scope.assignedTo=courseOfActionsData[0].assignedTo;
 	};
 	
 	c.server.get({sysId:sysId}).then(
@@ -67,6 +68,7 @@
 
 			//Populate Values
 			c.populateValues(c.data.incidentData[0].incidentStatus,c.data.courseOfActionsData);
+			
 
 		});
 }
@@ -87,12 +89,12 @@ function updateIncidentRecord($scope,c)
 	var reportToFlare=jQuery("#reportToFlare").is(":checked");
 	var doYouWantadditionalActions=jQuery("#doYouWantadditionalActions").is(":checked");
 	var groupName=jQuery("#groupSelectedValue option:selected").text();
-	var assignTo=jQuery("#assignTo option:selected").text();
+	var assignedTo=jQuery("#assignedTo option:selected").text();
 	var comments=jQuery("#comments").val();
 	var locationStr=window.location;
 	var pattern=/[a-zA-Z0-9]{32}/;
 	var sysId=pattern.exec(locationStr)+'';
-c.server.get({doYouWantadditionalActions:doYouWantadditionalActions,reportToFlare:reportToFlare,comments:comments,assignTo:assignTo,groupName:groupName,resolveAndCloseTicket:resolveAndCloseTicket,assignToGroup:assignToGroup,assignToNextTier:assignToNextTier,notifyProduction:notifyProduction,setStatusOfTicketToResolved:setStatusOfTicketToResolved,sendEmailReceipt:sendEmailReceipt,sysId:sysId,action:'execute',selectedCoa:selectedCoa,sendEmailUpdateToReporter:sendEmailUpdateToReporter,notifyIsp:notifyIsp,notifyDomainRegistrar:notifyDomainRegistrar}).then(
+c.server.get({doYouWantadditionalActions:doYouWantadditionalActions,reportToFlare:reportToFlare,comments:comments,assignedTo:assignedTo,groupName:groupName,resolveAndCloseTicket:resolveAndCloseTicket,assignToGroup:assignToGroup,assignToNextTier:assignToNextTier,notifyProduction:notifyProduction,setStatusOfTicketToResolved:setStatusOfTicketToResolved,sendEmailReceipt:sendEmailReceipt,sysId:sysId,action:'execute',selectedCoa:selectedCoa,sendEmailUpdateToReporter:sendEmailUpdateToReporter,notifyIsp:notifyIsp,notifyDomainRegistrar:notifyDomainRegistrar}).then(
 	function(response)
 	{  
 		location.reload(true);
@@ -109,7 +111,7 @@ c.server.get({doYouWantadditionalActions:doYouWantadditionalActions,reportToFlar
         <sys_created_on>2017-11-20 18:04:50</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5ccee769db6203001cf8dec0cf961901</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>x_19668_halo.GetOrSetIncidentRecords</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -117,7 +119,7 @@ c.server.get({doYouWantadditionalActions:doYouWantadditionalActions,reportToFlar
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sys_ui_script_5ccee769db6203001cf8dec0cf961901</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-11-20 19:00:02</sys_updated_on>
+        <sys_updated_on>2017-11-27 19:02:18</sys_updated_on>
         <use_scoped_format>false</use_scoped_format>
     </sys_ui_script>
 </record_update>
