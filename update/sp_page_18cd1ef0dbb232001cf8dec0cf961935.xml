@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
         <css>.col-lg-1,&#13;
 .col-lg-10,&#13;
 .col-lg-11,&#13;
@@ -58,6 +59,7 @@ footer&#13;
   display:none !important; &#13;
 }</css>
         <draft>false</draft>
+        <dynamic_title_structure/>
         <id>editprofile</id>
         <internal>false</internal>
         <public>false</public>

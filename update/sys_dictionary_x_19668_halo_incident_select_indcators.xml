@@ -26,6 +26,8 @@
         <element>select_indcators</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <internal_type display_value="">glide_list</internal_type>
         <mandatory>false</mandatory>
         <max_length>1024</max_length>

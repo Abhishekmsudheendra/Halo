@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
         <css>.col-lg-1,&#13;
 .col-lg-10,&#13;
 .col-lg-11,&#13;
@@ -63,6 +64,7 @@ footer&#13;
   border-left:0px !important;&#13;
 }</css>
         <draft>false</draft>
+        <dynamic_title_structure/>
         <id>home</id>
         <internal>false</internal>
         <public>false</public>
@@ -87,6 +89,7 @@ footer&#13;
     <sys_translated_text action="delete_multiple" query="documentkey=1645b014db0232001cf8dec0cf96197d"/>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#f6beaf</average_image_color>
+        <chunk_size_bytes/>
         <compressed>true</compressed>
         <content_type>image/jpeg</content_type>
         <file_name>img.jpg</file_name>

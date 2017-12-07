@@ -8,6 +8,7 @@
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_19668_halo.Tier4</name>
+        <scoped_admin>false</scoped_admin>
         <suffix>Tier4</suffix>
         <sys_class_name>sys_user_role</sys_class_name>
         <sys_created_by>admin</sys_created_by>

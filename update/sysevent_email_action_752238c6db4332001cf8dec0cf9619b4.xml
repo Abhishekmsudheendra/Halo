@@ -6,7 +6,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Incident">6fc5d886db5003001cf8dec0cf9619a8</category>
+        <category display_value="Incident" name="Incident">6fc5d886db5003001cf8dec0cf9619a8</category>
         <collection>x_19668_halo_incident</collection>
         <condition table="x_19668_halo_incident">resolve_and_close_the_ticket=true^ORresolve_and_close_the_ticketCHANGESTOtrue^NQset_status_to_resolved=true^ORset_status_to_resolvedCHANGESTOtrue^EQ<item endquery="false" field="resolve_and_close_the_ticket" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="false" field="resolve_and_close_the_ticket" goto="false" newquery="false" operator="CHANGESTO" or="true" value="true"/>
@@ -15,7 +15,17 @@
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>
+        <default_interval/>
         <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<br><hr><br>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
         <event_name/>
         <event_parm_1>false</event_parm_1>
         <event_parm_2>false</event_parm_2>

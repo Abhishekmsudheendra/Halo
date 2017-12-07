@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
         <client_script><![CDATA[function($scope) 
 {
   var c = this;
@@ -35,7 +36,7 @@
 	
 		c.server.get({operation:'submit',sector:sector,incidentType:incidentType,firstName:firstName,lastName:lastName,organization:organization,department:department,subAgency:subAgency,countryName:countryName,companyName:companyName,state:state,telephone:telephone,email:email,description:description,notes:notes}).then(function(response)
 		{
-			jQuery("form").html("Thanks for reporting. Your incident number is "+response.data.incidentId+". Please use below link to track the progress of your request <br\> <a href='https://dev21310.service-now.com/haloportal/?id=incident_end_user_view&incident_id="+response.data.incidentSysId+"' > "+response.data.incidentId+" </a>");
+			jQuery("form").html("Thanks for reporting. Your incident number is "+response.data.incidentId+". Please use below link to track the progress of your request <br\> <a href='/haloportal/?id=incident_end_user_view&incident_id="+response.data.incidentSysId+"' > "+response.data.incidentId+" </a>");
 		});
 	};
 	
@@ -225,7 +226,7 @@ position: relative;
         <sys_created_on>2017-07-07 17:00:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e9b7cb31db7332001cf8dec0cf96194b</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Submit Incident DHS</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -233,7 +234,7 @@ position: relative;
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_widget_e9b7cb31db7332001cf8dec0cf96194b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-07 17:03:42</sys_updated_on>
+        <sys_updated_on>2017-12-07 20:34:20</sys_updated_on>
         <template>&lt;div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix"&gt;  
   &lt;div id="zone-branding" class="zone zone-branding clearfix container-12"&gt;
     &lt;div class="grid-8 region region-branding" id="region-branding"&gt;

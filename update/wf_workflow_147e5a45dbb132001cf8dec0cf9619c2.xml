@@ -2008,6 +2008,8 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
         <element>u_incident_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
@@ -2088,6 +2090,8 @@ workflow.scratchpad.dataSources=dataSourcesList;&#13;
         <element>u_hash_code</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
