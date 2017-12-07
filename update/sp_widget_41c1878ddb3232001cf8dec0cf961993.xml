@@ -183,7 +183,7 @@ td
         <sys_created_on>2017-05-16 15:35:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>41c1878ddb3232001cf8dec0cf961993</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>My Group Incidents Widget</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -191,7 +191,7 @@ td
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_widget_41c1878ddb3232001cf8dec0cf961993</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-07-17 16:51:51</sys_updated_on>
+        <sys_updated_on>2017-12-07 17:29:53</sys_updated_on>
         <template><![CDATA[<!--
 <div class="row">
     <div -ng-controller="myCtrl">
@@ -217,7 +217,7 @@ td
         <table ng-table="tableParams" class="table table-condensed table-bordered table-striped">
           <tr ng-repeat="row in $data track by $index" >
             <td data-title="'#'" class="cell"  filter="{ incidentIndex: 'number'}" sortable="'incidentIndex'">{{$index+1}}</td>
-            <td data-title="'Incident Id'" filter="{ incidentId: 'text'}" sortable="'incidentId'"><a href="/haloportal/?id=incident_summary&incident_id={{row.sysId}}" style="color:#0c4a6f" >{{row.incidentId}}</a></td>
+            <td data-title="'Incident Id'" filter="{ incidentId: 'text'}" sortable="'incidentId'"><a ng-href="/haloportal/?id=incident_summary&incident_id={{row.sysId}}" target="_self" style="color:#0c4a6f" >{{row.incidentId}}</a></td>
             <td data-title="'Incident Type'"  filter="{ incidentType: 'text'}" sortable="'incidentType'" class="cell">{{row.incidentType}}</td>
             <td data-title="'Incident Status'"   filter="{ incidentStatus: 'text'}"  sortable="'incidentStatus'" class="cell">{{row.incidentStatus}}</td>
             <td data-title="'Indicator Count'"   filter="{ indicatorCount: 'number'}"  sortable="'indicatorCount'" class="cell">{{row.indicatorCount}}</td>
