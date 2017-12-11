@@ -371,7 +371,7 @@ p.control-label.ng-binding.ng-scope {
         <sys_created_on>2017-06-07 15:11:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6d1f0c10db1332001cf8dec0cf961984</sys_id>
-        <sys_mod_count>372</sys_mod_count>
+        <sys_mod_count>373</sys_mod_count>
         <sys_name>Incident Summary</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -379,7 +379,7 @@ p.control-label.ng-binding.ng-scope {
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_widget_6d1f0c10db1332001cf8dec0cf961984</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-11-27 19:01:46</sys_updated_on>
+        <sys_updated_on>2017-12-11 15:55:43</sys_updated_on>
         <template><![CDATA[ <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script> 
 
 <div class="container" -ng-controller="incidentSummaryCtrl">
@@ -410,8 +410,8 @@ p.control-label.ng-binding.ng-scope {
                     <label class="checkbox-inline"><input type="checkbox"   ng-model="setStatusOfTicketToResolved"  id="setStatusOfTicketToResolved"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Resolve Ticket</label>
                     <label class="checkbox-inline"><input type="checkbox"  ng-model="notifyProduction"  id="notifyProduction"   ng-disabled="c.data.incidentData[0].incidentStatus == 'Closed'">Notify Production</label><br/>
                   </div> 
-
-									<br/>
+					<br/>
+                  
                   <div class="row assignmentGroupSection">
                    <p class="control-label"><label>Assignment Group: </label>
                     <div class="groupName  col-md-3 col-sm-3 col-lg-3" >
@@ -471,12 +471,12 @@ p.control-label.ng-binding.ng-scope {
               
 
                 <uib-tab index="1" heading="Possible Indicators">
-                  <label>Extracted Potential Indicators</label>
+                 <!-- <label>Extracted Possible Indicators</label> -->
                   <table class="table table-condensed table-hover table-bordered">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>Ranking</th>
+                        <th>Threat Level</th>
                         <th>Indicator</th>
                         <th>Status</th>
                       </tr>

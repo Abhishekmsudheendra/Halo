@@ -2,8 +2,7 @@
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[
-function($scope)
+        <client_script><![CDATA[function($scope)
 {
 	
 	var locationStr=window.location;
@@ -61,7 +60,7 @@ function($scope)
 
 				c.data.rolesExist=angular.fromJson(response.data.rolesExist);
 				if(c.data.rolesExist[0].isEndUser == false)
-					window.location='https://dev21310.service-now.com/haloportal/?id=incident_summary&incident_id='+sysId;
+					window.location='/haloportal/?id=incident_summary&incident_id='+sysId;
 				//Store JSON in Session
 				sessionStorage.setItem('ipIndicatorsData', JSON.stringify(c.data.ipIndicatorsData));
 				sessionStorage.setItem('domainIndicatorsData', JSON.stringify(c.data.domainIndicatorsData));
@@ -403,7 +402,7 @@ p.control-label.ng-binding.ng-scope
         <sys_created_on>2017-05-08 21:14:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e65207e6dbe232001cf8dec0cf96199b</sys_id>
-        <sys_mod_count>194</sys_mod_count>
+        <sys_mod_count>195</sys_mod_count>
         <sys_name>End User Incident View</sys_name>
         <sys_package display_value="Halo" source="x_19668_halo">13d836e2db1132001cf8dec0cf9619ba</sys_package>
         <sys_policy/>
@@ -411,7 +410,7 @@ p.control-label.ng-binding.ng-scope
         <sys_scope display_value="Halo">13d836e2db1132001cf8dec0cf9619ba</sys_scope>
         <sys_update_name>sp_widget_e65207e6dbe232001cf8dec0cf96199b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-11-27 19:02:55</sys_updated_on>
+        <sys_updated_on>2017-12-07 21:42:01</sys_updated_on>
         <template><![CDATA[<script>
 /*
 jQuery('#containerBlock').hide();

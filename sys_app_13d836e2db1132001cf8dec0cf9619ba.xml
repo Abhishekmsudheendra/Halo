@@ -23,14 +23,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-03-07 17:13:41</sys_created_on>
         <sys_id>13d836e2db1132001cf8dec0cf9619ba</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-12-07 20:11:19</sys_updated_on>
+        <sys_updated_on>2017-12-11 17:19:43</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role display_value="x_19668_halo.Halo" name="x_19668_halo.Halo">93e836e2db1132001cf8dec0cf96198f</user_role>
         <vendor/>
         <vendor_prefix/>
-        <version>1.1.8</version>
+        <version>1.1.9</version>
     </sys_app>
 </record_update>
